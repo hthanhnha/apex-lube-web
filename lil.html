@@ -1,0 +1,2628 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HUNG.NHOT VIETNAM | Dầu Nhớt Cao Cấp & Giải Pháp Bôi Trơn Toàn Diện</title>
+  <meta name="description" content="HUNG.NHOT VIETNAM - Hệ thống phân phối dầu nhớt tổng hợp toàn phần cao cấp cho ô tô, xe máy, xe tải và công nghiệp. Chính hãng 100%, chuẩn API SP / ACEA C3, giao hàng toàn quốc." />
+
+  <!-- Google Fonts: Playfair Display (Luxury Serif) & Be Vietnam Pro (Clean Vietnamese Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Custom Design Tokens -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: {
+              950: '#060910',
+              900: '#090D16',
+              800: '#111827',
+              700: '#1A2234',
+            },
+            champagne: {
+              200: '#F5E4B3',
+              300: '#E8C96D',
+              400: '#D4AF37',
+              500: '#B68D2C',
+              600: '#8F6B1E',
+            },
+            amberoil: '#F59E0B',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Be Vietnam Pro"', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            gold: '0 10px 40px -10px rgba(212, 175, 55, 0.28)',
+            'gold-sm': '0 4px 20px -4px rgba(212, 175, 55, 0.22)',
+            luxury: '0 24px 60px -15px rgba(0, 0, 0, 0.75)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Luxury Editorial Custom Styles & Subtle Animations -->
+  <style>
+    :root {
+      --gold-border: rgba(212, 175, 55, 0.22);
+      --gold-border-hover: rgba(232, 201, 109, 0.55);
+    }
+
+    body {
+      background-color: #090D16;
+      color: #F8FAFC;
+      font-family: 'Be Vietnam Pro', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Gold Gradient Text */
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #F5E4B3 0%, #D4AF37 48%, #F59E0B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Luxury Glass Panel */
+    .glass-panel {
+      background: linear-gradient(145deg, rgba(17, 24, 39, 0.78) 0%, rgba(9, 13, 22, 0.92) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--gold-border);
+    }
+
+    .glass-panel:hover {
+      border-color: var(--gold-border-hover);
+    }
+
+    /* Gold Shimmer Primary Button */
+    .btn-gold {
+      background: linear-gradient(135deg, #E8C96D 0%, #D4AF37 50%, #B68D2C 100%);
+      color: #090D16;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn-gold::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+      transform: skewX(-22deg);
+      transition: left 0.65s ease;
+    }
+
+    .btn-gold:hover::after {
+      left: 140%;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px -6px rgba(212, 175, 55, 0.45);
+    }
+
+    /* Architectural Hairline Divider */
+    .gold-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.55) 50%, transparent 100%);
+    }
+
+    /* Subtle Hero Ambient Glow & Liquid Wave */
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-14px) rotate(1.2deg); }
+    }
+
+    @keyframes pulseAmbient {
+      0%, 100% { opacity: 0.35; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(1.08); }
+    }
+
+    .animate-float {
+      animation: floatSlow 6.5s ease-in-out infinite;
+    }
+
+    .animate-ambient {
+      animation: pulseAmbient 8s ease-in-out infinite;
+    }
+
+    /* Scroll Reveal Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090D16;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(212, 175, 55, 0.35);
+      border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(212, 175, 55, 0.65);
+    }
+
+    /* Subtle Architectural Grid Pattern */
+    .bg-arch-grid {
+      background-image:
+        linear-gradient(rgba(212, 175, 55, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(212, 175, 55, 0.045) 1px, transparent 1px);
+      background-size: 56px 56px;
+    }
+
+    /* Sticky Navbar Scrolled State */
+    .navbar-scrolled {
+      background: rgba(9, 13, 22, 0.88);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-champagne-400/30 selection:text-champagne-200">
+
+  <!-- ===================================================================== -->
+  <!-- 1. STICKY LUXURY HEADER                                               -->
+  <!-- ===================================================================== -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Emblem -->
+        <a href="#hero" class="flex items-center gap-3 group focus:outline-none">
+          <div class="relative w-11 h-11 flex items-center justify-center">
+            <svg viewBox="0 0 48 48" class="w-11 h-11 drop-shadow-[0_0_12px_rgba(212,175,55,0.4)] transition-transform duration-300 group-hover:scale-105" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="logoGold" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#F5E4B3" />
+                  <stop offset="0.5" stop-color="#D4AF37" />
+                  <stop offset="1" stop-color="#F59E0B" />
+                </linearGradient>
+              </defs>
+              <!-- Architectural Hexagon Frame -->
+              <polygon points="24,3 43,13.5 43,34.5 24,45 5,34.5 5,13.5" stroke="url(#logoGold)" stroke-width="1.8" fill="rgba(17,24,39,0.75)" />
+              <polygon points="24,7 39.5,15.5 39.5,32.5 24,41 8.5,32.5 8.5,15.5" stroke="rgba(212,175,55,0.28)" stroke-width="0.9" />
+              <!-- Stylized Oil Drop -->
+              <path d="M24 12.5C24 12.5 16.5 22.3 16.5 27.6C16.5 31.8 19.85 35 24 35C28.15 35 31.5 31.8 31.5 27.6C31.5 22.3 24 12.5 24 12.5Z" fill="url(#logoGold)" />
+              <path d="M21 27.5C21 25.4 22.4 22.8 23.5 21C22.2 24.5 22.6 28.8 25.4 30.8C22.8 31.2 21 29.7 21 27.5Z" fill="#090D16" fill-opacity="0.35" />
+            </svg>
+          </div>
+          <div class="leading-tight">
+            <span class="block font-serif text-lg sm:text-xl font-bold tracking-wider text-gold-gradient">HUNG.NHOT</span>
+            <span class="block text-[10px] tracking-[0.26em] text-slate-400 uppercase font-medium">Vietnam Lubricants</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="#tong-quan" class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Tổng quan</a>
+          <a href="#tra-cuu-nhot" class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Tra cứu nhớt</a>
+          <a href="#san-pham" class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Sản phẩm</a>
+          <a href="#dai-ly-b2b" class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Đại lý B2B</a>
+          <a href="#lien-he" class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Liên hệ</a>
+        </nav>
+
+        <!-- Right Actions: Cart + Hotline + Mobile Menu -->
+        <div class="flex items-center gap-2.5 sm:gap-3">
+          <!-- Cart Button -->
+          <button id="open-cart-btn" type="button" aria-label="Mở giỏ hàng" class="relative p-2.5 sm:px-3.5 sm:py-2.5 rounded-xl bg-obsidian-800/80 border border-champagne-400/25 hover:border-champagne-300/60 text-slate-100 transition-all flex items-center gap-2">
+            <i data-lucide="shopping-bag" class="w-5 h-5 text-champagne-300"></i>
+            <span class="hidden md:inline text-xs font-medium text-slate-200">Giỏ hàng</span>
+            <span id="cart-badge" class="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 text-[11px] font-bold rounded-full bg-champagne-400 text-obsidian-900">0</span>
+          </button>
+          
+          <!-- Hotline CTA -->
+          <a href="tel:0905888666" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl btn-gold text-xs font-bold tracking-wide shadow-gold-sm">
+            <i data-lucide="phone-call" class="w-4 h-4"></i>
+            <span>0905 123 456</span>
+          </a>
+
+          <!-- Mobile Drawer Toggle -->
+          <button id="mobile-menu-btn" type="button" aria-label="Mở menu di động" class="lg:hidden p-2.5 rounded-xl bg-obsidian-800/80 border border-champagne-400/25 text-champagne-300 hover:bg-obsidian-700 transition-colors">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Slide-Out Navigation Drawer -->
+  <div id="mobile-drawer-overlay" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+    <aside id="mobile-drawer" class="fixed top-0 right-0 h-full w-[82%] max-w-xs bg-obsidian-900 border-l border-champagne-400/25 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300">
+      <div>
+        <div class="flex items-center justify-between pb-5 border-b border-champagne-400/20">
+          <div>
+            <span class="font-serif text-lg font-bold text-gold-gradient">HUNG.NHOT</span>
+            <p class="text-[10px] uppercase tracking-[0.22em] text-slate-400">Vietnam</p>
+          </div>
+          <button id="close-mobile-drawer" type="button" aria-label="Đóng menu" class="p-2 rounded-lg bg-obsidian-800 text-slate-300 hover:text-champagne-300">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+        <nav class="mt-6 flex flex-col gap-2">
+          <a href="#tong-quan" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-200 hover:bg-obsidian-800 hover:text-champagne-300 font-medium transition-colors flex items-center justify-between">
+            <span>Tổng quan</span><i data-lucide="chevron-right" class="w-4 h-4 text-champagne-400/60"></i>
+          </a>
+          <a href="#tra-cuu-nhot" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-200 hover:bg-obsidian-800 hover:text-champagne-300 font-medium transition-colors flex items-center justify-between">
+            <span>Tra cứu nhớt</span><i data-lucide="chevron-right" class="w-4 h-4 text-champagne-400/60"></i>
+          </a>
+          <a href="#san-pham" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-200 hover:bg-obsidian-800 hover:text-champagne-300 font-medium transition-colors flex items-center justify-between">
+            <span>Sản phẩm</span><i data-lucide="chevron-right" class="w-4 h-4 text-champagne-400/60"></i>
+          </a>
+          <a href="#dai-ly-b2b" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-200 hover:bg-obsidian-800 hover:text-champagne-300 font-medium transition-colors flex items-center justify-between">
+            <span>Đại lý B2B</span><i data-lucide="chevron-right" class="w-4 h-4 text-champagne-400/60"></i>
+          </a>
+          <a href="#lien-he" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-200 hover:bg-obsidian-800 hover:text-champagne-300 font-medium transition-colors flex items-center justify-between">
+            <span>Liên hệ</span><i data-lucide="chevron-right" class="w-4 h-4 text-champagne-400/60"></i>
+          </a>
+        </nav>
+      </div>
+      <div class="pt-5 border-t border-champagne-400/20 space-y-3">
+        <a href="tel:0905888666" class="w-full py-3 rounded-xl btn-gold text-sm font-bold flex items-center justify-center gap-2">
+          <i data-lucide="phone-call" class="w-4 h-4"></i>
+          Hotline: 0905 888 666
+        </a>
+        <p class="text-center text-xs text-slate-400">Hỗ trợ kỹ thuật & báo giá sỉ 24/7</p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- 2. FULL-SCREEN LUXURY HERO SECTION                                    -->
+  <!-- ===================================================================== -->
+  <section id="hero" class="relative min-h-screen flex flex-col justify-between pt-24 pb-8 overflow-hidden bg-arch-grid">
+    <!-- Ambient Golden Oil Particle Canvas -->
+    <canvas id="hero-particles" class="absolute inset-0 w-full h-full pointer-events-none opacity-65"></canvas>
+
+    <!-- Radial Champagne Glows -->
+    <div class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[680px] h-[680px] rounded-full bg-champagne-400/10 blur-[140px] animate-ambient"></div>
+    <div class="pointer-events-none absolute bottom-10 right-0 w-[440px] h-[440px] rounded-full bg-amberoil/10 blur-[120px]"></div>
+
+    <!-- Main Hero Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto py-8 lg:py-14">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Editorial Copy -->
+        <div class="lg:col-span-7 space-y-7 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-obsidian-800/80 border border-champagne-400/30 text-xs font-medium tracking-wider uppercase text-champagne-300">
+            <span class="w-2 h-2 rounded-full bg-champagne-400 animate-pulse"></span>
+            Chuẩn Mực Bôi Trơn Thế Hệ Mới • API SP / ACEA C3
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.15] tracking-tight text-slate-50">
+            Đỉnh Cao Công Nghệ <span class="text-gold-gradient italic">Dầu Nhớt</span> — Bền Bỉ Mọi Hành Trình
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light">
+            <strong class="text-champagne-200 font-medium">HUNG.NHOT VIETNAM</strong> kiến tạo giải pháp dầu nhớt tổng hợp toàn phần ứng dụng phân tử Ester tinh khiết — bảo vệ tuyệt đối động cơ từ xe sang, mô tô phân khối lớn đến đội xe thương mại hạng nặng.
+          </p>
+
+          <!-- Dual CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#san-pham" class="w-full sm:w-auto px-8 py-4 rounded-xl btn-gold font-bold text-sm tracking-wide flex items-center justify-center gap-2.5 shadow-gold">
+              <span>Khám phá sản phẩm</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="#tra-cuu-nhot" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-obsidian-800/75 hover:bg-obsidian-800 border border-champagne-400/35 hover:border-champagne-300 text-champagne-200 font-semibold text-sm tracking-wide transition-all flex items-center justify-center gap-2.5">
+              <i data-lucide="gauge" class="w-4 h-4 text-champagne-400"></i>
+              <span>Tra cứu nhớt theo xe</span>
+            </a>
+          </div>
+
+          <!-- Micro Trust Badges -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 pt-3 text-xs text-slate-400">
+            <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-champagne-400"></i> Đầy đủ CO/CQ & VAT</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="award" class="w-4 h-4 text-champagne-400"></i> Công nghệ Ester-Core Đức</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="truck" class="w-4 h-4 text-champagne-400"></i> Miễn phí ship đơn từ 1.000.000đ</span>
+          </div>
+        </div>
+
+        <!-- Right Signature Flagship Oil Canister Showcase (Custom SVG) -->
+        <div class="lg:col-span-5 relative flex items-center justify-center">
+          <div class="relative w-full max-w-md mx-auto">
+            <!-- Architectural Halo Rings -->
+            <div class="absolute inset-0 m-auto w-72 h-72 sm:w-80 sm:h-80 rounded-full border border-champagne-400/20"></div>
+            <div class="absolute inset-0 m-auto w-60 h-60 sm:w-64 sm:h-64 rounded-full border border-dashed border-champagne-400/25"></div>
+            <div class="absolute inset-0 m-auto w-56 h-56 rounded-full bg-gradient-to-tr from-champagne-500/20 via-amberoil/15 to-transparent blur-2xl"></div>
+
+            <!-- Hero Bottle SVG -->
+            <div class="relative z-10 animate-float flex justify-center py-4">
+              <svg viewBox="0 0 320 380" class="w-64 sm:w-72 h-auto drop-shadow-[0_28px_45px_rgba(0,0,0,0.85)]" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="heroBodyGrad" x1="55" y1="70" x2="265" y2="350" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#273248" />
+                    <stop offset="32%" stop-color="#141B2B" />
+                    <stop offset="70%" stop-color="#0B101B" />
+                    <stop offset="100%" stop-color="#1F293D" />
+                  </linearGradient>
+                  <linearGradient id="heroGoldMetal" x1="80" y1="120" x2="240" y2="300" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#FBF0CB" />
+                    <stop offset="35%" stop-color="#D4AF37" />
+                    <stop offset="70%" stop-color="#B68D2C" />
+                    <stop offset="100%" stop-color="#F59E0B" />
+                  </linearGradient>
+                  <linearGradient id="heroCapGrad" x1="185" y1="20" x2="235" y2="55" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#F5E4B3" />
+                    <stop offset="50%" stop-color="#D4AF37" />
+                    <stop offset="100%" stop-color="#8F6B1E" />
+                  </linearGradient>
+                  <linearGradient id="heroLabelBg" x1="90" y1="130" x2="245" y2="315" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#111827" />
+                    <stop offset="100%" stop-color="#060910" />
+                  </linearGradient>
+                </defs>
+                <!-- Cap -->
+                <rect x="190" y="24" width="44" height="24" rx="5" fill="url(#heroCapGrad)" />
+                <rect x="196" y="48" width="32" height="12" fill="#8F6B1E" />
+                <line x1="198" y1="27" x2="198" y2="45" stroke="#090D16" stroke-opacity="0.3" stroke-width="2" />
+                <line x1="206" y1="27" x2="206" y2="45" stroke="#090D16" stroke-opacity="0.3" stroke-width="2" />
+                <line x1="214" y1="27" x2="214" y2="45" stroke="#090D16" stroke-opacity="0.3" stroke-width="2" />
+                <line x1="222" y1="27" x2="222" y2="45" stroke="#090D16" stroke-opacity="0.3" stroke-width="2" />
+
+                <!-- 4L Luxury Canister Silhouette -->
+                <path d="M108 60 L226 60 C246 60 262 76 262 96 L262 326 C262 344 247 358 229 358 L91 358 C73 358 58 344 58 326 L58 134 C58 102 74 60 108 60 Z" fill="url(#heroBodyGrad)" stroke="url(#heroGoldMetal)" stroke-width="2" />
+
+                <!-- Integrated Ergonomic Handle Cutout -->
+                <path d="M98 86 L136 86 C144 86 148 92 146 100 L122 174 C119 182 112 186 104 186 L86 186 C78 186 74 180 76 172 L90 96 C91 90 94 86 98 86 Z" fill="#090D16" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" />
+
+                <!-- Specular Metallic Highlight -->
+                <path d="M244 82 C250 88 252 100 252 120 L252 324" stroke="rgba(255,255,255,0.16)" stroke-width="4" stroke-linecap="round" />
+
+                <!-- Main Gold-Trimmed Label -->
+                <rect x="92" y="138" width="152" height="196" rx="14" fill="url(#heroLabelBg)" stroke="url(#heroGoldMetal)" stroke-width="1.8" />
+                <!-- Top Gold Accent Band -->
+                <path d="M93 152 C93 144 99 139 107 139 L229 139 C237 139 243 144 243 152 L243 176 L93 176 Z" fill="url(#heroGoldMetal)" />
+                <text x="168" y="162" text-anchor="middle" fill="#090D16" font-family="Playfair Display, serif" font-weight="800" font-size="14" letter-spacing="2">HUNG.NHOT</text>
+
+                <!-- Golden Droplet Emblem inside Label -->
+                <path d="M168 188 C168 188 153 206 153 216 C153 224.2 159.7 230.5 168 230.5 C176.3 230.5 183 224.2 183 216 C183 206 168 188 168 188 Z" fill="url(#heroGoldMetal)" />
+
+                <!-- Viscosity Text -->
+                <text x="168" y="264" text-anchor="middle" fill="#F8FAFC" font-family="Be Vietnam Pro, sans-serif" font-weight="800" font-size="28" letter-spacing="1">5W-30</text>
+                <text x="168" y="282" text-anchor="middle" fill="#E8C96D" font-family="Be Vietnam Pro, sans-serif" font-weight="600" font-size="9.5" letter-spacing="1.6">GOLD FULL SYNTHETIC</text>
+
+                <!-- Divider & Standard -->
+                <line x1="114" y1="294" x2="222" y2="294" stroke="rgba(212,175,55,0.4)" stroke-width="1" />
+                <text x="168" y="311" text-anchor="middle" fill="#CBD5E1" font-family="Be Vietnam Pro, sans-serif" font-weight="600" font-size="9">API SP • ACEA C3 • ESTER</text>
+                <text x="168" y="325" text-anchor="middle" fill="#94A3B8" font-family="Be Vietnam Pro, sans-serif" font-size="8.5">4 LITERS / 1.05 US GAL</text>
+              </svg>
+            </div>
+
+            <!-- Floating Technical Spec Callouts -->
+            <div class="hidden sm:flex items-center gap-3 absolute top-8 -left-4 z-20 px-4 py-3 rounded-2xl glass-panel shadow-luxury">
+              <div class="w-9 h-9 rounded-xl bg-champagne-400/15 border border-champagne-400/35 flex items-center justify-center text-champagne-300">
+                <i data-lucide="flame" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <p class="text-[10px] uppercase tracking-wider text-slate-400">Điểm chớp cháy</p>
+                <p class="text-sm font-bold text-champagne-200">238°C • Siêu bền nhiệt</p>
+              </div>
+            </div>
+
+            <div class="hidden sm:flex items-center gap-3 absolute bottom-10 -right-2 z-20 px-4 py-3 rounded-2xl glass-panel shadow-luxury">
+              <div class="w-9 h-9 rounded-xl bg-amberoil/15 border border-amberoil/35 flex items-center justify-center text-amberoil">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <p class="text-[10px] uppercase tracking-wider text-slate-400">Chu kỳ thay nhớt</p>
+                <p class="text-sm font-bold text-slate-100">Lên tới 10.000 km</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Architectural Stats Bar -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-4">
+      <div class="glass-panel rounded-2xl p-5 sm:p-6 grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div class="flex items-start gap-3.5 lg:border-r lg:border-champagne-400/15 lg:pr-4">
+          <div class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/10 border border-champagne-400/25 flex items-center justify-center text-champagne-300">
+            <i data-lucide="verified" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <p class="font-serif text-lg sm:text-xl font-bold text-champagne-200">100%</p>
+            <p class="text-xs text-slate-400 leading-snug mt-0.5">Nhập khẩu & Chính hãng nguyên đai</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3.5 lg:border-r lg:border-champagne-400/15 lg:pr-4">
+          <div class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/10 border border-champagne-400/25 flex items-center justify-center text-champagne-300">
+            <i data-lucide="building-2" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <p class="font-serif text-lg sm:text-xl font-bold text-champagne-200">500+</p>
+            <p class="text-xs text-slate-400 leading-snug mt-0.5">Đại lý & Gara đối tác toàn quốc</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3.5 lg:border-r lg:border-champagne-400/15 lg:pr-4">
+          <div class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/10 border border-champagne-400/25 flex items-center justify-center text-champagne-300">
+            <i data-lucide="cpu" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <p class="font-serif text-lg sm:text-xl font-bold text-champagne-200">API SP / C3</p>
+            <p class="text-xs text-slate-400 leading-snug mt-0.5">Tiêu chuẩn quốc tế khắt khe nhất</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-3.5">
+          <div class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/10 border border-champagne-400/25 flex items-center justify-center text-champagne-300">
+            <i data-lucide="zap" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <p class="font-serif text-lg sm:text-xl font-bold text-champagne-200">24 Giờ</p>
+            <p class="text-xs text-slate-400 leading-snug mt-0.5">Giao hàng thần tốc toàn quốc</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="gold-divider max-w-7xl mx-auto"></div>
+
+  <!-- ===================================================================== -->
+  <!-- 3. SIGNATURE OVERVIEW & TECHNOLOGY                                    -->
+  <!-- ===================================================================== -->
+  <section id="tong-quan" class="py-20 lg:py-28 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+        <!-- Asymmetric Left Editorial Column -->
+        <div class="lg:col-span-5 space-y-6 reveal">
+          <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400">
+            <span class="w-8 h-px bg-champagne-400"></span>
+            Tổng Quan & Công Nghệ
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-[42px] font-bold leading-tight text-slate-50">
+            Tinh Hoa Công Nghệ <span class="text-gold-gradient italic">Bôi Trơn</span> Thế Hệ Mới
+          </h2>
+          <p class="text-slate-300 leading-relaxed text-sm sm:text-base font-light">
+            Giống như một công trình kiến trúc trường tồn đòi hỏi nền móng hoàn mỹ, mỗi khối động cơ đều cần lớp màng bảo vệ phân tử chuẩn xác đến từng micron. <strong class="text-slate-100 font-medium">HUNG.NHOT</strong> kết hợp dầu gốc tổng hợp nhóm IV/V cùng hệ phụ gia Ester phân cực, giúp dầu bám chặt lên bề mặt kim loại ngay cả khi tắt máy.
+          </p>
+
+          <!-- Architectural Certification Strip -->
+          <div class="glass-panel rounded-2xl p-5 space-y-4">
+            <p class="text-xs uppercase tracking-widest text-champagne-300 font-semibold">Chứng nhận & Tiêu chuẩn toàn cầu</p>
+            <div class="grid grid-cols-3 gap-3 text-center">
+              <div class="p-3 rounded-xl bg-obsidian-900/80 border border-champagne-400/15">
+                <p class="font-serif font-bold text-champagne-200 text-sm">API SP</p>
+                <p class="text-[11px] text-slate-400 mt-0.5">Viện Dầu Khí Mỹ</p>
+              </div>
+              <div class="p-3 rounded-xl bg-obsidian-900/80 border border-champagne-400/15">
+                <p class="font-serif font-bold text-champagne-200 text-sm">ACEA C3</p>
+                <p class="text-[11px] text-slate-400 mt-0.5">Chuẩn Châu Âu</p>
+              </div>
+              <div class="p-3 rounded-xl bg-obsidian-900/80 border border-champagne-400/15">
+                <p class="font-serif font-bold text-champagne-200 text-sm">JASO MA2</p>
+                <p class="text-[11px] text-slate-400 mt-0.5">Chuẩn Nhật Bản</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#tra-cuu-nhot" class="inline-flex items-center gap-2 text-sm font-semibold text-champagne-300 hover:text-champagne-200 group">
+            <span>Tìm đúng phẩm cấp nhớt cho xe của bạn</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+          </a>
+        </div>
+
+        <!-- Asymmetric Right 4 Core Pillars Grid -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+          <!-- Pillar 1 -->
+          <article class="reveal glass-panel rounded-2xl p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1">
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-champagne-400/20 to-amberoil/10 border border-champagne-400/35 flex items-center justify-center text-champagne-300">
+                <i data-lucide="atom" class="w-6 h-6"></i>
+              </div>
+              <span class="font-serif text-3xl font-bold text-champagne-400/20">01</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-100 mb-2.5">Công Nghệ Ester Tổng Hợp Toàn Phần</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Phân tử Ester mang điện tích âm tự động bám hút lên bề mặt chi tiết máy, giảm thiểu 72% mài mòn khi khởi động nguội và duy trì độ êm ái vượt trội.
+            </p>
+          </article>
+
+          <!-- Pillar 2 -->
+          <article class="reveal glass-panel rounded-2xl p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 sm:mt-6">
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-champagne-400/20 to-amberoil/10 border border-champagne-400/35 flex items-center justify-center text-champagne-300">
+                <i data-lucide="thermometer-sun" class="w-6 h-6"></i>
+              </div>
+              <span class="font-serif text-3xl font-bold text-champagne-400/20">02</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-100 mb-2.5">Bảo Vệ Động Cơ Nhiệt Độ Cực Đại</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Độ bền trượt cắt HTHS cao kết hợp điểm chớp cháy trên 235°C giúp màng dầu không bị đứt gãy khi vận hành kẹt xe đô thị hay tăng tốc liên tục trên cao tốc.
+            </p>
+          </article>
+
+          <!-- Pillar 3 -->
+          <article class="reveal glass-panel rounded-2xl p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1">
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-champagne-400/20 to-amberoil/10 border border-champagne-400/35 flex items-center justify-center text-champagne-300">
+                <i data-lucide="fuel" class="w-6 h-6"></i>
+              </div>
+              <span class="font-serif text-3xl font-bold text-champagne-400/20">03</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-100 mb-2.5">Tiết Kiệm Nhiên Liệu Đến 8%</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Hệ phụ gia biến tính ma sát vi mô (Friction Modifier) giúp giảm tổn hao công suất nội tại, tối ưu hóa mức tiêu thụ xăng/dầu và giảm phát thải CO2.
+            </p>
+          </article>
+
+          <!-- Pillar 4 -->
+          <article class="reveal glass-panel rounded-2xl p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 sm:mt-6">
+            <div class="flex items-center justify-between mb-5">
+              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-champagne-400/20 to-amberoil/10 border border-champagne-400/35 flex items-center justify-center text-champagne-300">
+                <i data-lucide="clock-4" class="w-6 h-6"></i>
+              </div>
+              <span class="font-serif text-3xl font-bold text-champagne-400/20">04</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-100 mb-2.5">Chu Kỳ Thay Nhớt Tới 10.000 km</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Khả năng chống oxy hóa và phân tán cặn bùn vượt trội giữ lòng động cơ sạch bóng như mới, kéo dài gấp đôi chu kỳ bảo dưỡng so với dầu gốc khoáng.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 4. INTERACTIVE VEHICLE OIL FINDER ("TRA CỨU DẦU NHỚT CHUẨN THEO XE")  -->
+  <!-- ===================================================================== -->
+  <section id="tra-cuu-nhot" class="py-20 lg:py-28 relative bg-obsidian-950/60 border-y border-champagne-400/15">
+    <div class="pointer-events-none absolute top-0 left-1/4 w-96 h-96 bg-champagne-400/5 blur-[120px] rounded-full"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+        <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400 mb-3">
+          <span class="w-6 h-px bg-champagne-400"></span>
+          Tư Vấn Kỹ Thuật Tự Động
+          <span class="w-6 h-px bg-champagne-400"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-50">
+          Tra Cứu Dầu Nhớt <span class="text-gold-gradient italic">Chuẩn Theo Xe</span>
+        </h2>
+        <p class="text-slate-400 mt-4 text-sm sm:text-base">
+          Chọn thông tin phương tiện và điều kiện vận hành thực tế tại Việt Nam để nhận đề xuất cấp độ nhớt SAE & sản phẩm chuẩn xác từ kỹ sư HUNG.NHOT.
+        </p>
+      </div>
+
+      <!-- Interactive Selector Console -->
+      <div class="glass-panel rounded-3xl p-6 sm:p-8 lg:p-10 shadow-luxury reveal">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Step 1: Vehicle Type -->
+          <div class="space-y-2.5">
+            <label for="finder-vehicle" class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-champagne-300">
+              <span class="w-5 h-5 rounded-full bg-champagne-400/20 text-champagne-300 flex items-center justify-center text-[11px]">1</span>
+              Loại phương tiện
+            </label>
+            <select id="finder-vehicle" class="w-full px-4 py-3.5 rounded-xl bg-obsidian-900 border border-champagne-400/25 text-slate-100 text-sm focus:outline-none focus:border-champagne-300 transition-colors">
+              <option value="car">Ô tô du lịch (Sedan / SUV / MPV)</option>
+              <option value="scooter">Xe tay ga (SH, Vario, NVX, Vespa...)</option>
+              <option value="moto">Xe số & Mô tô Phân khối lớn (PKL)</option>
+              <option value="truck">Xe tải, Đầu kéo & Máy cơ giới</option>
+            </select>
+          </div>
+
+          <!-- Step 2: Engine / Fuel -->
+          <div class="space-y-2.5">
+            <label for="finder-engine" class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-champagne-300">
+              <span class="w-5 h-5 rounded-full bg-champagne-400/20 text-champagne-300 flex items-center justify-center text-[11px]">2</span>
+              Nhiên liệu / Động cơ
+            </label>
+            <select id="finder-engine" class="w-full px-4 py-3.5 rounded-xl bg-obsidian-900 border border-champagne-400/25 text-slate-100 text-sm focus:outline-none focus:border-champagne-300 transition-colors">
+              <option value="petrol">Động cơ Xăng tiêu chuẩn</option>
+              <option value="hybrid_turbo">Động cơ Hybrid / Turbo phun trực tiếp</option>
+              <option value="diesel">Động cơ Diesel (Máy dầu / Common Rail)</option>
+            </select>
+          </div>
+
+          <!-- Step 3: Driving Condition -->
+          <div class="space-y-2.5">
+            <label for="finder-condition" class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-champagne-300">
+              <span class="w-5 h-5 rounded-full bg-champagne-400/20 text-champagne-300 flex items-center justify-center text-[11px]">3</span>
+              Điều kiện vận hành chính
+            </label>
+            <select id="finder-condition" class="w-full px-4 py-3.5 rounded-xl bg-obsidian-900 border border-champagne-400/25 text-slate-100 text-sm focus:outline-none focus:border-champagne-300 transition-colors">
+              <option value="city">Đô thị kẹt xe, dừng-chạy liên tục</option>
+              <option value="highway">Đường trường cao tốc, đi tour xa</option>
+              <option value="heavy">Tải nặng, đèo dốc, thời tiết khắc nghiệt</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mt-7 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-champagne-400/15">
+          <p class="text-xs text-slate-400 flex items-center gap-2">
+            <i data-lucide="info" class="w-4 h-4 text-champagne-400 shrink-0"></i>
+            Khuyến nghị được chuẩn hóa theo tiêu chuẩn khí hậu nhiệt đới ẩm tại Việt Nam.
+          </p>
+          <button id="finder-submit-btn" type="button" class="w-full sm:w-auto px-8 py-3.5 rounded-xl btn-gold font-bold text-sm tracking-wide flex items-center justify-center gap-2 shadow-gold-sm">
+            <i data-lucide="search-check" class="w-4 h-4"></i>
+            <span>Tìm loại nhớt phù hợp</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Recommendation Output -->
+        <div id="finder-result" class="mt-8 hidden">
+          <!-- Populated dynamically by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 5. PRODUCT CATALOG & E-COMMERCE GRID ("BỘ SƯU TẬP DẦU NHỚT")          -->
+  <!-- ===================================================================== -->
+  <section id="san-pham" class="py-20 lg:py-28 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 reveal">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400 mb-3">
+            <span class="w-8 h-px bg-champagne-400"></span>
+            Danh Mục Chính Hãng
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-50">
+            Bộ Sưu Tập <span class="text-gold-gradient italic">Dầu Nhớt</span>
+          </h2>
+        </div>
+        <p class="text-sm text-slate-400 max-w-md leading-relaxed">
+          Lựa chọn dung tích linh hoạt từ chai 1L, can 4L đến xô 18L và phuy 200L. Giá niêm yết minh bạch, hỗ trợ đặt hàng trực tuyến nhanh chóng.
+        </p>
+      </div>
+
+      <!-- Filter Tabs + Search + Sort Bar -->
+      <div class="glass-panel rounded-2xl p-4 sm:p-5 mb-10 space-y-4 reveal">
+        <!-- Category Pills -->
+        <div id="category-tabs" class="flex flex-wrap gap-2">
+          <button type="button" data-category="all" class="filter-tab active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-champagne-400 text-obsidian-900">
+            Tất cả
+          </button>
+          <button type="button" data-category="car" class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all bg-obsidian-900/70 text-slate-300 border border-champagne-400/20 hover:border-champagne-400/50 hover:text-champagne-200">
+            Dầu nhớt Ô tô
+          </button>
+          <button type="button" data-category="bike" class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all bg-obsidian-900/70 text-slate-300 border border-champagne-400/20 hover:border-champagne-400/50 hover:text-champagne-200">
+            Dầu nhớt Xe máy
+          </button>
+          <button type="button" data-category="industrial" class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all bg-obsidian-900/70 text-slate-300 border border-champagne-400/20 hover:border-champagne-400/50 hover:text-champagne-200">
+            Dầu Xe tải & Công nghiệp
+          </button>
+          <button type="button" data-category="additive" class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all bg-obsidian-900/70 text-slate-300 border border-champagne-400/20 hover:border-champagne-400/50 hover:text-champagne-200">
+            Phụ gia chăm sóc
+          </button>
+        </div>
+
+        <!-- Search & Sort Controls -->
+        <div class="flex flex-col sm:flex-row gap-3 pt-3 border-t border-champagne-400/15">
+          <div class="relative flex-1">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+            <input id="product-search" type="text" placeholder="Tìm theo tên sản phẩm, độ nhớt (5W-30, 10W-40, AW 68...)" class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-obsidian-900 border border-champagne-400/20 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-champagne-300 transition-colors" />
+          </div>
+          <div class="sm:w-60">
+            <select id="product-sort" aria-label="Sắp xếp sản phẩm" class="w-full px-4 py-2.5 rounded-xl bg-obsidian-900 border border-champagne-400/20 text-sm text-slate-200 focus:outline-none focus:border-champagne-300 transition-colors">
+              <option value="default">Sắp xếp: Mặc định</option>
+              <option value="price-asc">Giá: Thấp đến cao</option>
+              <option value="price-desc">Giá: Cao đến thấp</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Grid Container -->
+      <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Dynamically Rendered Product Cards -->
+      </div>
+
+      <!-- Empty Search State -->
+      <div id="product-empty" class="hidden text-center py-16 glass-panel rounded-2xl">
+        <i data-lucide="package-search" class="w-12 h-12 text-champagne-400/60 mx-auto mb-3"></i>
+        <p class="font-serif text-xl text-slate-200">Không tìm thấy sản phẩm phù hợp</p>
+        <p class="text-sm text-slate-400 mt-1">Vui lòng thử từ khóa khác hoặc chọn lại danh mục "Tất cả".</p>
+        <button id="reset-filter-btn" type="button" class="mt-4 px-5 py-2.5 rounded-xl bg-champagne-400/15 border border-champagne-400/40 text-champagne-200 text-xs font-semibold hover:bg-champagne-400/25 transition-colors">
+          Đặt lại bộ lọc
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 6. B2B & GARAGE PARTNERSHIP SECTION ("ĐẶC QUYỀN ĐẠI LÝ & GARA")       -->
+  <!-- ===================================================================== -->
+  <section id="dai-ly-b2b" class="py-20 lg:py-28 relative bg-obsidian-950/70 border-y border-champagne-400/15 overflow-hidden">
+    <div class="pointer-events-none absolute -right-24 top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-champagne-400/10 blur-[140px]"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14 reveal">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400 mb-3">
+            <span class="w-8 h-px bg-champagne-400"></span>
+            Hợp Tác Phân Phối Chiến Lược
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-50 leading-tight">
+            Đặc Quyền <span class="text-gold-gradient italic">Đại Lý & Gara</span> Đối Tác
+          </h2>
+          <p class="text-slate-300 mt-4 text-sm sm:text-base font-light leading-relaxed">
+            Chính sách thương mại minh bạch, bảo vệ vùng phân phối và đồng hành dài hạn cùng các Gara ô tô, trung tâm chăm sóc xe và đại lý vật tư công nghiệp trên 63 tỉnh thành.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <button type="button" onclick="selectInquiryAndScroll('Mở đại lý')" class="px-6 py-3.5 rounded-xl btn-gold text-sm font-bold flex items-center gap-2 shadow-gold-sm">
+            <i data-lucide="handshake" class="w-4 h-4"></i>
+            <span>Đăng ký mở Đại lý</span>
+          </button>
+          <button type="button" onclick="selectInquiryAndScroll('Nhập cho Gara')" class="px-6 py-3.5 rounded-xl bg-obsidian-800 border border-champagne-400/35 hover:border-champagne-300 text-champagne-200 text-sm font-semibold transition-all">
+            Nhận bảng giá Gara
+          </button>
+        </div>
+      </div>
+
+      <!-- 4 Wholesale Luxury Benefit Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="reveal glass-panel rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-champagne-400/15 border border-champagne-400/35 flex items-center justify-center text-champagne-300 mb-5 group-hover:scale-105 transition-transform">
+              <i data-lucide="percent" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-100 mb-2">Chiết Khấu Bậc Thang</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Mức chiết khấu trực tiếp lên tới <strong class="text-champagne-300">25% – 32%</strong> theo sản lượng tháng/quý, kèm thưởng doanh số và chính sách công nợ linh hoạt cho đối tác thân thiết.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-champagne-400/15 text-xs font-semibold text-champagne-300">
+            Biên lợi nhuận dẫn đầu thị trường
+          </div>
+        </div>
+
+        <div class="reveal glass-panel rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-champagne-400/15 border border-champagne-400/35 flex items-center justify-center text-champagne-300 mb-5 group-hover:scale-105 transition-transform">
+              <i data-lucide="store" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-100 mb-2">Hỗ Trợ Kệ & Biển Hiệu</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Tài trợ miễn phí kệ trưng bày thép sơn tĩnh điện mạ vàng, bảng hiệu Alu cao cấp, đồng phục kỹ thuật viên, phễu rót và ấn phẩm POSM chuẩn nhận diện HUNG.NHOT.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-champagne-400/15 text-xs font-semibold text-champagne-300">
+            Nâng tầm không gian Gara chuẩn 5 sao
+          </div>
+        </div>
+
+        <div class="reveal glass-panel rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-champagne-400/15 border border-champagne-400/35 flex items-center justify-center text-champagne-300 mb-5 group-hover:scale-105 transition-transform">
+              <i data-lucide="file-check-2" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-100 mb-2">VAT & Hồ Sơ CO/CQ Đủ</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Xuất hóa đơn điện tử VAT 100%, cung cấp đầy đủ chứng nhận xuất xứ (CO), chứng nhận chất lượng (CQ) và phiếu kiểm định TDS/MSDS phục vụ đấu thầu doanh nghiệp.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-champagne-400/15 text-xs font-semibold text-champagne-300">
+            Pháp lý minh bạch tuyệt đối
+          </div>
+        </div>
+
+        <div class="reveal glass-panel rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-champagne-400/15 border border-champagne-400/35 flex items-center justify-center text-champagne-300 mb-5 group-hover:scale-105 transition-transform">
+              <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-slate-100 mb-2">Đào Tạo Kỹ Thuật</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Chuyên gia bôi trơn trực tiếp đào tạo đội ngũ cố vấn dịch vụ cách đọc mã tiêu chuẩn OEM, tư vấn thay nhớt đúng dòng xe sang và tối ưu doanh thu dịch vụ bảo dưỡng.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-champagne-400/15 text-xs font-semibold text-champagne-300">
+            Hỗ trợ kỹ thuật 1-1 trọn đời
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 7. CUSTOMER & GARAGE TESTIMONIALS                                     -->
+  <!-- ===================================================================== -->
+  <section class="py-20 lg:py-28 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+        <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400 mb-3">
+          <span class="w-6 h-px bg-champagne-400"></span>
+          Đánh Giá Thực Tế
+          <span class="w-6 h-px bg-champagne-400"></span>
+        </div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-50">
+          Niềm Tin Từ <span class="text-gold-gradient italic">Chủ Xe & Chủ Gara</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Testimonial 1 -->
+        <blockquote class="reveal glass-panel rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-champagne-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
+            </div>
+            <p class="text-sm text-slate-300 leading-relaxed italic">
+              "Tôi chuyển sang dùng Apex Gold Full Synthetic 5W-30 cho chiếc Mercedes GLC 300 hơn 2 năm nay. Cảm nhận rõ rệt nhất là máy nổ rất êm, chạy đường dài Đà Nẵng – Quy Nhơn nhiệt độ dầu cực ổn định và tới mốc 9.500 km xả ra nhớt vẫn còn độ sánh đẹp."
+            </p>
+          </div>
+          <div class="flex items-center gap-3.5 mt-6 pt-5 border-t border-champagne-400/15">
+            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-champagne-400 to-amberoil flex items-center justify-center text-obsidian-900 font-serif font-bold">
+              MQ
+            </div>
+            <div>
+              <p class="text-sm font-bold text-slate-100">Anh Minh Quân</p>
+              <p class="text-xs text-slate-400">Chủ xe Mercedes GLC 300 • Hải Châu, Đà Nẵng</p>
+            </div>
+          </div>
+        </blockquote>
+
+        <!-- Testimonial 2 -->
+        <blockquote class="reveal glass-panel rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-champagne-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
+            </div>
+            <p class="text-sm text-slate-300 leading-relaxed italic">
+              "Gara của tôi nhập sỉ dòng Apex 5W-30, 0W-20 Hybrid và phụ gia Engine Flush. Chính sách chiết khấu rõ ràng, giao hàng trong ngày và khách hàng quay lại bảo dưỡng định kỳ tăng hơn 40% nhờ chất lượng nhớt quá thuyết phục."
+            </p>
+          </div>
+          <div class="flex items-center gap-3.5 mt-6 pt-5 border-t border-champagne-400/15">
+            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-champagne-400 to-amberoil flex items-center justify-center text-obsidian-900 font-serif font-bold">
+              TH
+            </div>
+            <div>
+              <p class="text-sm font-bold text-slate-100">Anh Tuấn Hải</p>
+              <p class="text-xs text-slate-400">Giám đốc Auto Care 365 • TP. Thủ Đức, TP.HCM</p>
+            </div>
+          </div>
+        </blockquote>
+
+        <!-- Testimonial 3 -->
+        <blockquote class="reveal glass-panel rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-1 text-champagne-400 mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
+            </div>
+            <p class="text-sm text-slate-300 leading-relaxed italic">
+              "Anh em trong hội PKL chạy tour Tây Bắc cực mê chai Apex Ester Racing 10W-40. Sang số nhẹ tênh, không bị trượt nồi khi kéo tua cao và máy mát hơn hẳn lúc kẹt xe nội thành. Đóng gói tem niêm phong chuẩn chỉnh, rất yên tâm."
+            </p>
+          </div>
+          <div class="flex items-center gap-3.5 mt-6 pt-5 border-t border-champagne-400/15">
+            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-champagne-400 to-amberoil flex items-center justify-center text-obsidian-900 font-serif font-bold">
+              ĐK
+            </div>
+            <div>
+              <p class="text-sm font-bold text-slate-100">Anh Đức Khôi</p>
+              <p class="text-xs text-slate-400">Trưởng CLB Biker Miền Bắc • Cầu Giấy, Hà Nội</p>
+            </div>
+          </div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 8. CONSULTATION & WHOLESALE QUOTE FORM                                -->
+  <!-- ===================================================================== -->
+  <section id="lien-he" class="py-20 lg:py-28 relative bg-obsidian-950/75 border-t border-champagne-400/15">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-stretch">
+        <!-- Left Showroom / Warehouse Info -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-6 reveal">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400 mb-3">
+              <span class="w-8 h-px bg-champagne-400"></span>
+              Kết Nối Chuyên Gia
+            </div>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-50 leading-tight">
+              Đăng Ký Nhận <span class="text-gold-gradient italic">Báo Giá Sỉ</span> & Tư Vấn
+            </h2>
+            <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+              Để lại thông tin để nhận bảng giá chiết khấu đại lý mới nhất, catalog thông số kỹ thuật TDS hoặc tư vấn chọn loại nhớt tối ưu cho đội xe của bạn.
+            </p>
+          </div>
+
+          <div class="glass-panel rounded-2xl p-6 space-y-5">
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/15 border border-champagne-400/30 flex items-center justify-center text-champagne-300">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-champagne-300 font-semibold">Showroom & Tổng Kho Miền Trung</p>
+                <p class="text-sm text-slate-200 mt-0.5">268 Ngô Quyền, P. An Hải, TP. Đà Nẵng</p>
+                <p class="text-xs text-slate-400 mt-1">Kho phân phối: KCN Tân Bình (TP.HCM) & Long Biên (Hà Nội)</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/15 border border-champagne-400/30 flex items-center justify-center text-champagne-300">
+                <i data-lucide="phone-call" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-champagne-300 font-semibold">Hotline & Zalo Tư Vấn 24/7</p>
+                <a href="tel:0905888666" class="text-base font-bold text-slate-100 hover:text-champagne-300 transition-colors">0905 888 666</a>
+                <p class="text-xs text-slate-400">Zalo OA: HUNG.NHOT VIETNAM Official</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/15 border border-champagne-400/30 flex items-center justify-center text-champagne-300">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-champagne-300 font-semibold">Email Kinh Doanh & B2B</p>
+                <p class="text-sm text-slate-200">kinhdoanh@apexlube.vn</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <div class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/15 border border-champagne-400/30 flex items-center justify-center text-champagne-300">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-champagne-300 font-semibold">Giờ Làm Việc</p>
+                <p class="text-sm text-slate-200">Thứ 2 – Chủ Nhật: 07:30 – 20:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Consultation Form -->
+        <div class="lg:col-span-7 reveal">
+          <form id="consultation-form" novalidate class="glass-panel rounded-3xl p-6 sm:p-8 lg:p-10 h-full flex flex-col justify-between shadow-luxury">
+            <div class="space-y-5">
+              <div class="flex items-center justify-between pb-4 border-b border-champagne-400/15">
+                <h3 class="font-serif text-2xl font-bold text-slate-100">Gửi Yêu Cầu Tư Vấn</h3>
+                <span class="text-xs px-3 py-1 rounded-full bg-champagne-400/15 text-champagne-300 border border-champagne-400/30">Phản hồi trong 15 phút</span>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="consult-name" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Họ và tên <span class="text-amberoil">*</span></label>
+                  <input id="consult-name" type="text" placeholder="Nguyễn Văn A" required class="w-full px-4 py-3 rounded-xl bg-obsidian-900 border border-champagne-400/20 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-champagne-300 transition-colors" />
+                  <p id="err-consult-name" class="text-xs text-rose-400 mt-1 hidden"></p>
+                </div>
+
+                <div>
+                  <label for="consult-phone" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Số điện thoại / Zalo <span class="text-amberoil">*</span></label>
+                  <input id="consult-phone" type="tel" placeholder="0905 xxx xxx" required class="w-full px-4 py-3 rounded-xl bg-obsidian-900 border border-champagne-400/20 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-champagne-300 transition-colors" />
+                  <p id="err-consult-phone" class="text-xs text-rose-400 mt-1 hidden"></p>
+                </div>
+              </div>
+
+              <div>
+                <label for="consult-need" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Nhu cầu hợp tác / mua hàng <span class="text-amberoil">*</span></label>
+                <select id="consult-need" class="w-full px-4 py-3 rounded-xl bg-obsidian-900 border border-champagne-400/20 text-sm text-slate-100 focus:outline-none focus:border-champagne-300 transition-colors">
+                  <option value="Mua lẻ">Mua lẻ cho xe cá nhân</option>
+                  <option value="Mở đại lý">Mở đại lý phân phối khu vực</option>
+                  <option value="Nhập cho Gara">Nhập sỉ cho Gara / Trung tâm chăm sóc xe</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="consult-note" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2">Dòng xe / Sản lượng dự kiến / Ghi chú</label>
+                <textarea id="consult-note" rows="4" placeholder="Ví dụ: Tư vấn nhớt cho Mazda CX-5 2024 hoặc gửi bảng giá sỉ xô 18L / phuy 200L cho Gara tại Đà Nẵng..." class="w-full px-4 py-3 rounded-xl bg-obsidian-900 border border-champagne-400/20 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-champagne-300 transition-colors resize-none"></textarea>
+              </div>
+            </div>
+
+            <div class="pt-6 mt-4">
+              <button type="submit" class="w-full py-4 rounded-xl btn-gold font-bold text-sm tracking-wide flex items-center justify-center gap-2 shadow-gold">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Gửi Đăng Ký Nhận Báo Giá Ngay</span>
+              </button>
+              <p class="text-[11px] text-slate-400 text-center mt-3">
+                Thông tin của bạn được bảo mật tuyệt đối theo chính sách khách hàng của HUNG.NHOT VIETNAM.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- 10. LUXURY FOOTER                                                     -->
+  <!-- ===================================================================== -->
+  <footer class="bg-obsidian-950 border-t border-champagne-400/20 pt-16 pb-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-champagne-400/15">
+        <!-- Brand Column -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-obsidian-900 border border-champagne-400/35 flex items-center justify-center">
+              <i data-lucide="droplet" class="w-5 h-5 text-champagne-400 fill-champagne-400/30"></i>
+            </div>
+            <div>
+              <span class="block font-serif text-lg font-bold text-gold-gradient">HUNG.NHOT</span>
+              <span class="block text-[10px] uppercase tracking-[0.22em] text-slate-400">Vietnam Lubricants</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Hệ thống phân phối dầu nhớt tổng hợp toàn phần, dầu thủy lực và phụ gia bảo vệ động cơ cao cấp. Đồng hành bền bỉ cùng hàng trăm nghìn chủ xe và đối tác Gara tại Việt Nam.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-serif text-base font-bold text-champagne-200 mb-4">Điều Hướng Nhanh</h4>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><a href="#tong-quan" class="hover:text-champagne-300 transition-colors">Tổng quan & Công nghệ Ester</a></li>
+            <li><a href="#tra-cuu-nhot" class="hover:text-champagne-300 transition-colors">Tra cứu dầu nhớt theo xe</a></li>
+            <li><a href="#san-pham" class="hover:text-champagne-300 transition-colors">Bộ sưu tập sản phẩm</a></li>
+            <li><a href="#dai-ly-b2b" class="hover:text-champagne-300 transition-colors">Chính sách Đại lý & Gara</a></li>
+          </ul>
+        </div>
+
+        <!-- Product Lines -->
+        <div>
+          <h4 class="font-serif text-base font-bold text-champagne-200 mb-4">Dòng Sản Phẩm Chủ Lực</h4>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li><button type="button" onclick="quickFilterCategory('car')" class="hover:text-champagne-300 transition-colors text-left">Dầu nhớt Ô tô API SP / Hybrid</button></li>
+            <li><button type="button" onclick="quickFilterCategory('bike')" class="hover:text-champagne-300 transition-colors text-left">Dầu nhớt Xe tay ga & Mô tô PKL</button></li>
+            <li><button type="button" onclick="quickFilterCategory('industrial')" class="hover:text-champagne-300 transition-colors text-left">Dầu Diesel Xe tải & Thủy lực AW 68</button></li>
+            <li><button type="button" onclick="quickFilterCategory('additive')" class="hover:text-champagne-300 transition-colors text-left">Phụ gia súc rửa động cơ chuyên sâu</button></li>
+          </ul>
+        </div>
+
+        <!-- Policies & Legal -->
+        <div>
+          <h4 class="font-serif text-base font-bold text-champagne-200 mb-4">Cam Kết & Chính Sách</h4>
+          <ul class="space-y-2.5 text-sm text-slate-400">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-champagne-400"></i> Cam kết đền 200% nếu phát hiện hàng giả</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-champagne-400"></i> Miễn phí giao hàng đơn từ 1.000.000đ</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-champagne-400"></i> Đổi trả miễn phí trong 7 ngày nguyên seal</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-champagne-400"></i> Xuất hóa đơn VAT đầy đủ theo yêu cầu</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2026 HUNG.NHOT VIETNAM. Bản quyền thuộc về Công ty TNHH Giải Pháp Bôi Trơn Apex Việt Nam.</p>
+        <p>Thiết kế chuẩn Responsive • Sẵn sàng triển khai Vercel</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- FLOATING QUICK-ACTION BUTTONS (ZALO, HOTLINE, SCROLL-TO-TOP)          -->
+  <!-- ===================================================================== -->
+  <div class="fixed bottom-5 right-5 z-40 flex flex-col items-center gap-3">
+    <!-- Scroll to Top -->
+    <button id="scroll-top-btn" type="button" aria-label="Lên đầu trang" class="w-11 h-11 rounded-full bg-obsidian-800/90 border border-champagne-400/40 text-champagne-300 shadow-luxury flex items-center justify-center opacity-0 pointer-events-none translate-y-3 transition-all duration-300 hover:bg-champagne-400 hover:text-obsidian-900">
+      <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- Zalo Quick Chat -->
+    <a href="https://zalo.me/0905888666" target="_blank" rel="noopener noreferrer" aria-label="Chat Zalo HUNG.NHOT" class="w-12 h-12 rounded-full bg-[#0068FF] text-white shadow-lg flex items-center justify-center font-bold text-xs tracking-tight hover:scale-110 transition-transform ring-2 ring-white/20">
+      Zalo
+    </a>
+
+    <!-- Hotline Pulse -->
+    <a href="tel:0905888666" aria-label="Gọi Hotline 0905 888 666" class="relative w-12 h-12 rounded-full btn-gold shadow-gold flex items-center justify-center hover:scale-110 transition-transform">
+      <span class="absolute inset-0 rounded-full bg-champagne-400 animate-ping opacity-30"></span>
+      <i data-lucide="phone" class="w-5 h-5 relative z-10"></i>
+    </a>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- TECHNICAL DATASHEET MODAL ("XEM THÔNG SỐ")                            -->
+  <!-- ===================================================================== -->
+  <div id="datasheet-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="glass-panel rounded-3xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-luxury relative">
+      <div class="sticky top-0 z-10 bg-obsidian-900/95 backdrop-blur-md px-6 py-4 border-b border-champagne-400/20 flex items-center justify-between">
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.24em] text-champagne-400 font-semibold">Technical Data Sheet (TDS)</p>
+          <h3 id="tds-title" class="font-serif text-xl font-bold text-slate-100">Thông Số Kỹ Thuật</h3>
+        </div>
+        <button id="close-tds-modal" type="button" aria-label="Đóng thông số" class="p-2 rounded-xl bg-obsidian-800 text-slate-300 hover:text-champagne-300 transition-colors">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div id="tds-content" class="p-6 space-y-6">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- 9. SLIDE-OVER SHOPPING CART DRAWER                                    -->
+  <!-- ===================================================================== -->
+  <div id="cart-overlay" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-sm transition-opacity duration-300 opacity-0">
+    <aside id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-obsidian-900 border-l border-champagne-400/25 flex flex-col translate-x-full transition-transform duration-300 shadow-luxury">
+      <!-- Drawer Header -->
+      <div class="px-6 py-5 border-b border-champagne-400/20 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="shopping-bag" class="w-5 h-5 text-champagne-400"></i>
+          <h3 class="font-serif text-xl font-bold text-slate-100">Giỏ Hàng Của Bạn</h3>
+          <span id="cart-drawer-count" class="text-xs px-2 py-0.5 rounded-full bg-champagne-400/20 text-champagne-300 font-semibold">0</span>
+        </div>
+        <button id="close-cart-btn" type="button" aria-label="Đóng giỏ hàng" class="p-2 rounded-xl bg-obsidian-800 text-slate-300 hover:text-champagne-300">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Free Shipping Progress Bar -->
+      <div class="px-6 py-3.5 bg-obsidian-950/70 border-b border-champagne-400/15">
+        <div class="flex items-center justify-between text-xs mb-2">
+          <span id="shipping-status-text" class="text-slate-300">Mua thêm <strong class="text-champagne-300">1.000.000đ</strong> để miễn phí vận chuyển</span>
+          <i data-lucide="truck" class="w-4 h-4 text-champagne-400 shrink-0"></i>
+        </div>
+        <div class="w-full h-2 rounded-full bg-obsidian-800 overflow-hidden">
+          <div id="shipping-progress-bar" class="h-full rounded-full bg-gradient-to-r from-champagne-500 via-champagne-300 to-amberoil transition-all duration-500" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Cart Items List -->
+      <div id="cart-items-container" class="flex-1 overflow-y-auto px-6 py-4 space-y-3.5">
+        <!-- Populated dynamically -->
+      </div>
+
+      <!-- Cart Footer Summary -->
+      <div class="px-6 py-5 border-t border-champagne-400/20 bg-obsidian-950/90 space-y-4">
+        <div class="space-y-1.5 text-sm">
+          <div class="flex items-center justify-between text-slate-400">
+            <span>Tạm tính</span>
+            <span id="cart-subtotal" class="text-slate-200 font-medium">0đ</span>
+          </div>
+          <div class="flex items-center justify-between text-slate-400">
+            <span>Phí vận chuyển</span>
+            <span id="cart-shipping-fee" class="text-slate-200 font-medium">35.000đ</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t border-champagne-400/15">
+            <span class="font-semibold text-slate-100">Tổng thanh toán</span>
+            <span id="cart-total" class="font-serif text-xl font-bold text-gold-gradient">0đ</span>
+          </div>
+        </div>
+
+        <div class="flex gap-2.5">
+          <button id="clear-cart-btn" type="button" class="px-4 py-3.5 rounded-xl bg-obsidian-800 border border-slate-700 hover:border-rose-500/50 text-slate-300 hover:text-rose-300 text-xs font-semibold transition-colors">
+            Xóa hết
+          </button>
+          <button id="proceed-checkout-btn" type="button" class="flex-1 py-3.5 rounded-xl btn-gold font-bold text-sm tracking-wide flex items-center justify-center gap-2 disabled:opacity-40 disabled:pointer-events-none">
+            <span>Tiến hành đặt hàng</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- ORDER CHECKOUT & RECEIPT MODAL                                        -->
+  <!-- ===================================================================== -->
+  <div id="checkout-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="glass-panel rounded-3xl w-full max-w-2xl max-h-[92vh] overflow-y-auto shadow-luxury">
+      <div class="sticky top-0 z-10 bg-obsidian-900/95 backdrop-blur-md px-6 py-4 border-b border-champagne-400/20 flex items-center justify-between">
+        <div>
+          <p class="text-[10px] uppercase tracking-[0.22em] text-champagne-400 font-semibold">HUNG.NHOT E-Commerce</p>
+          <h3 id="checkout-modal-heading" class="font-serif text-xl font-bold text-slate-100">Xác Nhận Đặt Hàng</h3>
+        </div>
+        <button id="close-checkout-modal" type="button" aria-label="Đóng thanh toán" class="p-2 rounded-xl bg-obsidian-800 text-slate-300 hover:text-champagne-300">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Checkout Form View -->
+      <form id="checkout-form" novalidate class="p-6 space-y-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="order-name" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Họ và tên người nhận <span class="text-amberoil">*</span></label>
+            <input id="order-name" type="text" required placeholder="Trần Minh Hoàng" class="w-full px-4 py-3 rounded-xl bg-obsidian-900 border border-champagne-400/20 text-sm text-slate-100 focus:outline-none focus:border-champagne-300" />
+          </div>
+          <div>
+            <label for="order-phone" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Số điện thoại <span class="text-amberoil">*</span></label>
+            <input id="order-phone" type="tel" required placeholder="0905 xxx xxx" class="w-full px-4 py-3 rounded-xl bg-obsidian-900 border border-champagne-400/20 text-sm text-slate-100 focus:outline-none focus:border-champagne-300" />
+          </div>
+        </div>
+
+        <div>
+          <label for="order-address" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">Địa chỉ giao hàng chi tiết <span class="text-amberoil">*</span></label>
+          <input id="order-address" type="text" required placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành phố" class="w-full px-4 py-3 rounded-xl bg-obsidian-900 border border-champagne-400/20 text-sm text-slate-100 focus:outline-none focus:border-champagne-300" />
+        </div>
+
+        <!-- Payment Method Selection -->
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-300 mb-2.5">Phương thức thanh toán</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <label class="cursor-pointer flex items-start gap-3 p-3.5 rounded-xl bg-obsidian-900 border border-champagne-400/30 has-[:checked]:border-champagne-300 has-[:checked]:bg-champagne-400/10 transition-all">
+              <input type="radio" name="payment-method" value="COD" checked class="mt-1 accent-champagne-400" />
+              <div>
+                <p class="text-sm font-semibold text-slate-100">Thanh toán khi nhận hàng (COD)</p>
+                <p class="text-xs text-slate-400 mt-0.5">Kiểm tra nguyên tem niêm phong trước khi trả tiền</p>
+              </div>
+            </label>
+            <label class="cursor-pointer flex items-start gap-3 p-3.5 rounded-xl bg-obsidian-900 border border-champagne-400/30 has-[:checked]:border-champagne-300 has-[:checked]:bg-champagne-400/10 transition-all">
+              <input type="radio" name="payment-method" value="QR" class="mt-1 accent-champagne-400" />
+              <div>
+                <p class="text-sm font-semibold text-slate-100">Chuyển khoản ngân hàng QR</p>
+                <p class="text-xs text-slate-400 mt-0.5">Xác nhận tự động, ưu tiên đóng gói hỏa tốc</p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Bank Transfer QR Box (Shown when QR is selected) -->
+        <div id="qr-payment-box" class="hidden p-4 rounded-2xl bg-obsidian-950 border border-champagne-400/25 flex flex-col sm:flex-row items-center gap-4">
+          <div class="w-28 h-28 shrink-0 rounded-xl bg-white p-2 flex items-center justify-center">
+            <!-- Stylized Vector QR Pattern -->
+            <svg viewBox="0 0 100 100" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="100" fill="#FFFFFF" />
+              <rect x="6" y="6" width="26" height="26" fill="#090D16" />
+              <rect x="11" y="11" width="16" height="16" fill="#FFFFFF" />
+              <rect x="15" y="15" width="8" height="8" fill="#090D16" />
+              <rect x="68" y="6" width="26" height="26" fill="#090D16" />
+              <rect x="73" y="11" width="16" height="16" fill="#FFFFFF" />
+              <rect x="77" y="15" width="8" height="8" fill="#090D16" />
+              <rect x="6" y="68" width="26" height="26" fill="#090D16" />
+              <rect x="11" y="73" width="16" height="16" fill="#FFFFFF" />
+              <rect x="15" y="77" width="8" height="8" fill="#090D16" />
+              <rect x="38" y="8" width="8" height="8" fill="#090D16" />
+              <rect x="52" y="8" width="8" height="8" fill="#090D16" />
+              <rect x="44" y="20" width="12" height="12" fill="#B68D2C" />
+              <rect x="10" y="42" width="12" height="8" fill="#090D16" />
+              <rect x="28" y="40" width="10" height="16" fill="#090D16" />
+              <rect x="44" y="42" width="16" height="16" fill="#090D16" />
+              <rect x="66" y="40" width="10" height="12" fill="#090D16" />
+              <rect x="82" y="44" width="12" height="10" fill="#090D16" />
+              <rect x="42" y="66" width="12" height="10" fill="#090D16" />
+              <rect x="60" y="64" width="14" height="14" fill="#090D16" />
+              <rect x="80" y="68" width="12" height="24" fill="#090D16" />
+              <rect x="40" y="84" width="24" height="10" fill="#090D16" />
+            </svg>
+          </div>
+          <div class="text-xs space-y-1.5 flex-1 text-center sm:text-left">
+            <p class="font-bold text-champagne-200 text-sm">Ngân hàng TMCP Kỹ Thương (Techcombank)</p>
+            <p class="text-slate-300">Chủ TK: <strong class="text-slate-100">CONG TY TNHH HUNG.NHOT VIETNAM</strong></p>
+            <div class="flex items-center justify-center sm:justify-start gap-2">
+              <span class="text-slate-300">Số TK: <strong id="bank-account-no" class="text-champagne-300 text-sm">1903 8888 6666 88</strong></span>
+              <button id="copy-bank-btn" type="button" class="px-2.5 py-1 rounded-lg bg-champagne-400/15 border border-champagne-400/35 text-champagne-200 hover:bg-champagne-400/25 text-[11px] font-semibold">
+                Sao chép
+              </button>
+            </div>
+            <p class="text-slate-400">Nội dung CK: <span class="text-slate-200">APEX + Số điện thoại của bạn</span></p>
+          </div>
+        </div>
+
+        <!-- Order Mini Summary -->
+        <div id="checkout-summary-box" class="p-4 rounded-2xl bg-obsidian-950/80 border border-champagne-400/15 space-y-2 text-sm">
+          <!-- Populated dynamically -->
+        </div>
+
+        <p id="checkout-error-msg" class="text-xs text-rose-400 hidden"></p>
+
+        <button type="submit" class="w-full py-4 rounded-xl btn-gold font-bold text-sm tracking-wide shadow-gold flex items-center justify-center gap-2">
+          <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+          <span>Hoàn Tất Đặt Hàng</span>
+        </button>
+      </form>
+
+      <!-- Instant Order Confirmation Receipt View -->
+      <div id="checkout-receipt" class="hidden p-6 sm:p-8 text-center space-y-6">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- LUXURY TOAST NOTIFICATION CONTAINER                                   -->
+  <!-- ===================================================================== -->
+  <div id="toast-container" class="fixed top-24 right-4 z-[60] flex flex-col gap-2.5 pointer-events-none max-w-sm w-[calc(100vw-2rem)]"></div>
+
+  <!-- ===================================================================== -->
+  <!-- APPLICATION JAVASCRIPT (DATA, SVG GENERATOR, FINDER, CART, ANIMATION) -->
+  <!-- ===================================================================== -->
+  <script>
+    // =========================================================================
+    // 1. PRODUCT CATALOG DATABASE (8 REALISTIC VIETNAMESE ENGINE OIL PRODUCTS)
+    // =========================================================================
+    const PRODUCTS = [
+      {
+        id: 'apex-gold-5w30',
+        name: 'Apex Gold Full Synthetic 5W-30',
+        subtitle: 'Tổng hợp toàn phần Ester • Bảo vệ tối đa xe sang & SUV',
+        category: 'car',
+        categoryLabel: 'Dầu nhớt Ô tô',
+        viscosity: '5W-30',
+        standard: 'API SP / ACEA C3',
+        tierColor: { primary: '#E8C96D', secondary: '#B68D2C', accent: '#F59E0B', body: '#141B2B' },
+        packaging: 'canister',
+        badge: 'Bán chạy nhất',
+        variants: [
+          { size: '1L', price: 295000 },
+          { size: '4L', price: 1090000 },
+          { size: 'Xô 18L', price: 4550000 },
+        ],
+        tds: {
+          vis40: '64.2 cSt',
+          vis100: '11.4 cSt',
+          viIndex: '174',
+          flashPoint: '238°C',
+          pourPoint: '-42°C',
+          standards: 'API SP, ACEA C3, MB 229.51, BMW LL-04, VW 504.00/507.00',
+          interval: '8.000 – 10.000 km',
+          application: 'Phù hợp cho xe ô tô máy xăng & diesel hiện đại trang bị Turbo tăng áp, bộ lọc hạt DPF/GPF (Mercedes, BMW, Mazda, Hyundai, Kia, Ford, Toyota...).',
+        },
+      },
+      {
+        id: 'apex-ester-10w40',
+        name: 'Apex Ester Racing 10W-40',
+        subtitle: 'Công nghệ Ester-Core • Sang số mượt, chống trượt ly hợp',
+        category: 'bike',
+        categoryLabel: 'Dầu nhớt Xe máy',
+        viscosity: '10W-40',
+        standard: 'JASO MA2 / API SN+',
+        tierColor: { primary: '#FB7185', secondary: '#BE123C', accent: '#F59E0B', body: '#19121C' },
+        packaging: 'bottle',
+        badge: 'Xe số & PKL',
+        variants: [
+          { size: '1L', price: 310000 },
+          { size: 'Combo 2L', price: 595000 },
+          { size: 'Thùng 12L', price: 3450000 },
+        ],
+        tds: {
+          vis40: '92.5 cSt',
+          vis100: '14.6 cSt',
+          viIndex: '165',
+          flashPoint: '234°C',
+          pourPoint: '-36°C',
+          standards: 'API SN Plus, JASO MA2 (T903:2016)',
+          interval: '3.000 – 4.000 km',
+          application: 'Tối ưu cho xe côn tay, xe số cao cấp và mô tô phân khối lớn (Winner X, Exciter, Ducati, Kawasaki, Honda CB/CBR, BMW Motorrad).',
+        },
+      },
+      {
+        id: 'apex-scooter-5w40',
+        name: 'Apex Scooter Pro 5W-40',
+        subtitle: 'Chuyên biệt cho xe tay ga đô thị • Mát máy, bốc ga',
+        category: 'bike',
+        categoryLabel: 'Dầu nhớt Xe máy',
+        viscosity: '5W-40',
+        standard: 'JASO MB / API SP',
+        tierColor: { primary: '#60A5FA', secondary: '#1D4ED8', accent: '#D4AF37', body: '#0F192B' },
+        packaging: 'bottle',
+        badge: 'Chuyên Tay Ga',
+        variants: [
+          { size: '0.8L', price: 215000 },
+          { size: '1L', price: 255000 },
+          { size: 'Thùng 12L', price: 2880000 },
+        ],
+        tds: {
+          vis40: '84.8 cSt',
+          vis100: '13.9 cSt',
+          viIndex: '169',
+          flashPoint: '230°C',
+          pourPoint: '-39°C',
+          standards: 'API SP, JASO MB (Giảm ma sát ly hợp khô)',
+          interval: '2.500 – 3.500 km',
+          application: 'Thiết kế riêng cho động cơ tay ga 4 thì (Honda SH, Vario, Air Blade, Lead, Yamaha NVX, Grande, Piaggio Vespa) vận hành nhiều trong đô thị.',
+        },
+      },
+      {
+        id: 'apex-hybrid-0w20',
+        name: 'Apex Hybrid Ultra 0W-20',
+        subtitle: 'Siêu lỏng tiết kiệm nhiên liệu • Bảo vệ động cơ Hybrid & Start-Stop',
+        category: 'car',
+        categoryLabel: 'Dầu nhớt Ô tô',
+        viscosity: '0W-20',
+        standard: 'API SP / ILSAC GF-6A',
+        tierColor: { primary: '#34D399', secondary: '#047857', accent: '#E8C96D', body: '#0E1F1B' },
+        packaging: 'canister',
+        badge: 'Chuẩn Hybrid',
+        variants: [
+          { size: '1L', price: 340000 },
+          { size: '4L', price: 1280000 },
+        ],
+        tds: {
+          vis40: '43.5 cSt',
+          vis100: '8.4 cSt',
+          viIndex: '172',
+          flashPoint: '228°C',
+          pourPoint: '-45°C',
+          standards: 'API SP Resource Conserving, ILSAC GF-6A, Dexos1 Gen 3',
+          interval: '10.000 km',
+          application: 'Chuyên dùng cho các dòng xe Hybrid, Turbo phun xăng trực tiếp (Toyota Corolla Cross HEV, Camry Hybrid, Honda CR-V e:HEV, Lexus, Mazda SkyActiv).',
+        },
+      },
+      {
+        id: 'apex-diesel-15w40',
+        name: 'Apex Heavy Duty Diesel 15W-40',
+        subtitle: 'Chịu tải cực đại • Chống muội than cho xe tải & đầu kéo',
+        category: 'industrial',
+        categoryLabel: 'Dầu Xe tải & Công nghiệp',
+        viscosity: '15W-40',
+        standard: 'API CK-4 / CI-4',
+        tierColor: { primary: '#FBBF24', secondary: '#B45309', accent: '#FDE68A', body: '#1F1912' },
+        packaging: 'drum',
+        badge: 'Tải nặng CK-4',
+        variants: [
+          { size: '4L', price: 520000 },
+          { size: 'Xô 18L', price: 2150000 },
+          { size: 'Phuy 200L', price: 21800000 },
+        ],
+        tds: {
+          vis40: '114.0 cSt',
+          vis100: '15.2 cSt',
+          viIndex: '140',
+          flashPoint: '236°C',
+          pourPoint: '-30°C',
+          standards: 'API CK-4/CI-4 Plus, ACEA E9, Volvo VDS-4.5, Cummins CES 20086',
+          interval: '15.000 – 25.000 km',
+          application: 'Dành cho xe bán tải máy dầu, xe tải đường dài, xe đầu kéo container, máy công trình hạng nặng hoạt động liên tục cường độ cao.',
+        },
+      },
+      {
+        id: 'apex-hydraulic-aw68',
+        name: 'Apex Hydraulic AW 68',
+        subtitle: 'Dầu thủy lực chống mài mòn áp suất cao • Tách nước nhanh',
+        category: 'industrial',
+        categoryLabel: 'Dầu Xe tải & Công nghiệp',
+        viscosity: 'ISO VG 68',
+        standard: 'DIN 51524-2 HLP',
+        tierColor: { primary: '#94A3B8', secondary: '#475569', accent: '#D4AF37', body: '#131A26' },
+        packaging: 'drum',
+        badge: 'Công nghiệp',
+        variants: [
+          { size: 'Xô 18L', price: 1680000 },
+          { size: 'Phuy 200L', price: 16900000 },
+        ],
+        tds: {
+          vis40: '68.0 cSt',
+          vis100: '8.9 cSt',
+          viIndex: '104',
+          flashPoint: '232°C',
+          pourPoint: '-24°C',
+          standards: 'DIN 51524 Part 2 (HLP), ISO 11158 HM, Parker Denison HF-0',
+          interval: '2.000 – 4.000 giờ máy',
+          application: 'Hệ thống thủy lực máy ép nhựa, máy CNC, cần cẩu, xe đào, dây chuyền sản xuất công nghiệp vận hành dưới áp suất và nhiệt độ cao.',
+        },
+      },
+      {
+        id: 'apex-engine-flush',
+        name: 'Apex Engine Flush Pro',
+        subtitle: 'Phụ gia súc rửa cặn bùn & muội carbon bên trong động cơ',
+        category: 'additive',
+        categoryLabel: 'Phụ gia chăm sóc',
+        viscosity: 'FLUSH',
+        standard: 'An toàn gioăng phớt',
+        tierColor: { primary: '#F59E0B', secondary: '#92400E', accent: '#FEF3C7', body: '#1A1410' },
+        packaging: 'additive',
+        badge: 'Chăm sóc máy',
+        variants: [
+          { size: '300ml (Ô tô/Xe máy)', price: 185000 },
+          { size: '500ml (Gara Pro)', price: 280000 },
+        ],
+        tds: {
+          vis40: '12.4 cSt',
+          vis100: '3.2 cSt',
+          viIndex: '115',
+          flashPoint: '118°C',
+          pourPoint: '-33°C',
+          standards: 'Không chứa dung môi clo gây hại phớt cao su & cảm biến',
+          interval: 'Mỗi 2 – 3 kỳ thay nhớt',
+          application: 'Đổ trực tiếp vào nhớt cũ trước khi xả, chạy không tải 10 phút giúp hòa tan hoàn toàn cặn bùn, làm sạch vòng bạc xéc-măng và đường dẫn dầu.',
+        },
+      },
+      {
+        id: 'apex-gear-80w90',
+        name: 'Apex Gear Oil 80W-90 GL-5',
+        subtitle: 'Dầu cầu & hộp số chịu cực áp EP • Chống hú vi sai',
+        category: 'industrial',
+        categoryLabel: 'Dầu Xe tải & Công nghiệp',
+        viscosity: '80W-90',
+        standard: 'API GL-5 / MT-1',
+        tierColor: { primary: '#C084FC', secondary: '#6B21A8', accent: '#E8C96D', body: '#181224' },
+        packaging: 'canister',
+        badge: 'Hộp số & Cầu',
+        variants: [
+          { size: '1L', price: 195000 },
+          { size: '4L', price: 720000 },
+          { size: 'Xô 18L', price: 2950000 },
+        ],
+        tds: {
+          vis40: '138.0 cSt',
+          vis100: '14.5 cSt',
+          viIndex: '103',
+          flashPoint: '218°C',
+          pourPoint: '-27°C',
+          standards: 'API GL-5, API MT-1, MIL-PRF-2105E, SAE J2360',
+          interval: '40.000 km',
+          application: 'Bảo vệ bánh răng truyền động hypoid, hộp số sàn và cầu sau chịu tải nặng trên xe du lịch, xe bán tải 2 cầu và xe tải thương mại.',
+        },
+      },
+    ];
+
+    // =========================================================================
+    // 2. APPLICATION STATE & HELPERS
+    // =========================================================================
+    const FREE_SHIPPING_THRESHOLD = 1000000;
+    const STANDARD_SHIPPING_FEE = 35000;
+    const CART_STORAGE_KEY = 'apex_lube_cart_v1';
+
+    let currentCategory = 'all';
+    let currentSearch = '';
+    let currentSort = 'default';
+    // Track selected variant index per product card
+    const selectedVariants = {};
+    PRODUCTS.forEach((p) => { selectedVariants[p.id] = 0; });
+
+    let cart = [];
+
+    // Safe localStorage read/write
+    function loadCart() {
+      try {
+        const raw = localStorage.getItem(CART_STORAGE_KEY);
+        cart = raw ? JSON.parse(raw) : [];
+        if (!Array.isArray(cart)) cart = [];
+      } catch (err) {
+        cart = [];
+      }
+    }
+
+    function saveCart() {
+      try {
+        localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+      } catch (err) {
+        // Ignore quota/private-mode storage error
+      }
+    }
+
+    function formatVND(amount) {
+      return new Intl.NumberFormat('vi-VN').format(amount) + 'đ';
+    }
+
+    // =========================================================================
+    // 3. CUSTOM STYLIZED SVG OIL PACKAGING GENERATOR (UNIQUE GRADIENT IDS)
+    // =========================================================================
+    function generateProductSVG(product, uidSuffix = '') {
+      const uid = `${product.id}-${uidSuffix}`.replace(/[^a-zA-Z0-9-]/g, '');
+      const { primary, secondary, accent, body } = product.tierColor;
+
+      if (product.packaging === 'drum') {
+        // Industrial Xô / Phuy SVG
+        return `
+          <svg viewBox="0 0 220 220" class="w-40 h-40 mx-auto drop-shadow-[0_14px_24px_rgba(0,0,0,0.65)] transition-transform duration-500 group-hover:scale-105" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="drumBody-${uid}" x1="40" y1="30" x2="180" y2="195" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#283449" />
+                <stop offset="45%" stop-color="${body}" />
+                <stop offset="100%" stop-color="#070A12" />
+              </linearGradient>
+              <linearGradient id="drumAccent-${uid}" x1="45" y1="70" x2="175" y2="155" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="${primary}" />
+                <stop offset="55%" stop-color="${secondary}" />
+                <stop offset="100%" stop-color="${accent}" />
+              </linearGradient>
+            </defs>
+            <!-- Top Lid -->
+            <ellipse cx="110" cy="40" rx="64" ry="14" fill="#232E42" stroke="${primary}" stroke-width="1.5" />
+            <ellipse cx="138" cy="38" rx="10" ry="4" fill="${primary}" />
+            <!-- Cylinder Body -->
+            <path d="M46 40 L46 176 C46 186 75 194 110 194 C145 194 174 186 174 176 L174 40" fill="url(#drumBody-${uid})" stroke="rgba(212,175,55,0.45)" stroke-width="1.5" />
+            <!-- Structural Ribs -->
+            <path d="M46 74 C72 82 148 82 174 74" stroke="${primary}" stroke-opacity="0.45" stroke-width="3" />
+            <path d="M46 154 C72 162 148 162 174 154" stroke="${primary}" stroke-opacity="0.45" stroke-width="3" />
+            <!-- Center Label Band -->
+            <rect x="52" y="84" width="116" height="62" rx="8" fill="#090D16" stroke="url(#drumAccent-${uid})" stroke-width="1.5" />
+            <rect x="53" y="85" width="114" height="16" rx="6" fill="url(#drumAccent-${uid})" />
+            <text x="110" y="96" text-anchor="middle" fill="#090D16" font-family="Playfair Display, serif" font-weight="800" font-size="9" letter-spacing="1.5">HUNG.NHOT</text>
+            <text x="110" y="122" text-anchor="middle" fill="#F8FAFC" font-family="Be Vietnam Pro, sans-serif" font-weight="800" font-size="16">${product.viscosity}</text>
+            <text x="110" y="137" text-anchor="middle" fill="${primary}" font-family="Be Vietnam Pro, sans-serif" font-weight="600" font-size="7.5">${product.standard}</text>
+          </svg>
+        `;
+      }
+
+      if (product.packaging === 'bottle' || product.packaging === 'additive') {
+        const isAdditive = product.packaging === 'additive';
+        return `
+          <svg viewBox="0 0 220 220" class="w-40 h-40 mx-auto drop-shadow-[0_14px_24px_rgba(0,0,0,0.65)] transition-transform duration-500 group-hover:scale-105" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="btlBody-${uid}" x1="60" y1="45" x2="160" y2="205" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#29344A" />
+                <stop offset="45%" stop-color="${body}" />
+                <stop offset="100%" stop-color="#070A12" />
+              </linearGradient>
+              <linearGradient id="btlMetal-${uid}" x1="68" y1="80" x2="152" y2="180" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="${primary}" />
+                <stop offset="50%" stop-color="${secondary}" />
+                <stop offset="100%" stop-color="${accent}" />
+              </linearGradient>
+            </defs>
+            <!-- Cap -->
+            <rect x="94" y="18" width="32" height="17" rx="4" fill="url(#btlMetal-${uid})" />
+            <rect x="99" y="35" width="22" height="9" fill="${secondary}" />
+            <!-- Sleek 1L / Additive Bottle -->
+            <path d="${isAdditive ? 'M82 46 L138 46 C146 56 150 68 150 84 L150 188 C150 196 143 202 135 202 L85 202 C77 202 70 196 70 188 L70 84 C70 68 74 56 82 46 Z' : 'M92 44 L128 44 C146 56 156 76 156 96 L156 188 C156 197 148 204 139 204 L81 204 C72 204 64 197 64 188 L64 96 C64 76 74 56 92 44 Z'}" fill="url(#btlBody-${uid})" stroke="url(#btlMetal-${uid})" stroke-width="1.6" />
+            <!-- Specular Highlight -->
+            <line x1="145" y1="86" x2="145" y2="188" stroke="rgba(255,255,255,0.16)" stroke-width="3" stroke-linecap="round" />
+            <!-- Label -->
+            <rect x="75" y="88" width="70" height="98" rx="9" fill="#090D16" stroke="url(#btlMetal-${uid})" stroke-width="1.4" />
+            <path d="M76 96 C76 91 80 89 84 89 L136 89 C140 89 144 91 144 96 L144 108 L76 108 Z" fill="url(#btlMetal-${uid})" />
+            <text x="110" y="101" text-anchor="middle" fill="#090D16" font-family="Playfair Display, serif" font-weight="800" font-size="8" letter-spacing="1.2">HUNG.NHOT</text>
+            <path d="M110 116 C110 116 102 126 102 131.5 C102 135.8 105.6 139 110 139 C114.4 139 118 135.8 118 131.5 C118 126 110 116 110 116 Z" fill="url(#btlMetal-${uid})" />
+            <text x="110" y="159" text-anchor="middle" fill="#F8FAFC" font-family="Be Vietnam Pro, sans-serif" font-weight="800" font-size="14">${product.viscosity}</text>
+            <text x="110" y="174" text-anchor="middle" fill="${primary}" font-family="Be Vietnam Pro, sans-serif" font-weight="600" font-size="6.8">${isAdditive ? 'ENGINE CARE' : 'ESTER SYNTH'}</text>
+          </svg>
+        `;
+      }
+
+      // Default 4L Luxury Canister SVG
+      return `
+        <svg viewBox="0 0 220 220" class="w-40 h-40 mx-auto drop-shadow-[0_14px_24px_rgba(0,0,0,0.65)] transition-transform duration-500 group-hover:scale-105" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="canBody-${uid}" x1="40" y1="35" x2="180" y2="200" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#28344B" />
+              <stop offset="45%" stop-color="${body}" />
+              <stop offset="100%" stop-color="#070A12" />
+            </linearGradient>
+            <linearGradient id="canMetal-${uid}" x1="65" y1="70" x2="170" y2="185" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="${primary}" />
+              <stop offset="50%" stop-color="${secondary}" />
+              <stop offset="100%" stop-color="${accent}" />
+            </linearGradient>
+          </defs>
+          <!-- Cap -->
+          <rect x="128" y="18" width="28" height="15" rx="4" fill="url(#canMetal-${uid})" />
+          <rect x="132" y="33" width="20" height="8" fill="${secondary}" />
+          <!-- Canister Shape -->
+          <path d="M74 41 L154 41 C167 41 177 51 177 64 L177 186 C177 197 168 205 157 205 L63 205 C52 205 43 197 43 186 L43 84 C43 64 53 41 74 41 Z" fill="url(#canBody-${uid})" stroke="url(#canMetal-${uid})" stroke-width="1.6" />
+          <!-- Handle Cutout -->
+          <path d="M68 57 L92 57 C97 57 99 61 98 66 L83 110 C81 115 77 118 72 118 L60 118 C55 118 53 114 54 109 L63 63 C64 59 66 57 68 57 Z" fill="#090D16" stroke="${primary}" stroke-opacity="0.4" stroke-width="1.2" />
+          <!-- Metallic Highlight -->
+          <line x1="168" y1="58" x2="168" y2="185" stroke="rgba(255,255,255,0.16)" stroke-width="3" stroke-linecap="round" />
+          <!-- Label -->
+          <rect x="66" y="84" width="98" height="106" rx="10" fill="#090D16" stroke="url(#canMetal-${uid})" stroke-width="1.5" />
+          <path d="M67 93 C67 88 71 85 76 85 L154 85 C159 85 163 88 163 93 L163 106 L67 106 Z" fill="url(#canMetal-${uid})" />
+          <text x="115" y="99" text-anchor="middle" fill="#090D16" font-family="Playfair Display, serif" font-weight="800" font-size="9" letter-spacing="1.4">HUNG.NHOT</text>
+          <path d="M115 114 C115 114 106 125 106 131 C106 136 110 139.5 115 139.5 C120 139.5 124 136 124 131 C124 125 115 114 115 114 Z" fill="url(#canMetal-${uid})" />
+          <text x="115" y="160" text-anchor="middle" fill="#F8FAFC" font-family="Be Vietnam Pro, sans-serif" font-weight="800" font-size="18">${product.viscosity}</text>
+          <text x="115" y="177" text-anchor="middle" fill="${primary}" font-family="Be Vietnam Pro, sans-serif" font-weight="600" font-size="7.5">${product.standard}</text>
+        </svg>
+      `;
+    }
+
+    // =========================================================================
+    // 4. RENDER PRODUCT CATALOG GRID
+    // =========================================================================
+    function renderProducts() {
+      const grid = document.getElementById('product-grid');
+      const emptyEl = document.getElementById('product-empty');
+
+      let list = PRODUCTS.filter((p) => {
+        const matchesCat = currentCategory === 'all' || p.category === currentCategory;
+        const q = currentSearch.trim().toLowerCase();
+        const matchesSearch = !q ||
+          p.name.toLowerCase().includes(q) ||
+          p.viscosity.toLowerCase().includes(q) ||
+          p.standard.toLowerCase().includes(q) ||
+          p.subtitle.toLowerCase().includes(q);
+        return matchesCat && matchesSearch;
+      });
+
+      if (currentSort === 'price-asc') {
+        list.sort((a, b) => a.variants[0].price - b.variants[0].price);
+      } else if (currentSort === 'price-desc') {
+        list.sort((a, b) => b.variants[0].price - a.variants[0].price);
+      }
+
+      if (list.length === 0) {
+        grid.innerHTML = '';
+        emptyEl.classList.remove('hidden');
+        lucide.createIcons();
+        return;
+      }
+
+      emptyEl.classList.add('hidden');
+      grid.innerHTML = list.map((p) => {
+        const vIdx = selectedVariants[p.id] || 0;
+        const activeVariant = p.variants[vIdx];
+
+        const variantPills = p.variants.map((v, idx) => {
+          const isActive = idx === vIdx;
+          return `
+            <button type="button" onclick="selectProductVariant('${p.id}', ${idx})"
+              class="px-2.5 py-1 rounded-lg text-[11px] font-semibold transition-all ${
+                isActive
+                  ? 'bg-champagne-400 text-obsidian-900 shadow-sm'
+                  : 'bg-obsidian-900/80 text-slate-300 border border-champagne-400/20 hover:border-champagne-400/50'
+              }">
+              ${v.size}
+            </button>
+          `;
+        }).join('');
+
+        return `
+          <article class="glass-panel rounded-2xl p-5 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 shadow-luxury">
+            <div>
+              <!-- Top Badges -->
+              <div class="flex items-center justify-between gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-champagne-400/15 text-champagne-300 border border-champagne-400/30">
+                  ${p.viscosity}
+                </span>
+                <span class="text-[11px] text-slate-400 font-medium">${p.badge}</span>
+              </div>
+
+              <!-- Custom SVG Visual Container -->
+              <div class="relative rounded-2xl bg-gradient-to-b from-obsidian-800/60 to-obsidian-950/90 border border-champagne-400/10 py-5 px-3 mb-4 overflow-hidden">
+                <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(212,175,55,0.12),transparent_65%)]"></div>
+                ${generateProductSVG(p, 'grid')}
+              </div>
+
+              <!-- Title & Specs -->
+              <p class="text-[11px] uppercase tracking-wider text-champagne-400 font-semibold">${p.standard}</p>
+              <h3 class="font-serif text-lg font-bold text-slate-100 mt-1 leading-snug group-hover:text-champagne-200 transition-colors">
+                ${p.name}
+              </h3>
+              <p class="text-xs text-slate-400 mt-1.5 line-clamp-2 leading-relaxed">
+                ${p.subtitle}
+              </p>
+
+              <!-- Capacity Selector -->
+              <div class="mt-4">
+                <p class="text-[10px] uppercase tracking-wider text-slate-400 mb-1.5">Chọn dung tích:</p>
+                <div class="flex flex-wrap gap-1.5">
+                  ${variantPills}
+                </div>
+              </div>
+            </div>
+
+            <!-- Price & Actions -->
+            <div class="mt-5 pt-4 border-t border-champagne-400/15 space-y-3">
+              <div class="flex items-baseline justify-between">
+                <span class="text-xs text-slate-400">Giá niêm yết</span>
+                <span class="font-serif text-xl font-bold text-gold-gradient">${formatVND(activeVariant.price)}</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2">
+                <button type="button" onclick="openDatasheet('${p.id}')" class="px-3 py-2.5 rounded-xl bg-obsidian-900 border border-champagne-400/25 hover:border-champagne-300 text-slate-200 hover:text-champagne-200 text-xs font-semibold transition-colors flex items-center justify-center gap-1.5">
+                  <i data-lucide="file-text" class="w-3.5 h-3.5 text-champagne-400"></i>
+                  <span>Thông số</span>
+                </button>
+                <button type="button" onclick="addToCart('${p.id}', ${vIdx})" class="px-3 py-2.5 rounded-xl btn-gold text-xs font-bold flex items-center justify-center gap-1.5">
+                  <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                  <span>Thêm giỏ</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    function selectProductVariant(productId, variantIdx) {
+      selectedVariants[productId] = variantIdx;
+      renderProducts();
+    }
+
+    function quickFilterCategory(category) {
+      currentCategory = category;
+      document.querySelectorAll('.filter-tab').forEach((btn) => {
+        const isTarget = btn.dataset.category === category;
+        btn.classList.toggle('bg-champagne-400', isTarget);
+        btn.classList.toggle('text-obsidian-900', isTarget);
+        btn.classList.toggle('font-semibold', isTarget);
+        btn.classList.toggle('bg-obsidian-900/70', !isTarget);
+        btn.classList.toggle('text-slate-300', !isTarget);
+      });
+      renderProducts();
+      document.getElementById('san-pham').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // =========================================================================
+    // 5. INTERACTIVE VEHICLE OIL FINDER ENGINE
+    // =========================================================================
+    function runOilFinder() {
+      const vehicle = document.getElementById('finder-vehicle').value;
+      const engine = document.getElementById('finder-engine').value;
+      const condition = document.getElementById('finder-condition').value;
+      const resultEl = document.getElementById('finder-result');
+
+      let recommendation = {
+        grade: 'SAE 5W-30 • API SP / ACEA C3',
+        interval: '8.000 – 10.000 km',
+        reason: 'Cấp độ nhớt 5W-30 tổng hợp toàn phần giúp bơm dầu tức thì khi khởi động nguội, duy trì màng dầu bền bỉ trong điều kiện kẹt xe đô thị và bảo vệ tối ưu bộ tăng áp.',
+        productIds: ['apex-gold-5w30', 'apex-engine-flush'],
+      };
+
+      if (vehicle === 'car') {
+        if (engine === 'hybrid_turbo' && condition !== 'heavy') {
+          recommendation = {
+            grade: 'SAE 0W-20 • API SP / ILSAC GF-6A',
+            interval: '10.000 km',
+            reason: 'Động cơ Hybrid và Turbo phun xăng trực tiếp có khe hở chi tiết siêu nhỏ, cần dầu siêu lỏng 0W-20 để bôi trơn tức thì trong chu kỳ tắt/mở liên tục và tiết kiệm tối đa nhiên liệu.',
+            productIds: ['apex-hybrid-0w20', 'apex-gold-5w30'],
+          };
+        } else if (engine === 'diesel') {
+          recommendation = {
+            grade: 'SAE 5W-30 ACEA C3 hoặc 15W-40 CK-4',
+            interval: '8.000 – 12.000 km',
+            reason: 'Động cơ máy dầu du lịch và bán tải yêu cầu hệ phụ gia ít tro (Low-SAPS) bảo vệ bộ lọc DPF cùng khả năng trung hòa muội than cao khi vận hành tải nặng.',
+            productIds: ['apex-gold-5w30', 'apex-diesel-15w40'],
+          };
+        } else if (condition === 'heavy') {
+          recommendation = {
+            grade: 'SAE 5W-30 Full Synthetic Ester + Phụ gia súc rửa',
+            interval: '8.000 km',
+            reason: 'Vận hành đèo dốc, tải nặng khiến nhiệt độ buồng đốt tăng cao. Công nghệ Ester-Core có điểm chớp cháy 238°C giữ độ nhớt ổn định tuyệt đối, kết hợp dầu cầu 80W-90 nếu đi đường địa hình.',
+            productIds: ['apex-gold-5w30', 'apex-gear-80w90'],
+          };
+        }
+      } else if (vehicle === 'scooter') {
+        recommendation = {
+          grade: 'SAE 5W-40 • JASO MB / API SP',
+          interval: '2.500 – 3.500 km',
+          reason: 'Xe tay ga sử dụng ly hợp khô và thường xuyên bị nóng máy khi kẹt xe. Chuẩn JASO MB giúp giảm ma sát tối đa, giúp xe vọt mượt, tiết kiệm xăng và tản nhiệt nhanh.',
+          productIds: ['apex-scooter-5w40', 'apex-engine-flush'],
+        };
+      } else if (vehicle === 'moto') {
+        recommendation = {
+          grade: 'SAE 10W-40 • JASO MA2 Ester Racing',
+          interval: '3.000 – 4.000 km',
+          reason: 'Xe số, côn tay và mô tô PKL dùng chung nhớt cho động cơ và bộ ly hợp ướt. Tiêu chuẩn JASO MA2 kết hợp Ester giúp bắt côn chuẩn, sang số nhẹ và chống tuột nồi ở tua máy cao.',
+          productIds: ['apex-ester-10w40', 'apex-engine-flush'],
+        };
+      } else if (vehicle === 'truck') {
+        recommendation = {
+          grade: 'SAE 15W-40 API CK-4 + Dầu Cầu 80W-90 / Thủy Lực AW 68',
+          interval: '15.000 – 25.000 km',
+          reason: 'Đội xe vận tải và máy cơ giới cần màng dầu chịu cắt trượt cực cao, chỉ số kiềm tổng TBN lớn để chống ăn mòn axit và kéo dài tuổi thọ đại tu động cơ.',
+          productIds: ['apex-diesel-15w40', 'apex-gear-80w90', 'apex-hydraulic-aw68'],
+        };
+      }
+
+      const matchedProducts = recommendation.productIds
+        .map((id) => PRODUCTS.find((p) => p.id === id))
+        .filter(Boolean);
+
+      resultEl.innerHTML = `
+        <div class="rounded-2xl bg-obsidian-950/90 border border-champagne-400/35 p-5 sm:p-6 space-y-6">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 border-b border-champagne-400/15">
+            <div>
+              <span class="text-[11px] uppercase tracking-widest text-champagne-400 font-semibold">Đề xuất chuẩn kỹ thuật cho xe của bạn</span>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-gold-gradient mt-1">${recommendation.grade}</h3>
+            </div>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-champagne-400/10 border border-champagne-400/30 text-xs font-semibold text-champagne-200 self-start md:self-center">
+              <i data-lucide="calendar-clock" class="w-4 h-4 text-champagne-400"></i>
+              <span>Chu kỳ khuyến nghị: ${recommendation.interval}</span>
+            </div>
+          </div>
+
+          <p class="text-sm text-slate-300 leading-relaxed">
+            <strong class="text-champagne-200">Lý do kỹ thuật:</strong> ${recommendation.reason}
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-${matchedProducts.length >= 3 ? '3' : '2'} gap-4">
+            ${matchedProducts.map((p) => `
+              <div class="p-4 rounded-2xl bg-obsidian-900/90 border border-champagne-400/20 flex items-center gap-4">
+                <div class="w-20 shrink-0">
+                  ${generateProductSVG(p, 'finder')}
+                </div>
+                <div class="flex-1 min-w-0">
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-champagne-400">${p.viscosity} • ${p.variants[0].size}</span>
+                  <h4 class="font-serif text-sm font-bold text-slate-100 truncate mt-0.5">${p.name}</h4>
+                  <p class="text-sm font-bold text-gold-gradient mt-1">${formatVND(p.variants[0].price)}</p>
+                  <div class="flex gap-2 mt-2.5">
+                    <button type="button" onclick="addToCart('${p.id}', 0)" class="px-3 py-1.5 rounded-lg btn-gold text-[11px] font-bold">
+                      + Thêm giỏ
+                    </button>
+                    <button type="button" onclick="openDatasheet('${p.id}')" class="px-2.5 py-1.5 rounded-lg bg-obsidian-800 border border-champagne-400/25 text-slate-200 text-[11px] font-medium hover:text-champagne-300">
+                      Thông số
+                    </button>
+                  </div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+
+      resultEl.classList.remove('hidden');
+      lucide.createIcons();
+      showToast('Đã phân tích và đề xuất dòng nhớt chuẩn nhất cho xe của bạn!', 'success');
+    }
+
+    // =========================================================================
+    // 6. TECHNICAL DATASHEET MODAL
+    // =========================================================================
+    function openDatasheet(productId) {
+      const product = PRODUCTS.find((p) => p.id === productId);
+      if (!product) return;
+
+      const modal = document.getElementById('datasheet-modal');
+      const title = document.getElementById('tds-title');
+      const content = document.getElementById('tds-content');
+      const vIdx = selectedVariants[product.id] || 0;
+
+      title.textContent = product.name;
+      content.innerHTML = `
+        <div class="flex flex-col sm:flex-row items-center gap-6 p-4 rounded-2xl bg-obsidian-950/70 border border-champagne-400/15">
+          <div class="w-36 shrink-0">${generateProductSVG(product, 'tds')}</div>
+          <div class="space-y-2 text-center sm:text-left">
+            <span class="inline-block px-3 py-1 rounded-lg text-xs font-bold bg-champagne-400/15 text-champagne-300 border border-champagne-400/30">${product.viscosity} • ${product.standard}</span>
+            <p class="text-sm text-slate-300 leading-relaxed">${product.subtitle}</p>
+            <p class="text-xs text-slate-400"><strong class="text-champagne-200">Chu kỳ thay đề xuất:</strong> ${product.tds.interval}</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase tracking-widest text-champagne-300 font-semibold mb-3">Bảng Thông Số Lý Hóa Điển Hình</h4>
+          <div class="overflow-hidden rounded-2xl border border-champagne-400/20">
+            <table class="w-full text-sm text-left">
+              <tbody class="divide-y divide-champagne-400/10">
+                <tr class="bg-obsidian-900/60">
+                  <td class="px-4 py-3 text-slate-400">Độ nhớt động học @ 40°C (ASTM D445)</td>
+                  <td class="px-4 py-3 font-semibold text-slate-100 text-right">${product.tds.vis40}</td>
+                </tr>
+                <tr class="bg-obsidian-950/50">
+                  <td class="px-4 py-3 text-slate-400">Độ nhớt động học @ 100°C (ASTM D445)</td>
+                  <td class="px-4 py-3 font-semibold text-slate-100 text-right">${product.tds.vis100}</td>
+                </tr>
+                <tr class="bg-obsidian-900/60">
+                  <td class="px-4 py-3 text-slate-400">Chỉ số độ nhớt VI (ASTM D2270)</td>
+                  <td class="px-4 py-3 font-semibold text-champagne-300 text-right">${product.tds.viIndex}</td>
+                </tr>
+                <tr class="bg-obsidian-950/50">
+                  <td class="px-4 py-3 text-slate-400">Điểm chớp cháy cốc hở Flash Point (COC)</td>
+                  <td class="px-4 py-3 font-semibold text-slate-100 text-right">${product.tds.flashPoint}</td>
+                </tr>
+                <tr class="bg-obsidian-900/60">
+                  <td class="px-4 py-3 text-slate-400">Điểm đông đặc Pour Point (ASTM D97)</td>
+                  <td class="px-4 py-3 font-semibold text-slate-100 text-right">${product.tds.pourPoint}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="space-y-3 text-sm">
+          <div class="p-4 rounded-xl bg-obsidian-900/70 border border-champagne-400/15">
+            <p class="text-xs font-semibold uppercase tracking-wider text-champagne-300 mb-1">Tiêu chuẩn & Phê duyệt OEM</p>
+            <p class="text-slate-200">${product.tds.standards}</p>
+          </div>
+          <div class="p-4 rounded-xl bg-obsidian-900/70 border border-champagne-400/15">
+            <p class="text-xs font-semibold uppercase tracking-wider text-champagne-300 mb-1">Ứng dụng & Khuyến nghị</p>
+            <p class="text-slate-300 leading-relaxed">${product.tds.application}</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 border-t border-champagne-400/20">
+          <div>
+            <p class="text-xs text-slate-400">Dung tích đang chọn: <strong class="text-slate-200">${product.variants[vIdx].size}</strong></p>
+            <p class="font-serif text-xl font-bold text-gold-gradient">${formatVND(product.variants[vIdx].price)}</p>
+          </div>
+          <button type="button" onclick="addToCart('${product.id}', ${vIdx}); closeDatasheet();" class="w-full sm:w-auto px-6 py-3 rounded-xl btn-gold text-sm font-bold flex items-center justify-center gap-2">
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+            <span>Thêm vào giỏ hàng</span>
+          </button>
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      lucide.createIcons();
+    }
+
+    function closeDatasheet() {
+      const modal = document.getElementById('datasheet-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    // =========================================================================
+    // 7. SHOPPING CART CRUD & DRAWER LOGIC
+    // =========================================================================
+    function addToCart(productId, variantIdx = 0) {
+      const product = PRODUCTS.find((p) => p.id === productId);
+      if (!product) return;
+      const variant = product.variants[variantIdx] || product.variants[0];
+      const cartKey = `${product.id}__${variant.size}`;
+
+      const existing = cart.find((item) => item.key === cartKey);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({
+          key: cartKey,
+          productId: product.id,
+          name: product.name,
+          viscosity: product.viscosity,
+          size: variant.size,
+          price: variant.price,
+          qty: 1,
+        });
+      }
+
+      saveCart();
+      updateCartUI();
+      showToast(`Đã thêm "${product.name} (${variant.size})" vào giỏ hàng`, 'success');
+    }
+
+    function updateCartItemQty(cartKey, delta) {
+      const idx = cart.findIndex((i) => i.key === cartKey);
+      if (idx === -1) return;
+      cart[idx].qty += delta;
+      if (cart[idx].qty <= 0) {
+        cart.splice(idx, 1);
+      }
+      saveCart();
+      updateCartUI();
+    }
+
+    function removeCartItem(cartKey) {
+      cart = cart.filter((i) => i.key !== cartKey);
+      saveCart();
+      updateCartUI();
+    }
+
+    function clearCart() {
+      if (cart.length === 0) return;
+      cart = [];
+      saveCart();
+      updateCartUI();
+      showToast('Đã làm trống giỏ hàng', 'info');
+    }
+
+    function getCartTotals() {
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+      const shippingFee = subtotal === 0 || subtotal >= FREE_SHIPPING_THRESHOLD ? 0 : STANDARD_SHIPPING_FEE;
+      const grandTotal = subtotal + shippingFee;
+      return { totalItems, subtotal, shippingFee, grandTotal };
+    }
+
+    function updateCartUI() {
+      const { totalItems, subtotal, shippingFee, grandTotal } = getCartTotals();
+
+      document.getElementById('cart-badge').textContent = totalItems;
+      document.getElementById('cart-drawer-count').textContent = totalItems;
+      document.getElementById('cart-subtotal').textContent = formatVND(subtotal);
+      document.getElementById('cart-shipping-fee').textContent = shippingFee === 0 && subtotal > 0 ? 'Miễn phí' : formatVND(shippingFee);
+      document.getElementById('cart-total').textContent = formatVND(grandTotal);
+
+      // Progress bar for free shipping
+      const pct = Math.min(100, Math.round((subtotal / FREE_SHIPPING_THRESHOLD) * 100));
+      document.getElementById('shipping-progress-bar').style.width = `${pct}%`;
+      const shipTextEl = document.getElementById('shipping-status-text');
+      if (subtotal >= FREE_SHIPPING_THRESHOLD) {
+        shipTextEl.innerHTML = `<span class="text-emerald-400 font-semibold">Chúc mừng! Đơn hàng được Miễn phí vận chuyển toàn quốc.</span>`;
+      } else {
+        const remaining = FREE_SHIPPING_THRESHOLD - subtotal;
+        shipTextEl.innerHTML = `Mua thêm <strong class="text-champagne-300">${formatVND(remaining)}</strong> để nhận <strong class="text-slate-100">Miễn phí vận chuyển</strong>`;
+      }
+
+      const proceedBtn = document.getElementById('proceed-checkout-btn');
+      proceedBtn.disabled = cart.length === 0;
+
+      const container = document.getElementById('cart-items-container');
+      if (cart.length === 0) {
+        container.innerHTML = `
+          <div class="h-full flex flex-col items-center justify-center text-center py-14 space-y-3">
+            <div class="w-16 h-16 rounded-2xl bg-obsidian-800 border border-champagne-400/20 flex items-center justify-center text-champagne-400/60">
+              <i data-lucide="shopping-bag" class="w-8 h-8"></i>
+            </div>
+            <p class="font-serif text-lg text-slate-200">Giỏ hàng đang trống</p>
+            <p class="text-xs text-slate-400 max-w-xs">Khám phá bộ sưu tập dầu nhớt tổng hợp cao cấp HUNG.NHOT để bảo vệ động cơ của bạn.</p>
+            <button type="button" onclick="closeCartDrawer()" class="mt-2 px-5 py-2.5 rounded-xl bg-champagne-400/15 border border-champagne-400/40 text-champagne-200 text-xs font-semibold hover:bg-champagne-400/25">
+              Tiếp tục mua sắm
+            </button>
+          </div>
+        `;
+      } else {
+        container.innerHTML = cart.map((item) => `
+          <div class="p-3.5 rounded-2xl bg-obsidian-800/70 border border-champagne-400/20 flex items-center justify-between gap-3">
+            <div class="min-w-0 flex-1">
+              <div class="flex items-center gap-1.5">
+                <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-champagne-400/15 text-champagne-300">${item.viscosity}</span>
+                <span class="text-[11px] text-slate-400">Dung tích: ${item.size}</span>
+              </div>
+              <h4 class="text-sm font-semibold text-slate-100 truncate mt-1">${item.name}</h4>
+              <p class="text-sm font-bold text-champagne-300 mt-0.5">${formatVND(item.price * item.qty)}</p>
+            </div>
+            <div class="flex flex-col items-end gap-2">
+              <button type="button" onclick="removeCartItem('${item.key}')" aria-label="Xóa sản phẩm" class="text-slate-500 hover:text-rose-400 transition-colors">
+                <i data-lucide="trash-2" class="w-4 h-4"></i>
+              </button>
+              <div class="flex items-center rounded-lg bg-obsidian-900 border border-champagne-400/25">
+                <button type="button" onclick="updateCartItemQty('${item.key}', -1)" class="w-7 h-7 flex items-center justify-center text-slate-300 hover:text-champagne-300 font-bold">−</button>
+                <span class="w-7 text-center text-xs font-semibold text-slate-100">${item.qty}</span>
+                <button type="button" onclick="updateCartItemQty('${item.key}', 1)" class="w-7 h-7 flex items-center justify-center text-slate-300 hover:text-champagne-300 font-bold">+</button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      lucide.createIcons();
+    }
+
+    function openCartDrawer() {
+      const overlay = document.getElementById('cart-overlay');
+      const drawer = document.getElementById('cart-drawer');
+      overlay.classList.remove('hidden');
+      requestAnimationFrame(() => {
+        overlay.classList.remove('opacity-0');
+        drawer.classList.remove('translate-x-full');
+      });
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCartDrawer() {
+      const overlay = document.getElementById('cart-overlay');
+      const drawer = document.getElementById('cart-drawer');
+      overlay.classList.add('opacity-0');
+      drawer.classList.add('translate-x-full');
+      setTimeout(() => {
+        overlay.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    // =========================================================================
+    // 8. CHECKOUT MODAL & ORDER CONFIRMATION RECEIPT
+    // =========================================================================
+    function openCheckoutModal() {
+      if (cart.length === 0) return;
+      closeCartDrawer();
+
+      const modal = document.getElementById('checkout-modal');
+      const form = document.getElementById('checkout-form');
+      const receipt = document.getElementById('checkout-receipt');
+      const heading = document.getElementById('checkout-modal-heading');
+      const summaryBox = document.getElementById('checkout-summary-box');
+
+      const { subtotal, shippingFee, grandTotal } = getCartTotals();
+
+      heading.textContent = 'Xác Nhận Đặt Hàng';
+      form.classList.remove('hidden');
+      receipt.classList.add('hidden');
+      document.getElementById('checkout-error-msg').classList.add('hidden');
+
+      summaryBox.innerHTML = `
+        <p class="text-xs uppercase tracking-wider text-champagne-300 font-semibold mb-2">Tóm tắt đơn hàng (${cart.length} dòng sản phẩm)</p>
+        <div class="space-y-1.5 max-h-32 overflow-y-auto pr-1">
+          ${cart.map((item) => `
+            <div class="flex justify-between text-xs text-slate-300">
+              <span class="truncate pr-3">${item.name} (${item.size}) × ${item.qty}</span>
+              <span class="font-medium shrink-0">${formatVND(item.price * item.qty)}</span>
+            </div>
+          `).join('')}
+        </div>
+        <div class="pt-2.5 mt-2 border-t border-champagne-400/15 space-y-1 text-xs">
+          <div class="flex justify-between text-slate-400">
+            <span>Phí vận chuyển</span>
+            <span>${shippingFee === 0 ? 'Miễn phí' : formatVND(shippingFee)}</span>
+          </div>
+          <div class="flex justify-between text-sm font-bold pt-1">
+            <span class="text-slate-100">Tổng thanh toán</span>
+            <span class="text-gold-gradient font-serif text-lg">${formatVND(grandTotal)}</span>
+          </div>
+        </div>
+      `;
+
+      setTimeout(() => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        lucide.createIcons();
+      }, 200);
+    }
+
+    function closeCheckoutModal() {
+      const modal = document.getElementById('checkout-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function handleCheckoutSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('order-name').value.trim();
+      const phone = document.getElementById('order-phone').value.trim();
+      const address = document.getElementById('order-address').value.trim();
+      const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+      const errEl = document.getElementById('checkout-error-msg');
+
+      const phoneClean = phone.replace(/[\s.-]/g, '');
+      const vnPhoneRegex = /^(0|\+84)[3|5|7|8|9][0-9]{8}$/;
+
+      if (!name || !address || !vnPhoneRegex.test(phoneClean)) {
+        errEl.textContent = 'Vui lòng nhập đầy đủ họ tên, địa chỉ và số điện thoại Việt Nam hợp lệ (10 số).';
+        errEl.classList.remove('hidden');
+        return;
+      }
+
+      errEl.classList.add('hidden');
+      const { grandTotal } = getCartTotals();
+      const orderCode = 'APX-' + new Date().getFullYear() + '-' + Math.floor(1000 + Math.random() * 9000);
+      const itemsSnapshot = [...cart];
+
+      // Clear cart after successful order
+      cart = [];
+      saveCart();
+      updateCartUI();
+
+      // Render Instant Luxury Receipt
+      document.getElementById('checkout-form').classList.add('hidden');
+      document.getElementById('checkout-modal-heading').textContent = 'Đặt Hàng Thành Công';
+      const receipt = document.getElementById('checkout-receipt');
+      receipt.innerHTML = `
+        <div class="w-16 h-16 mx-auto rounded-full bg-emerald-500/15 border border-emerald-400/40 flex items-center justify-center text-emerald-400">
+          <i data-lucide="check-circle-2" class="w-9 h-9"></i>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-[0.22em] text-champagne-400 font-semibold">Phiếu Xác Nhận Đơn Hàng</p>
+          <h4 class="font-serif text-2xl sm:text-3xl font-bold text-slate-50 mt-1">Cảm ơn Quý khách, ${name}!</h4>
+          <p class="text-sm text-slate-400 mt-1">Mã đơn hàng của bạn là <strong class="text-champagne-300 text-base">${orderCode}</strong></p>
+        </div>
+
+        <div class="text-left p-5 rounded-2xl bg-obsidian-950/90 border border-champagne-400/20 space-y-2.5 text-sm">
+          <div class="flex justify-between gap-2"><span class="text-slate-400">Người nhận:</span><span class="text-slate-100 font-medium">${name} • ${phone}</span></div>
+          <div class="flex justify-between gap-2"><span class="text-slate-400 shrink-0">Địa chỉ:</span><span class="text-slate-200 text-right">${address}</span></div>
+          <div class="flex justify-between gap-2"><span class="text-slate-400">Thanh toán:</span><span class="text-champagne-300 font-semibold">${paymentMethod === 'QR' ? 'Chuyển khoản ngân hàng QR' : 'Thanh toán khi nhận hàng (COD)'}</span></div>
+          <div class="pt-3 mt-2 border-t border-champagne-400/15 space-y-1.5">
+            ${itemsSnapshot.map((i) => `
+              <div class="flex justify-between text-xs text-slate-300">
+                <span>${i.name} (${i.size}) × ${i.qty}</span>
+                <span>${formatVND(i.price * i.qty)}</span>
+              </div>
+            `).join('')}
+          </div>
+          <div class="pt-3 mt-2 border-t border-champagne-400/20 flex justify-between items-center">
+            <span class="font-semibold text-slate-100">Tổng giá trị đơn hàng</span>
+            <span class="font-serif text-xl font-bold text-gold-gradient">${formatVND(grandTotal)}</span>
+          </div>
+        </div>
+
+        <p class="text-xs text-slate-400">Nhân viên kho vận HUNG.NHOT sẽ gọi điện xác nhận đơn hàng trong vòng 15 phút.</p>
+        <button type="button" onclick="closeCheckoutModal()" class="px-8 py-3.5 rounded-xl btn-gold text-sm font-bold">
+          Tiếp tục khám phá HUNG.NHOT
+        </button>
+      `;
+
+      receipt.classList.remove('hidden');
+      document.getElementById('checkout-form').reset();
+      document.getElementById('qr-payment-box').classList.add('hidden');
+      lucide.createIcons();
+      showToast(`Đơn hàng ${orderCode} đã được ghi nhận thành công!`, 'success');
+    }
+
+    // =========================================================================
+    // 9. CONSULTATION FORM & B2B QUICK SELECT
+    // =========================================================================
+    function selectInquiryAndScroll(needValue) {
+      const select = document.getElementById('consult-need');
+      if (select) select.value = needValue;
+      document.getElementById('lien-he').scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => document.getElementById('consult-name').focus(), 550);
+    }
+
+    function handleConsultationSubmit(e) {
+      e.preventDefault();
+      const nameInput = document.getElementById('consult-name');
+      const phoneInput = document.getElementById('consult-phone');
+      const needSelect = document.getElementById('consult-need');
+      const errName = document.getElementById('err-consult-name');
+      const errPhone = document.getElementById('err-consult-phone');
+
+      let valid = true;
+      if (nameInput.value.trim().length < 2) {
+        errName.textContent = 'Vui lòng nhập họ và tên của bạn.';
+        errName.classList.remove('hidden');
+        valid = false;
+      } else {
+        errName.classList.add('hidden');
+      }
+
+      const phoneClean = phoneInput.value.trim().replace(/[\s.-]/g, '');
+      const vnPhoneRegex = /^(0|\+84)[3|5|7|8|9][0-9]{8}$/;
+      if (!vnPhoneRegex.test(phoneClean)) {
+        errPhone.textContent = 'Số điện thoại không hợp lệ (VD: 0905123456).';
+        errPhone.classList.remove('hidden');
+        valid = false;
+      } else {
+        errPhone.classList.add('hidden');
+      }
+
+      if (!valid) return;
+
+      showToast(`Cảm ơn ${nameInput.value.trim()}! Yêu cầu "${needSelect.value}" đã được gửi — chuyên viên sẽ gọi lại trong 15 phút.`, 'success');
+      e.target.reset();
+    }
+
+    // =========================================================================
+    // 10. LUXURY TOAST SYSTEM & CLIPBOARD HELPER (NO ALERT/CONFIRM)
+    // =========================================================================
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      const borderClass = type === 'success' ? 'border-champagne-400/50' : 'border-slate-500/50';
+      const iconName = type === 'success' ? 'check-circle-2' : 'info';
+      const iconColor = type === 'success' ? 'text-champagne-300' : 'text-sky-400';
+
+      toast.className = `pointer-events-auto glass-panel ${borderClass} rounded-2xl px-4 py-3.5 shadow-luxury flex items-start gap-3 translate-x-8 opacity-0 transition-all duration-300`;
+      toast.innerHTML = `
+        <i data-lucide="${iconName}" class="w-5 h-5 ${iconColor} shrink-0 mt-0.5"></i>
+        <p class="text-xs sm:text-sm text-slate-100 leading-snug">${message}</p>
+      `;
+
+      container.appendChild(toast);
+      lucide.createIcons();
+
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-x-8', 'opacity-0');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('translate-x-8', 'opacity-0');
+        setTimeout(() => toast.remove(), 320);
+      }, 3600);
+    }
+
+    function copyBankAccount() {
+      const text = '19038888666688';
+      const tempInput = document.createElement('textarea');
+      tempInput.value = text;
+      tempInput.style.position = 'fixed';
+      tempInput.style.opacity = '0';
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        showToast('Đã sao chép số tài khoản: 1903 8888 6666 88', 'success');
+      } catch (err) {
+        showToast('Số tài khoản: 1903 8888 6666 88', 'info');
+      }
+      document.body.removeChild(tempInput);
+    }
+
+    // =========================================================================
+    // 11. AMBIENT GOLDEN LIQUID PARTICLES CANVAS (HERO)
+    // =========================================================================
+    function initHeroParticles() {
+      const canvas = document.getElementById('hero-particles');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width = 0;
+      let height = 0;
+      let particles = [];
+
+      function resize() {
+        const rect = canvas.parentElement.getBoundingClientRect();
+        width = canvas.width = rect.width;
+        height = canvas.height = rect.height;
+        const count = Math.min(48, Math.floor(width / 28));
+        particles = Array.from({ length: count }, () => ({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          r: Math.random() * 2.2 + 0.8,
+          vx: (Math.random() - 0.5) * 0.28,
+          vy: -(Math.random() * 0.35 + 0.12),
+          alpha: Math.random() * 0.5 + 0.18,
+        }));
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        particles.forEach((p) => {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.y < -10) {
+            p.y = height + 10;
+            p.x = Math.random() * width;
+          }
+          if (p.x < -10) p.x = width + 10;
+          if (p.x > width + 10) p.x = -10;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = `rgba(232, 201, 109, ${p.alpha})`;
+          ctx.fill();
+        });
+        requestAnimationFrame(animate);
+      }
+
+      resize();
+      window.addEventListener('resize', resize);
+      animate();
+    }
+
+    // =========================================================================
+    // 12. SCROLL EFFECTS, INTERSECTION OBSERVER & EVENT LISTENERS
+    // =========================================================================
+    function initInteractions() {
+      // Sticky Header & Scroll-to-top button
+      const header = document.getElementById('main-header');
+      const scrollTopBtn = document.getElementById('scroll-top-btn');
+
+      window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY > 36;
+        header.classList.toggle('navbar-scrolled', scrolled);
+
+        if (window.scrollY > 420) {
+          scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
+        } else {
+          scrollTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
+        }
+      });
+
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // IntersectionObserver for luxury reveal animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+      );
+      document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+      // Mobile Navigation Drawer
+      const mobileOverlay = document.getElementById('mobile-drawer-overlay');
+      const mobileDrawer = document.getElementById('mobile-drawer');
+
+      function openMobileDrawer() {
+        mobileOverlay.classList.remove('hidden');
+        requestAnimationFrame(() => {
+          mobileOverlay.classList.remove('opacity-0');
+          mobileDrawer.classList.remove('translate-x-full');
+        });
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMobileDrawer() {
+        mobileOverlay.classList.add('opacity-0');
+        mobileDrawer.classList.add('translate-x-full');
+        setTimeout(() => {
+          mobileOverlay.classList.add('hidden');
+          document.body.style.overflow = '';
+        }, 300);
+      }
+
+      document.getElementById('mobile-menu-btn').addEventListener('click', openMobileDrawer);
+      document.getElementById('close-mobile-drawer').addEventListener('click', closeMobileDrawer);
+      mobileOverlay.addEventListener('click', (e) => {
+        if (e.target === mobileOverlay) closeMobileDrawer();
+      });
+      document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+        link.addEventListener('click', closeMobileDrawer);
+      });
+
+      // Category Tabs, Search & Sort
+      document.querySelectorAll('.filter-tab').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          currentCategory = btn.dataset.category;
+          document.querySelectorAll('.filter-tab').forEach((b) => {
+            const active = b === btn;
+            b.classList.toggle('bg-champagne-400', active);
+            b.classList.toggle('text-obsidian-900', active);
+            b.classList.toggle('font-semibold', active);
+            b.classList.toggle('bg-obsidian-900/70', !active);
+            b.classList.toggle('text-slate-300', !active);
+          });
+          renderProducts();
+        });
+      });
+
+      document.getElementById('product-search').addEventListener('input', (e) => {
+        currentSearch = e.target.value;
+        renderProducts();
+      });
+
+      document.getElementById('product-sort').addEventListener('change', (e) => {
+        currentSort = e.target.value;
+        renderProducts();
+      });
+
+      document.getElementById('reset-filter-btn').addEventListener('click', () => {
+        currentSearch = '';
+        currentSort = 'default';
+        document.getElementById('product-search').value = '';
+        document.getElementById('product-sort').value = 'default';
+        quickFilterCategory('all');
+      });
+
+      // Oil Finder Button
+      document.getElementById('finder-submit-btn').addEventListener('click', runOilFinder);
+
+      // Cart Drawer Events
+      document.getElementById('open-cart-btn').addEventListener('click', openCartDrawer);
+      document.getElementById('close-cart-btn').addEventListener('click', closeCartDrawer);
+      document.getElementById('cart-overlay').addEventListener('click', (e) => {
+        if (e.target.id === 'cart-overlay') closeCartDrawer();
+      });
+      document.getElementById('clear-cart-btn').addEventListener('click', clearCart);
+      document.getElementById('proceed-checkout-btn').addEventListener('click', openCheckoutModal);
+
+      // Datasheet Modal Close
+      document.getElementById('close-tds-modal').addEventListener('click', closeDatasheet);
+      document.getElementById('datasheet-modal').addEventListener('click', (e) => {
+        if (e.target.id === 'datasheet-modal') closeDatasheet();
+      });
+
+      // Checkout Modal Events
+      document.getElementById('close-checkout-modal').addEventListener('click', closeCheckoutModal);
+      document.getElementById('checkout-modal').addEventListener('click', (e) => {
+        if (e.target.id === 'checkout-modal') closeCheckoutModal();
+      });
+      document.querySelectorAll('input[name="payment-method"]').forEach((radio) => {
+        radio.addEventListener('change', (e) => {
+          document.getElementById('qr-payment-box').classList.toggle('hidden', e.target.value !== 'QR');
+        });
+      });
+      document.getElementById('copy-bank-btn').addEventListener('click', copyBankAccount);
+      document.getElementById('checkout-form').addEventListener('submit', handleCheckoutSubmit);
+
+      // Consultation Form Submit
+      document.getElementById('consultation-form').addEventListener('submit', handleConsultationSubmit);
+
+      // Close modals on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeDatasheet();
+          closeCheckoutModal();
+          closeCartDrawer();
+          closeMobileDrawer();
+        }
+      });
+    }
+
+    // Boot Application
+    window.addEventListener('DOMContentLoaded', () => {
+      loadCart();
+      renderProducts();
+      updateCartUI();
+      initInteractions();
+      initHeroParticles();
+      lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
