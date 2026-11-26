@@ -58,45 +58,188 @@
 
   <!-- Luxury Editorial Custom Styles & Subtle Animations -->
   <style>
+    @property --border-angle {
+      syntax: '<angle>';
+      initial-value: 0deg;
+      inherits: false;
+    }
+
     :root {
       --gold-border: rgba(212, 175, 55, 0.22);
-      --gold-border-hover: rgba(232, 201, 109, 0.55);
+      --gold-border-hover: rgba(232, 201, 109, 0.58);
+      --gold-specular: rgba(251, 240, 203, 0.16);
+    }
+
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+      overflow-x: clip;
     }
 
     body {
-      background-color: #090D16;
+      background-color: #070A12;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(212, 175, 55, 0.09), transparent 65%),
+        radial-gradient(circle at 85% 30%, rgba(245, 158, 11, 0.045), transparent 45%),
+        radial-gradient(circle at 15% 75%, rgba(212, 175, 55, 0.045), transparent 45%);
+      background-attachment: fixed;
       color: #F8FAFC;
       font-family: 'Be Vietnam Pro', sans-serif;
-      overflow-x: hidden;
+      letter-spacing: -0.005em;
     }
 
-    /* Gold Gradient Text */
+    /* Ultra-fine brushed obsidian film grain */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 90;
+      pointer-events: none;
+      opacity: 0.028;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    /* Classic Top Reading Progress Bar */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 0%;
+      z-index: 60;
+      background: linear-gradient(90deg, #B68D2C, #FBF0CB, #F59E0B);
+      box-shadow: 0 0 10px rgba(232, 201, 109, 0.7);
+      transition: width 0.08s linear;
+      pointer-events: none;
+    }
+
+    /* Hero Aurora Mesh (Multi-Layered Drifting Radial Gradients) */
+    @keyframes auroraDrift {
+      0%, 100% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      33% {
+        transform: translate3d(2.5%, -2%, 0) scale(1.05);
+      }
+      66% {
+        transform: translate3d(-2%, 2.5%, 0) scale(0.97);
+      }
+    }
+
+    .aurora-mesh {
+      background-image:
+        radial-gradient(ellipse 55% 48% at 18% 22%, rgba(212, 175, 55, 0.18), transparent 68%),
+        radial-gradient(ellipse 50% 45% at 82% 28%, rgba(245, 158, 11, 0.13), transparent 65%),
+        radial-gradient(ellipse 60% 50% at 62% 82%, rgba(30, 58, 138, 0.22), transparent 70%),
+        radial-gradient(ellipse 45% 40% at 28% 78%, rgba(16, 185, 129, 0.08), transparent 65%);
+      filter: blur(42px);
+      animation: auroraDrift 16s ease-in-out infinite;
+    }
+
+    /* Animated Metallic Gold Foil Typography + Hero Text Shimmer */
+    @keyframes goldFlow {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
     .text-gold-gradient {
-      background: linear-gradient(135deg, #F5E4B3 0%, #D4AF37 48%, #F59E0B 100%);
+      background: linear-gradient(120deg, #FFF3C4 0%, #E8C96D 22%, #D4AF37 46%, #FFF8DC 58%, #B68D2C 82%, #F5E4B3 100%);
+      background-size: 200% auto;
+      animation: goldFlow 6s ease-in-out infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 2px 18px rgba(212, 175, 55, 0.2));
+    }
+
+    .hero-shimmer-text {
+      background: linear-gradient(110deg, #F8FAFC 28%, #E2E8F0 42%, #FFF3C4 50%, #E2E8F0 58%, #F8FAFC 72%);
+      background-size: 220% auto;
+      animation: goldFlow 7.5s linear infinite;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
-    /* Luxury Glass Panel */
+    /* Dashboard & Modal Glassmorphism (Frosted Backdrop Blur + Pointer Spotlight) */
     .glass-panel {
-      background: linear-gradient(145deg, rgba(17, 24, 39, 0.78) 0%, rgba(9, 13, 22, 0.92) 100%);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      background: linear-gradient(155deg, rgba(20, 28, 46, 0.78) 0%, rgba(11, 16, 28, 0.88) 55%, rgba(7, 10, 18, 0.94) 100%);
+      backdrop-filter: blur(22px) saturate(165%);
+      -webkit-backdrop-filter: blur(22px) saturate(165%);
       border: 1px solid var(--gold-border);
+      box-shadow:
+        inset 0 1px 0 var(--gold-specular),
+        0 20px 50px -15px rgba(0, 0, 0, 0.78);
+      transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     .glass-panel:hover {
+      background:
+        radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(232, 201, 109, 0.14), transparent 65%),
+        linear-gradient(155deg, rgba(20, 28, 46, 0.82) 0%, rgba(11, 16, 28, 0.9) 55%, rgba(7, 10, 18, 0.95) 100%);
       border-color: var(--gold-border-hover);
+      box-shadow:
+        inset 0 1px 0 rgba(251, 240, 203, 0.3),
+        0 26px 60px -14px rgba(0, 0, 0, 0.85),
+        0 0 42px -14px rgba(212, 175, 55, 0.25);
     }
 
-    /* Gold Shimmer Primary Button */
+    .modal-glass {
+      background: linear-gradient(160deg, rgba(17, 24, 39, 0.82) 0%, rgba(7, 10, 18, 0.94) 100%);
+      backdrop-filter: blur(28px) saturate(180%);
+      -webkit-backdrop-filter: blur(28px) saturate(180%);
+    }
+
+    /* Conic Rotating Glow Border (@property + conic-gradient) for Featured Cards & CTAs */
+    @keyframes rotateConicBorder {
+      to {
+        --border-angle: 360deg;
+      }
+    }
+
+    .glow-border {
+      position: relative;
+    }
+
+    .glow-border::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1.5px;
+      background: conic-gradient(
+        from var(--border-angle),
+        rgba(212, 175, 55, 0.14) 0deg,
+        rgba(251, 240, 203, 0.95) 45deg,
+        #D4AF37 85deg,
+        #F59E0B 120deg,
+        rgba(212, 175, 55, 0.12) 190deg,
+        rgba(212, 175, 55, 0.14) 360deg
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      animation: rotateConicBorder 4.5s linear infinite;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Gold Shimmer Primary Button with Specular Highlight */
     .btn-gold {
-      background: linear-gradient(135deg, #E8C96D 0%, #D4AF37 50%, #B68D2C 100%);
+      background: linear-gradient(135deg, #F5E4B3 0%, #E2BE53 38%, #D4AF37 68%, #A87E1F 100%);
       color: #090D16;
       position: relative;
       overflow: hidden;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.52),
+        inset 0 -1px 0 rgba(110, 78, 12, 0.45),
+        0 10px 28px -8px rgba(212, 175, 55, 0.42);
+      transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, filter 0.25s ease;
     }
 
     .btn-gold::after {
@@ -106,7 +249,7 @@
       left: -120%;
       width: 60%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
       transform: skewX(-22deg);
       transition: left 0.65s ease;
     }
@@ -117,39 +260,140 @@
 
     .btn-gold:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 32px -6px rgba(212, 175, 55, 0.45);
+      filter: brightness(1.04);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.65),
+        0 14px 36px -6px rgba(212, 175, 55, 0.52);
     }
 
-    /* Architectural Hairline Divider */
-    .gold-divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.55) 50%, transparent 100%);
+    .btn-gold:active {
+      transform: translateY(0) scale(0.985);
     }
 
-    /* Subtle Hero Ambient Glow & Liquid Wave */
-    @keyframes floatSlow {
-
-      0%,
+    /* Skeleton Shimmer Loading State (linear-gradient + background-position) */
+    @keyframes skeletonShimmer {
+      0% {
+        background-position: 200% 0;
+      }
       100% {
+        background-position: -200% 0;
+      }
+    }
+
+    .skeleton-shimmer {
+      background: linear-gradient(
+        90deg,
+        rgba(17, 24, 39, 0.88) 20%,
+        rgba(212, 175, 55, 0.22) 50%,
+        rgba(17, 24, 39, 0.88) 80%
+      );
+      background-size: 200% 100%;
+      animation: skeletonShimmer 1.4s ease-in-out infinite;
+    }
+
+    /* Product Poster Diagonal Sheen Sweep on Card Hover */
+    .product-poster-frame::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(115deg, transparent 30%, rgba(251, 240, 203, 0.16) 50%, transparent 70%);
+      transform: translateX(-130%);
+      transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+      pointer-events: none;
+    }
+
+    .group:hover .product-poster-frame::after {
+      transform: translateX(130%);
+    }
+
+    /* Infinite Luxury Brand & OEM Certification Marquee */
+    @keyframes marqueeScroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .marquee-viewport {
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+      mask-image: linear-gradient(90deg, transparent 0%, black 10%, black 90%, transparent 100%);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 36s linear infinite;
+    }
+
+    .marquee-viewport:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    /* Architectural Hairline Divider with Classic Center Diamond */
+    .gold-divider {
+      position: relative;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.5) 50%, transparent 100%);
+    }
+
+    .gold-divider::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 7px;
+      height: 7px;
+      background: #D4AF37;
+      border: 1px solid #FBF0CB;
+      transform: translate(-50%, -50%) rotate(45deg);
+      box-shadow: 0 0 12px rgba(212, 175, 55, 0.75);
+    }
+
+    /* Refined Form Focus States */
+    input:focus,
+    select:focus,
+    textarea:focus {
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.14);
+    }
+
+    /* Subtle Hero Ambient Glow & Orbital Animations */
+    @keyframes floatSlow {
+      0%, 100% {
         transform: translateY(0px) rotate(0deg);
       }
-
       50% {
         transform: translateY(-14px) rotate(1.2deg);
       }
     }
 
     @keyframes pulseAmbient {
-
-      0%,
-      100% {
+      0%, 100% {
         opacity: 0.35;
         transform: scale(1);
       }
-
       50% {
-        opacity: 0.6;
+        opacity: 0.62;
         transform: scale(1.08);
+      }
+    }
+
+    @keyframes spinOrbit {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spinOrbitReverse {
+      from {
+        transform: rotate(360deg);
+      }
+      to {
+        transform: rotate(0deg);
       }
     }
 
@@ -161,16 +405,54 @@
       animation: pulseAmbient 8s ease-in-out infinite;
     }
 
-    /* Scroll Reveal Animations */
+    .animate-orbit {
+      animation: spinOrbit 48s linear infinite;
+    }
+
+    .animate-orbit-reverse {
+      animation: spinOrbitReverse 64s linear infinite;
+    }
+
+    /* Scroll Reveal Animations (Native CSS Scroll-Driven animation-timeline: view() + IO Fallback) */
     .reveal {
       opacity: 0;
-      transform: translateY(28px);
+      transform: translateY(24px);
       transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     .reveal.is-visible {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    .grid > .reveal:nth-child(2) { transition-delay: 80ms; }
+    .grid > .reveal:nth-child(3) { transition-delay: 160ms; }
+    .grid > .reveal:nth-child(4) { transition-delay: 240ms; }
+
+    @keyframes scrollViewReveal {
+      from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.975);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @supports (animation-timeline: view()) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: border-color 0.35s ease, box-shadow 0.35s ease;
+        animation: scrollViewReveal linear both;
+        animation-timeline: view();
+        animation-range: entry 4% cover 24%;
+      }
+
+      #lien-he .reveal {
+        animation-range: entry 2% entry 72%;
+      }
     }
 
     /* Custom Scrollbar */
@@ -180,20 +462,21 @@
     }
 
     ::-webkit-scrollbar-track {
-      background: #090D16;
+      background: #070A12;
     }
 
     ::-webkit-scrollbar-thumb {
-      background: rgba(212, 175, 55, 0.35);
+      background: linear-gradient(180deg, rgba(232, 201, 109, 0.45), rgba(182, 141, 44, 0.35));
       border-radius: 999px;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-      background: rgba(212, 175, 55, 0.65);
+      background: rgba(232, 201, 109, 0.72);
     }
 
-    /* Subtle Architectural Grid Pattern */
+    /* Architectural Grid */
     .bg-arch-grid {
+      position: relative;
       background-image:
         linear-gradient(rgba(212, 175, 55, 0.045) 1px, transparent 1px),
         linear-gradient(90deg, rgba(212, 175, 55, 0.045) 1px, transparent 1px);
@@ -202,16 +485,17 @@
 
     /* Sticky Navbar Scrolled State */
     .navbar-scrolled {
-      background: rgba(9, 13, 22, 0.88);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(212, 175, 55, 0.22);
-      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+      background: rgba(7, 10, 18, 0.84);
+      backdrop-filter: blur(22px) saturate(165%);
+      -webkit-backdrop-filter: blur(22px) saturate(165%);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.24);
+      box-shadow: 0 12px 36px -12px rgba(0, 0, 0, 0.8);
     }
   </style>
 </head>
 
 <body class="antialiased selection:bg-champagne-400/30 selection:text-champagne-200">
+  <div id="scroll-progress" aria-hidden="true"></div>
 
   <!-- ===================================================================== -->
   <!-- 1. STICKY LUXURY HEADER                                               -->
@@ -347,6 +631,9 @@
   <!-- ===================================================================== -->
   <section id="hero"
     class="relative min-h-screen flex flex-col justify-between pt-24 pb-8 overflow-hidden bg-arch-grid">
+    <!-- Hero Aurora Mesh (Multi-Layered Radial Gradients) -->
+    <div id="hero-aurora" aria-hidden="true" class="pointer-events-none absolute -inset-16 aurora-mesh"></div>
+
     <!-- Ambient Golden Oil Particle Canvas -->
     <canvas id="hero-particles" class="absolute inset-0 w-full h-full pointer-events-none opacity-65"></canvas>
 
@@ -364,12 +651,12 @@
         <!-- Left Editorial Copy -->
         <div class="lg:col-span-7 space-y-7 text-center lg:text-left">
           <div
-            class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-obsidian-800/80 border border-champagne-400/30 text-xs font-medium tracking-wider uppercase text-champagne-300">
+            class="glow-border inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-obsidian-800/80 text-xs font-medium tracking-wider uppercase text-champagne-300">
             <span class="w-2 h-2 rounded-full bg-champagne-400 animate-pulse"></span>
             Chuẩn Mực Bôi Trơn Thế Hệ Mới • API SP / ACEA C3
           </div>
 
-          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.15] tracking-tight text-slate-50">
+          <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.15] tracking-tight hero-shimmer-text">
             Đỉnh Cao Công Nghệ <span class="text-gold-gradient italic">Dầu Nhớt</span> — Bền Bỉ Mọi Hành Trình
           </h1>
 
@@ -382,12 +669,12 @@
           <!-- Dual CTAs -->
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
             <a href="#san-pham"
-              class="w-full sm:w-auto px-8 py-4 rounded-xl btn-gold font-bold text-sm tracking-wide flex items-center justify-center gap-2.5 shadow-gold">
+              class="glow-border w-full sm:w-auto px-8 py-4 rounded-xl btn-gold font-bold text-sm tracking-wide flex items-center justify-center gap-2.5 shadow-gold">
               <span>Khám phá sản phẩm</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
             <a href="#tra-cuu-nhot"
-              class="w-full sm:w-auto px-8 py-4 rounded-xl bg-obsidian-800/75 hover:bg-obsidian-800 border border-champagne-400/35 hover:border-champagne-300 text-champagne-200 font-semibold text-sm tracking-wide transition-all flex items-center justify-center gap-2.5">
+              class="glow-border w-full sm:w-auto px-8 py-4 rounded-xl bg-obsidian-800/75 hover:bg-obsidian-800 backdrop-blur-md text-champagne-200 font-semibold text-sm tracking-wide transition-all flex items-center justify-center gap-2.5">
               <i data-lucide="gauge" class="w-4 h-4 text-champagne-400"></i>
               <span>Tra cứu nhớt theo xe</span>
             </a>
@@ -408,20 +695,21 @@
         <!-- Right Signature Showcase (Owner Portrait) -->
         <div class="lg:col-span-5 relative flex items-center justify-center">
           <div class="relative w-full max-w-md mx-auto">
-            <!-- Architectural Halo Rings -->
-            <div class="absolute inset-0 m-auto w-72 h-72 sm:w-80 sm:h-80 rounded-full border border-champagne-400/20">
+            <!-- Architectural Halo Rings (Slow Orbital Motion) -->
+            <div class="absolute inset-0 m-auto w-64 h-64 sm:w-80 sm:h-80 rounded-full border border-champagne-400/20 animate-orbit">
+              <span class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-champagne-300 shadow-[0_0_10px_rgba(232,201,109,0.9)]"></span>
             </div>
             <div
-              class="absolute inset-0 m-auto w-60 h-60 sm:w-64 sm:h-64 rounded-full border border-dashed border-champagne-400/25">
+              class="absolute inset-0 m-auto w-52 h-52 sm:w-64 sm:h-64 rounded-full border border-dashed border-champagne-400/25 animate-orbit-reverse">
             </div>
             <div
-              class="absolute inset-0 m-auto w-56 h-56 rounded-full bg-gradient-to-tr from-champagne-500/20 via-amberoil/15 to-transparent blur-2xl">
+              class="absolute inset-0 m-auto w-52 h-52 sm:w-60 sm:h-60 rounded-full bg-gradient-to-tr from-champagne-500/20 via-amberoil/15 to-transparent blur-2xl animate-ambient">
             </div>
 
             <!-- Hero Owner Portrait -->
             <div class="relative z-10 flex justify-center pt-2">
               <img src="hero-owner.png" alt="HUNG.NHOT - Dầu nhớt chính hãng"
-                class="w-72 sm:w-80 lg:w-full max-w-[380px] h-auto object-contain"
+                class="w-64 sm:w-80 lg:w-full max-w-[380px] h-auto object-contain"
                 style="-webkit-mask-image: linear-gradient(to bottom, black 84%, transparent 100%); mask-image: linear-gradient(to bottom, black 84%, transparent 100%);" />
             </div>
 
@@ -503,10 +791,38 @@
 
   <div class="gold-divider max-w-7xl mx-auto"></div>
 
+  <!-- Luxury Partner Brands & Global Standards Marquee -->
+  <div class="py-5 bg-obsidian-950/70 border-b border-champagne-400/15 overflow-hidden">
+    <div class="marquee-viewport max-w-7xl mx-auto">
+      <div class="marquee-track items-center gap-10 text-xs sm:text-sm uppercase tracking-[0.26em] font-serif text-champagne-300/75">
+        <span class="flex items-center gap-10 whitespace-nowrap">
+          <span>Apex Ester-Core</span><span class="text-champagne-400/40">◆</span>
+          <span>Shell Helix Ultra</span><span class="text-champagne-400/40">◆</span>
+          <span>Mobil 1 Synthetic</span><span class="text-champagne-400/40">◆</span>
+          <span>Liqui Moly Germany</span><span class="text-champagne-400/40">◆</span>
+          <span>Motul 7100 4T</span><span class="text-champagne-400/40">◆</span>
+          <span>Castrol Edge</span><span class="text-champagne-400/40">◆</span>
+          <span>API SP / ILSAC GF-6A</span><span class="text-champagne-400/40">◆</span>
+          <span>ACEA C3 / JASO MA2</span><span class="text-champagne-400/40">◆</span>
+        </span>
+        <span class="flex items-center gap-10 whitespace-nowrap ml-10" aria-hidden="true">
+          <span>Apex Ester-Core</span><span class="text-champagne-400/40">◆</span>
+          <span>Shell Helix Ultra</span><span class="text-champagne-400/40">◆</span>
+          <span>Mobil 1 Synthetic</span><span class="text-champagne-400/40">◆</span>
+          <span>Liqui Moly Germany</span><span class="text-champagne-400/40">◆</span>
+          <span>Motul 7100 4T</span><span class="text-champagne-400/40">◆</span>
+          <span>Castrol Edge</span><span class="text-champagne-400/40">◆</span>
+          <span>API SP / ILSAC GF-6A</span><span class="text-champagne-400/40">◆</span>
+          <span>ACEA C3 / JASO MA2</span><span class="text-champagne-400/40">◆</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
   <!-- ===================================================================== -->
   <!-- 3. SIGNATURE OVERVIEW & TECHNOLOGY                                    -->
   <!-- ===================================================================== -->
-  <section id="tong-quan" class="py-20 lg:py-28 relative">
+  <section id="tong-quan" class="py-20 lg:py-28 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
         <!-- Asymmetric Left Editorial Column -->
@@ -629,8 +945,8 @@
   <!-- ===================================================================== -->
   <!-- 4. INTERACTIVE VEHICLE OIL FINDER ("TRA CỨU DẦU NHỚT CHUẨN THEO XE")  -->
   <!-- ===================================================================== -->
-  <section id="tra-cuu-nhot" class="py-20 lg:py-28 relative bg-obsidian-950/60 border-y border-champagne-400/15">
-    <div class="pointer-events-none absolute top-0 left-1/4 w-96 h-96 bg-champagne-400/5 blur-[120px] rounded-full">
+  <section id="tra-cuu-nhot" class="py-20 lg:py-28 relative overflow-hidden bg-obsidian-950/60 border-y border-champagne-400/15">
+    <div class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 sm:left-1/4 sm:translate-x-0 w-72 sm:w-96 h-72 sm:h-96 bg-champagne-400/5 blur-[120px] rounded-full">
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -710,7 +1026,7 @@
             Khuyến nghị được chuẩn hóa theo tiêu chuẩn khí hậu nhiệt đới ẩm tại Việt Nam.
           </p>
           <button id="finder-submit-btn" type="button"
-            class="w-full sm:w-auto px-8 py-3.5 rounded-xl btn-gold font-bold text-sm tracking-wide flex items-center justify-center gap-2 shadow-gold-sm">
+            class="glow-border w-full sm:w-auto px-8 py-3.5 rounded-xl btn-gold font-bold text-sm tracking-wide flex items-center justify-center gap-2 shadow-gold-sm">
             <i data-lucide="search-check" class="w-4 h-4"></i>
             <span>Tìm loại nhớt phù hợp</span>
           </button>
@@ -727,7 +1043,7 @@
   <!-- ===================================================================== -->
   <!-- 5. PRODUCT CATALOG & E-COMMERCE GRID ("BỘ SƯU TẬP DẦU NHỚT")          -->
   <!-- ===================================================================== -->
-  <section id="san-pham" class="py-20 lg:py-28 relative">
+  <section id="san-pham" class="py-20 lg:py-28 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Header -->
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 reveal">
@@ -837,7 +1153,7 @@
         </div>
         <div class="flex flex-wrap gap-3">
           <button type="button" onclick="selectInquiryAndScroll('Mở đại lý')"
-            class="px-6 py-3.5 rounded-xl btn-gold text-sm font-bold flex items-center gap-2 shadow-gold-sm">
+            class="glow-border px-6 py-3.5 rounded-xl btn-gold text-sm font-bold flex items-center gap-2 shadow-gold-sm">
             <i data-lucide="handshake" class="w-4 h-4"></i>
             <span>Đăng ký mở Đại lý</span>
           </button>
@@ -928,7 +1244,7 @@
   <!-- ===================================================================== -->
   <!-- 7. CUSTOMER & GARAGE TESTIMONIALS                                     -->
   <!-- ===================================================================== -->
-  <section class="py-20 lg:py-28 relative">
+  <section class="py-20 lg:py-28 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-14 reveal">
         <div
@@ -944,7 +1260,8 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Testimonial 1 -->
-        <blockquote class="reveal glass-panel rounded-2xl p-7 flex flex-col justify-between">
+        <blockquote class="reveal glass-panel relative rounded-2xl p-7 flex flex-col justify-between hover:-translate-y-1">
+          <span aria-hidden="true" class="pointer-events-none absolute top-4 right-6 font-serif text-6xl leading-none text-champagne-400/15 select-none">“</span>
           <div>
             <div class="flex items-center gap-1 text-champagne-400 mb-4">
               <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
@@ -972,7 +1289,8 @@
         </blockquote>
 
         <!-- Testimonial 2 -->
-        <blockquote class="reveal glass-panel rounded-2xl p-7 flex flex-col justify-between">
+        <blockquote class="reveal glass-panel relative rounded-2xl p-7 flex flex-col justify-between hover:-translate-y-1">
+          <span aria-hidden="true" class="pointer-events-none absolute top-4 right-6 font-serif text-6xl leading-none text-champagne-400/15 select-none">“</span>
           <div>
             <div class="flex items-center gap-1 text-champagne-400 mb-4">
               <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
@@ -1000,7 +1318,8 @@
         </blockquote>
 
         <!-- Testimonial 3 -->
-        <blockquote class="reveal glass-panel rounded-2xl p-7 flex flex-col justify-between">
+        <blockquote class="reveal glass-panel relative rounded-2xl p-7 flex flex-col justify-between hover:-translate-y-1">
+          <span aria-hidden="true" class="pointer-events-none absolute top-4 right-6 font-serif text-6xl leading-none text-champagne-400/15 select-none">“</span>
           <div>
             <div class="flex items-center gap-1 text-champagne-400 mb-4">
               <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
@@ -1033,7 +1352,7 @@
   <!-- ===================================================================== -->
   <!-- 8. SELLER CONTACT INFORMATION                                         -->
   <!-- ===================================================================== -->
-  <section id="lien-he" class="py-20 lg:py-28 relative bg-obsidian-950/75 border-t border-champagne-400/15">
+  <section id="lien-he" class="py-20 lg:py-28 relative overflow-hidden bg-obsidian-950/75 border-t border-champagne-400/15">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-12 reveal">
         <div
@@ -1136,39 +1455,49 @@
             </div>
 
             <!-- Interactive 3-Brand Promo Poster Carousel -->
-            <div class="relative h-[380px] sm:h-[420px] overflow-hidden rounded-2xl border border-champagne-400/25 bg-obsidian-950/90 flex items-center justify-center select-none">
+            <div
+              class="relative h-[320px] sm:h-[420px] overflow-hidden rounded-2xl border border-champagne-400/25 bg-obsidian-950/90 flex items-center justify-center select-none">
               <!-- Ambient center glow -->
-              <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.14),transparent_65%)]"></div>
+              <div
+                class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.14),transparent_65%)]">
+              </div>
 
               <!-- Poster 0: Liqui Moly -->
               <button type="button" onclick="selectPromoPoster(0)" aria-label="Xem Liqui Moly 5W-30"
                 class="promo-slide absolute transition-all duration-500 ease-out rounded-xl overflow-hidden focus:outline-none">
-                <img src="liqui-promo.jpg" alt="Liqui Moly 5W-30 Long Life III" class="h-[330px] sm:h-[370px] w-auto object-contain block" />
+                <img src="liqui-promo.jpg" alt="Liqui Moly 5W-30 Long Life III"
+                  class="h-[265px] sm:h-[370px] w-auto object-contain block" />
               </button>
 
               <!-- Poster 1: Shell Helix Ultra -->
               <button type="button" onclick="selectPromoPoster(1)" aria-label="Xem Shell Helix Ultra 0W-40"
                 class="promo-slide absolute transition-all duration-500 ease-out rounded-xl overflow-hidden focus:outline-none">
-                <img src="shell-promo.jpg" alt="Shell Helix Ultra 0W-40" class="h-[330px] sm:h-[370px] w-auto object-contain block" />
+                <img src="shell-promo.jpg" alt="Shell Helix Ultra 0W-40"
+                  class="h-[265px] sm:h-[370px] w-auto object-contain block" />
               </button>
 
               <!-- Poster 2: Motul 7100 -->
               <button type="button" onclick="selectPromoPoster(2)" aria-label="Xem Motul 7100 10W-40"
                 class="promo-slide absolute transition-all duration-500 ease-out rounded-xl overflow-hidden focus:outline-none">
-                <img src="motul-promo.jpg" alt="Motul 7100 4T 10W-40" class="h-[330px] sm:h-[370px] w-auto object-contain block" />
+                <img src="motul-promo.jpg" alt="Motul 7100 4T 10W-40"
+                  class="h-[265px] sm:h-[370px] w-auto object-contain block" />
               </button>
 
               <!-- Bottom Indicator Dots -->
-              <div class="absolute bottom-2.5 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2 px-3 py-1 rounded-full bg-obsidian-900/80 border border-champagne-400/25 backdrop-blur-sm">
-                <button type="button" onclick="selectPromoPoster(0)" aria-label="Chọn Liqui Moly" class="promo-dot w-2 h-2 rounded-full transition-all duration-300"></button>
-                <button type="button" onclick="selectPromoPoster(1)" aria-label="Chọn Shell" class="promo-dot w-2 h-2 rounded-full transition-all duration-300"></button>
-                <button type="button" onclick="selectPromoPoster(2)" aria-label="Chọn Motul" class="promo-dot w-2 h-2 rounded-full transition-all duration-300"></button>
+              <div
+                class="absolute bottom-2.5 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2 px-3 py-1 rounded-full bg-obsidian-900/80 border border-champagne-400/25 backdrop-blur-sm">
+                <button type="button" onclick="selectPromoPoster(0)" aria-label="Chọn Liqui Moly"
+                  class="promo-dot w-2 h-2 rounded-full transition-all duration-300"></button>
+                <button type="button" onclick="selectPromoPoster(1)" aria-label="Chọn Shell"
+                  class="promo-dot w-2 h-2 rounded-full transition-all duration-300"></button>
+                <button type="button" onclick="selectPromoPoster(2)" aria-label="Chọn Motul"
+                  class="promo-dot w-2 h-2 rounded-full transition-all duration-300"></button>
               </div>
             </div>
 
             <div class="space-y-3">
               <a href="tel:0905888666"
-                class="w-full py-3.5 px-5 rounded-xl btn-gold font-bold text-sm tracking-wide flex items-center justify-center gap-2 shadow-gold">
+                class="glow-border w-full py-3.5 px-5 rounded-xl btn-gold font-bold text-sm tracking-wide flex items-center justify-center gap-2 shadow-gold">
                 <i data-lucide="phone-call" class="w-4 h-4"></i>
                 <span>Gọi Hotline: 0905 888 666</span>
               </a>
@@ -1192,7 +1521,7 @@
   <!-- ===================================================================== -->
   <!-- 10. LUXURY FOOTER                                                     -->
   <!-- ===================================================================== -->
-  <footer class="bg-obsidian-950 border-t border-champagne-400/20 pt-16 pb-10">
+  <footer class="bg-obsidian-950 border-t border-champagne-400/20 pt-16 pb-10 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-champagne-400/15">
         <!-- Brand Column -->
@@ -1263,7 +1592,7 @@
 
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
         <p>© 2026 HUNG.NHOT VIETNAM. Bản quyền thuộc về Công ty TNHH Giải Pháp Bôi Trơn Apex Việt Nam.</p>
-        <p>Thiết kế chuẩn Responsive • Sẵn sàng triển khai Vercel</p>
+        <p class="text-champagne-400/70 tracking-wider uppercase text-[11px]">Precision Automotive Lubrication</p>
       </div>
     </div>
   </footer>
@@ -1271,24 +1600,24 @@
   <!-- ===================================================================== -->
   <!-- FLOATING QUICK-ACTION BUTTONS (ZALO, HOTLINE, SCROLL-TO-TOP)          -->
   <!-- ===================================================================== -->
-  <div class="fixed bottom-5 right-5 z-40 flex flex-col items-center gap-3">
+  <div class="fixed bottom-4 right-3 sm:bottom-5 sm:right-5 z-40 flex flex-col items-center gap-2.5 sm:gap-3">
     <!-- Scroll to Top -->
     <button id="scroll-top-btn" type="button" aria-label="Lên đầu trang"
-      class="w-11 h-11 rounded-full bg-obsidian-800/90 border border-champagne-400/40 text-champagne-300 shadow-luxury flex items-center justify-center opacity-0 pointer-events-none translate-y-3 transition-all duration-300 hover:bg-champagne-400 hover:text-obsidian-900">
-      <i data-lucide="arrow-up" class="w-5 h-5"></i>
+      class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-obsidian-800/90 border border-champagne-400/40 text-champagne-300 shadow-luxury flex items-center justify-center opacity-0 pointer-events-none translate-y-3 transition-all duration-300 hover:bg-champagne-400 hover:text-obsidian-900">
+      <i data-lucide="arrow-up" class="w-4 h-4 sm:w-5 sm:h-5"></i>
     </button>
 
     <!-- Zalo Quick Chat -->
     <a href="https://zalo.me/0905888666" target="_blank" rel="noopener noreferrer" aria-label="Chat Zalo HUNG.NHOT"
-      class="w-12 h-12 rounded-full bg-[#0068FF] text-white shadow-lg flex items-center justify-center font-bold text-xs tracking-tight hover:scale-110 transition-transform ring-2 ring-white/20">
+      class="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#0068FF] text-white shadow-lg flex items-center justify-center font-bold text-[11px] sm:text-xs tracking-tight hover:scale-110 transition-transform ring-2 ring-white/20">
       Zalo
     </a>
 
     <!-- Hotline Pulse -->
     <a href="tel:0905888666" aria-label="Gọi Hotline 0905 888 666"
-      class="relative w-12 h-12 rounded-full btn-gold shadow-gold flex items-center justify-center hover:scale-110 transition-transform">
+      class="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full btn-gold shadow-gold flex items-center justify-center hover:scale-110 transition-transform">
       <span class="absolute inset-0 rounded-full bg-champagne-400 animate-ping opacity-30"></span>
-      <i data-lucide="phone" class="w-5 h-5 relative z-10"></i>
+      <i data-lucide="phone" class="w-4 h-4 sm:w-5 sm:h-5 relative z-10"></i>
     </a>
   </div>
 
@@ -1296,10 +1625,10 @@
   <!-- TECHNICAL DATASHEET MODAL ("XEM THÔNG SỐ")                            -->
   <!-- ===================================================================== -->
   <div id="datasheet-modal"
-    class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-    <div class="glass-panel rounded-3xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-luxury relative">
+    class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/75 backdrop-blur-md">
+    <div class="modal-glass glass-panel rounded-3xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-luxury relative">
       <div
-        class="sticky top-0 z-10 bg-obsidian-900/95 backdrop-blur-md px-6 py-4 border-b border-champagne-400/20 flex items-center justify-between">
+        class="sticky top-0 z-10 bg-obsidian-900/80 backdrop-blur-xl px-6 py-4 border-b border-champagne-400/20 flex items-center justify-between">
         <div>
           <p class="text-[10px] uppercase tracking-[0.24em] text-champagne-400 font-semibold">Technical Data Sheet (TDS)
           </p>
@@ -1574,8 +1903,45 @@
     }
 
     // =========================================================================
-    // 4. RENDER PRODUCT CATALOG GRID
+    // 4. RENDER PRODUCT CATALOG GRID & SKELETON SHIMMER
     // =========================================================================
+    let productSkeletonTimer = null;
+
+    function renderProductSkeletons(count = 4) {
+      const grid = document.getElementById('product-grid');
+      const emptyEl = document.getElementById('product-empty');
+      emptyEl.classList.add('hidden');
+      grid.innerHTML = Array.from({ length: count }, () => `
+        <div class="glass-panel rounded-2xl p-5 space-y-4">
+          <div class="flex items-center justify-between">
+            <div class="h-6 w-16 rounded-lg skeleton-shimmer"></div>
+            <div class="h-4 w-20 rounded-md skeleton-shimmer"></div>
+          </div>
+          <div class="h-72 w-full rounded-2xl skeleton-shimmer"></div>
+          <div class="space-y-2">
+            <div class="h-3 w-28 rounded skeleton-shimmer"></div>
+            <div class="h-5 w-4/5 rounded skeleton-shimmer"></div>
+            <div class="h-3.5 w-full rounded skeleton-shimmer"></div>
+          </div>
+          <div class="pt-4 border-t border-champagne-400/10 space-y-3">
+            <div class="flex justify-between items-center">
+              <div class="h-3.5 w-20 rounded skeleton-shimmer"></div>
+              <div class="h-6 w-28 rounded skeleton-shimmer"></div>
+            </div>
+            <div class="h-10 w-full rounded-xl skeleton-shimmer"></div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderProductsWithSkeleton(delayMs = 280) {
+      if (productSkeletonTimer) clearTimeout(productSkeletonTimer);
+      renderProductSkeletons(4);
+      productSkeletonTimer = setTimeout(() => {
+        renderProducts();
+      }, delayMs);
+    }
+
     function renderProducts() {
       const grid = document.getElementById('product-grid');
       const emptyEl = document.getElementById('product-empty');
@@ -1605,9 +1971,10 @@
       }
 
       emptyEl.classList.add('hidden');
-      grid.innerHTML = list.map((p) => {
+      grid.innerHTML = list.map((p, cardIdx) => {
         const vIdx = selectedVariants[p.id] || 0;
         const activeVariant = p.variants[vIdx];
+        const isFeatured = cardIdx === 0 && currentCategory === 'all';
 
         const variantPills = p.variants.map((v, idx) => {
           const isActive = idx === vIdx;
@@ -1623,7 +1990,7 @@
         }).join('');
 
         return `
-          <article class="glass-panel rounded-2xl p-5 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 shadow-luxury">
+          <article class="${isFeatured ? 'glow-border ' : ''}glass-panel min-w-0 w-full rounded-2xl p-4 sm:p-5 flex flex-col justify-between group transition-all duration-300 hover:-translate-y-1.5 shadow-luxury">
             <div>
               <!-- Top Badges -->
               <div class="flex items-center justify-between gap-2 mb-3">
@@ -1634,7 +2001,7 @@
               </div>
 
               <!-- Product Image Container -->
-              <div class="relative rounded-2xl bg-obsidian-950/90 border border-champagne-400/15 mb-4 overflow-hidden">
+              <div class="product-poster-frame relative rounded-2xl bg-obsidian-950/90 border border-champagne-400/20 group-hover:border-champagne-300/45 mb-4 overflow-hidden transition-colors duration-300">
                 ${generateProductSVG(p, 'grid')}
               </div>
 
@@ -1698,11 +2065,38 @@
     // =========================================================================
     // 5. INTERACTIVE VEHICLE OIL FINDER ENGINE
     // =========================================================================
+    let finderSkeletonTimer = null;
     function runOilFinder() {
       const vehicle = document.getElementById('finder-vehicle').value;
       const engine = document.getElementById('finder-engine').value;
       const condition = document.getElementById('finder-condition').value;
       const resultEl = document.getElementById('finder-result');
+
+      if (finderSkeletonTimer) clearTimeout(finderSkeletonTimer);
+      resultEl.innerHTML = `
+        <div class="rounded-2xl bg-obsidian-950/90 border border-champagne-400/25 p-5 sm:p-6 space-y-5">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-champagne-400/15">
+            <div class="space-y-2">
+              <div class="h-3 w-44 rounded skeleton-shimmer"></div>
+              <div class="h-7 w-72 rounded-lg skeleton-shimmer"></div>
+            </div>
+            <div class="h-9 w-48 rounded-xl skeleton-shimmer"></div>
+          </div>
+          <div class="h-4 w-5/6 rounded skeleton-shimmer"></div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="h-32 rounded-2xl skeleton-shimmer"></div>
+            <div class="h-32 rounded-2xl skeleton-shimmer"></div>
+          </div>
+        </div>
+      `;
+      resultEl.classList.remove('hidden');
+
+      finderSkeletonTimer = setTimeout(() => {
+        renderOilFinderResult(vehicle, engine, condition, resultEl);
+      }, 320);
+    }
+
+    function renderOilFinderResult(vehicle, engine, condition, resultEl) {
 
       let recommendation = {
         grade: 'SAE 5W-30 • API SP / ACEA C3',
@@ -1806,8 +2200,10 @@
     }
 
     // =========================================================================
-    // 6. TECHNICAL DATASHEET MODAL
+    // 6. TECHNICAL DATASHEET MODAL (GLASSMORPHISM + SKELETON SHIMMER)
     // =========================================================================
+    let tdsSkeletonTimer = null;
+
     function openDatasheet(productId) {
       const product = PRODUCTS.find((p) => p.id === productId);
       if (!product) return;
@@ -1817,8 +2213,30 @@
       const content = document.getElementById('tds-content');
       const vIdx = selectedVariants[product.id] || 0;
 
+      if (tdsSkeletonTimer) clearTimeout(tdsSkeletonTimer);
       title.textContent = product.name;
+
       content.innerHTML = `
+        <div class="flex flex-col sm:flex-row items-center gap-6 p-4 rounded-2xl bg-obsidian-950/70 border border-champagne-400/15">
+          <div class="w-48 sm:w-56 h-64 rounded-xl skeleton-shimmer shrink-0"></div>
+          <div class="flex-1 w-full space-y-3">
+            <div class="h-6 w-36 rounded-lg skeleton-shimmer"></div>
+            <div class="h-4 w-full rounded skeleton-shimmer"></div>
+            <div class="h-4 w-3/4 rounded skeleton-shimmer"></div>
+          </div>
+        </div>
+        <div class="space-y-2.5">
+          <div class="h-4 w-48 rounded skeleton-shimmer"></div>
+          <div class="h-44 w-full rounded-2xl skeleton-shimmer"></div>
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+
+      tdsSkeletonTimer = setTimeout(() => {
+        content.innerHTML = `
         <div class="flex flex-col sm:flex-row items-center gap-6 p-4 rounded-2xl bg-obsidian-950/70 border border-champagne-400/15">
           <div class="w-48 sm:w-56 shrink-0">${generateProductSVG(product, 'tds')}</div>
           <div class="space-y-2 text-center sm:text-left">
@@ -1874,20 +2292,18 @@
             <p class="text-xs text-slate-400">Dung tích đang chọn: <strong class="text-slate-200">${product.variants[vIdx].size}</strong></p>
             <p class="font-serif text-xl font-bold text-gold-gradient">${formatVND(product.variants[vIdx].price)}</p>
           </div>
-          <a href="#lien-he" onclick="closeDatasheet()" class="w-full sm:w-auto px-6 py-3 rounded-xl btn-gold text-sm font-bold flex items-center justify-center gap-2">
+          <a href="#lien-he" onclick="closeDatasheet()" class="glow-border w-full sm:w-auto px-6 py-3 rounded-xl btn-gold text-sm font-bold flex items-center justify-center gap-2">
             <i data-lucide="phone-call" class="w-4 h-4"></i>
             <span>Liên hệ người bán</span>
           </a>
         </div>
       `;
-
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-      document.body.style.overflow = 'hidden';
-      lucide.createIcons();
+        lucide.createIcons();
+      }, 200);
     }
 
     function closeDatasheet() {
+      if (tdsSkeletonTimer) clearTimeout(tdsSkeletonTimer);
       const modal = document.getElementById('datasheet-modal');
       modal.classList.add('hidden');
       modal.classList.remove('flex');
@@ -2036,9 +2452,10 @@
     // 12. SCROLL EFFECTS, INTERSECTION OBSERVER & EVENT LISTENERS
     // =========================================================================
     function initInteractions() {
-      // Sticky Header, Scroll-Spy & Scroll-to-top button
+      // Sticky Header, Scroll-Spy, Progress Bar & Scroll-to-top button
       const header = document.getElementById('main-header');
       const scrollTopBtn = document.getElementById('scroll-top-btn');
+      const scrollProgress = document.getElementById('scroll-progress');
       const navLinks = Array.from(document.querySelectorAll('#desktop-nav .nav-spy-link'));
       const spySections = navLinks
         .map((link) => {
@@ -2077,6 +2494,12 @@
       window.addEventListener('scroll', () => {
         const scrolled = window.scrollY > 36;
         header.classList.toggle('navbar-scrolled', scrolled);
+
+        if (scrollProgress) {
+          const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+          const pct = maxScroll > 0 ? Math.min(100, (window.scrollY / maxScroll) * 100) : 0;
+          scrollProgress.style.width = `${pct}%`;
+        }
 
         if (window.scrollY > 420) {
           scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-3');
@@ -2150,7 +2573,7 @@
             b.classList.toggle('bg-obsidian-900/70', !active);
             b.classList.toggle('text-slate-300', !active);
           });
-          renderProducts();
+          renderProductsWithSkeleton(240);
         });
       });
 
@@ -2161,7 +2584,7 @@
 
       document.getElementById('product-sort').addEventListener('change', (e) => {
         currentSort = e.target.value;
-        renderProducts();
+        renderProductsWithSkeleton(240);
       });
 
       document.getElementById('reset-filter-btn').addEventListener('click', () => {
@@ -2181,6 +2604,15 @@
         if (e.target.id === 'datasheet-modal') closeDatasheet();
       });
 
+      // Interactive Golden Pointer Spotlight across Glass Panels
+      document.addEventListener('pointermove', (e) => {
+        const panel = e.target.closest('.glass-panel');
+        if (!panel) return;
+        const rect = panel.getBoundingClientRect();
+        panel.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+        panel.style.setProperty('--my', `${e.clientY - rect.top}px`);
+      }, { passive: true });
+
       // Close modals on Escape key
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
@@ -2190,9 +2622,9 @@
       });
     }
 
-    // Boot Application
+    // Boot Application (with crisp initial Skeleton Shimmer transition)
     window.addEventListener('DOMContentLoaded', () => {
-      renderProducts();
+      renderProductsWithSkeleton(320);
       selectPromoPoster(1);
       initInteractions();
       initHeroParticles();
