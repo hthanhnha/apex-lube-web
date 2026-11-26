@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="vi" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HUNG.NHOT VIETNAM | Dầu Nhớt Cao Cấp & Giải Pháp Bôi Trơn Toàn Diện</title>
-  <meta name="description" content="HUNG.NHOT VIETNAM - Hệ thống phân phối dầu nhớt tổng hợp toàn phần cao cấp cho ô tô, xe máy, xe tải và công nghiệp. Chính hãng 100%, chuẩn API SP / ACEA C3, giao hàng toàn quốc." />
+  <meta name="description"
+    content="HUNG.NHOT VIETNAM - Hệ thống phân phối dầu nhớt tổng hợp toàn phần cao cấp cho ô tô, xe máy, xe tải và công nghiệp. Chính hãng 100%, chuẩn API SP / ACEA C3, giao hàng toàn quốc." />
 
   <!-- Google Fonts: Playfair Display (Luxury Serif) & Be Vietnam Pro (Clean Vietnamese Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600&display=swap"
+    rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -124,13 +128,29 @@
 
     /* Subtle Hero Ambient Glow & Liquid Wave */
     @keyframes floatSlow {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-14px) rotate(1.2deg); }
+
+      0%,
+      100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-14px) rotate(1.2deg);
+      }
     }
 
     @keyframes pulseAmbient {
-      0%, 100% { opacity: 0.35; transform: scale(1); }
-      50% { opacity: 0.6; transform: scale(1.08); }
+
+      0%,
+      100% {
+        opacity: 0.35;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.6;
+        transform: scale(1.08);
+      }
     }
 
     .animate-float {
@@ -158,13 +178,16 @@
       width: 8px;
       height: 8px;
     }
+
     ::-webkit-scrollbar-track {
       background: #090D16;
     }
+
     ::-webkit-scrollbar-thumb {
       background: rgba(212, 175, 55, 0.35);
       border-radius: 999px;
     }
+
     ::-webkit-scrollbar-thumb:hover {
       background: rgba(212, 175, 55, 0.65);
     }
@@ -187,18 +210,22 @@
     }
   </style>
 </head>
+
 <body class="antialiased selection:bg-champagne-400/30 selection:text-champagne-200">
 
   <!-- ===================================================================== -->
   <!-- 1. STICKY LUXURY HEADER                                               -->
   <!-- ===================================================================== -->
-  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent">
+  <header id="main-header"
+    class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <!-- Brand Emblem -->
         <a href="#hero" class="flex items-center gap-3 group focus:outline-none">
           <div class="relative w-11 h-11 flex items-center justify-center">
-            <svg viewBox="0 0 48 48" class="w-11 h-11 drop-shadow-[0_0_12px_rgba(212,175,55,0.4)] transition-transform duration-300 group-hover:scale-105" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 48 48"
+              class="w-11 h-11 drop-shadow-[0_0_12px_rgba(212,175,55,0.4)] transition-transform duration-300 group-hover:scale-105"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="logoGold" x1="6" y1="4" x2="42" y2="44" gradientUnits="userSpaceOnUse">
                   <stop stop-color="#F5E4B3" />
@@ -207,38 +234,52 @@
                 </linearGradient>
               </defs>
               <!-- Architectural Hexagon Frame -->
-              <polygon points="24,3 43,13.5 43,34.5 24,45 5,34.5 5,13.5" stroke="url(#logoGold)" stroke-width="1.8" fill="rgba(17,24,39,0.75)" />
-              <polygon points="24,7 39.5,15.5 39.5,32.5 24,41 8.5,32.5 8.5,15.5" stroke="rgba(212,175,55,0.28)" stroke-width="0.9" />
+              <polygon points="24,3 43,13.5 43,34.5 24,45 5,34.5 5,13.5" stroke="url(#logoGold)" stroke-width="1.8"
+                fill="rgba(17,24,39,0.75)" />
+              <polygon points="24,7 39.5,15.5 39.5,32.5 24,41 8.5,32.5 8.5,15.5" stroke="rgba(212,175,55,0.28)"
+                stroke-width="0.9" />
               <!-- Stylized Oil Drop -->
-              <path d="M24 12.5C24 12.5 16.5 22.3 16.5 27.6C16.5 31.8 19.85 35 24 35C28.15 35 31.5 31.8 31.5 27.6C31.5 22.3 24 12.5 24 12.5Z" fill="url(#logoGold)" />
-              <path d="M21 27.5C21 25.4 22.4 22.8 23.5 21C22.2 24.5 22.6 28.8 25.4 30.8C22.8 31.2 21 29.7 21 27.5Z" fill="#090D16" fill-opacity="0.35" />
+              <path
+                d="M24 12.5C24 12.5 16.5 22.3 16.5 27.6C16.5 31.8 19.85 35 24 35C28.15 35 31.5 31.8 31.5 27.6C31.5 22.3 24 12.5 24 12.5Z"
+                fill="url(#logoGold)" />
+              <path d="M21 27.5C21 25.4 22.4 22.8 23.5 21C22.2 24.5 22.6 28.8 25.4 30.8C22.8 31.2 21 29.7 21 27.5Z"
+                fill="#090D16" fill-opacity="0.35" />
             </svg>
           </div>
           <div class="leading-tight">
-            <span class="block font-serif text-lg sm:text-xl font-bold tracking-wider text-gold-gradient">HUNG.NHOT</span>
-            <span class="block text-[10px] tracking-[0.26em] text-slate-400 uppercase font-medium">Vietnam Lubricants</span>
+            <span
+              class="block font-serif text-lg sm:text-xl font-bold tracking-wider text-gold-gradient">HUNG.NHOT</span>
+            <span class="block text-[10px] tracking-[0.26em] text-slate-400 uppercase font-medium">Vietnam
+              Lubricants</span>
           </div>
         </a>
 
         <!-- Desktop Navigation Links -->
         <nav class="hidden lg:flex items-center gap-8">
-          <a href="#tong-quan" class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Tổng quan</a>
-          <a href="#tra-cuu-nhot" class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Tra cứu nhớt</a>
-          <a href="#san-pham" class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Sản phẩm</a>
-          <a href="#dai-ly-b2b" class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Đại lý B2B</a>
-          <a href="#lien-he" class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Liên hệ</a>
+          <a href="#tong-quan"
+            class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Tổng quan</a>
+          <a href="#tra-cuu-nhot"
+            class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Tra cứu nhớt</a>
+          <a href="#san-pham" class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Sản
+            phẩm</a>
+          <a href="#dai-ly-b2b"
+            class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Đại lý B2B</a>
+          <a href="#lien-he" class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Liên
+            hệ</a>
         </nav>
 
         <!-- Right Actions: Hotline + Mobile Menu -->
         <div class="flex items-center gap-2.5 sm:gap-3">
           <!-- Hotline CTA -->
-          <a href="tel:0905888666" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl btn-gold text-xs font-bold tracking-wide shadow-gold-sm">
+          <a href="tel:0905888666"
+            class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl btn-gold text-xs font-bold tracking-wide shadow-gold-sm">
             <i data-lucide="phone-call" class="w-4 h-4"></i>
             <span>0905 123 456</span>
           </a>
 
           <!-- Mobile Drawer Toggle -->
-          <button id="mobile-menu-btn" type="button" aria-label="Mở menu di động" class="lg:hidden p-2.5 rounded-xl bg-obsidian-800/80 border border-champagne-400/25 text-champagne-300 hover:bg-obsidian-700 transition-colors">
+          <button id="mobile-menu-btn" type="button" aria-label="Mở menu di động"
+            class="lg:hidden p-2.5 rounded-xl bg-obsidian-800/80 border border-champagne-400/25 text-champagne-300 hover:bg-obsidian-700 transition-colors">
             <i data-lucide="menu" class="w-5 h-5"></i>
           </button>
         </div>
@@ -247,38 +288,47 @@
   </header>
 
   <!-- Mobile Slide-Out Navigation Drawer -->
-  <div id="mobile-drawer-overlay" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
-    <aside id="mobile-drawer" class="fixed top-0 right-0 h-full w-[82%] max-w-xs bg-obsidian-900 border-l border-champagne-400/25 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300">
+  <div id="mobile-drawer-overlay"
+    class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+    <aside id="mobile-drawer"
+      class="fixed top-0 right-0 h-full w-[82%] max-w-xs bg-obsidian-900 border-l border-champagne-400/25 p-6 flex flex-col justify-between translate-x-full transition-transform duration-300">
       <div>
         <div class="flex items-center justify-between pb-5 border-b border-champagne-400/20">
           <div>
             <span class="font-serif text-lg font-bold text-gold-gradient">HUNG.NHOT</span>
             <p class="text-[10px] uppercase tracking-[0.22em] text-slate-400">Vietnam</p>
           </div>
-          <button id="close-mobile-drawer" type="button" aria-label="Đóng menu" class="p-2 rounded-lg bg-obsidian-800 text-slate-300 hover:text-champagne-300">
+          <button id="close-mobile-drawer" type="button" aria-label="Đóng menu"
+            class="p-2 rounded-lg bg-obsidian-800 text-slate-300 hover:text-champagne-300">
             <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
         <nav class="mt-6 flex flex-col gap-2">
-          <a href="#tong-quan" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-200 hover:bg-obsidian-800 hover:text-champagne-300 font-medium transition-colors flex items-center justify-between">
+          <a href="#tong-quan"
+            class="mobile-nav-link px-4 py-3 rounded-xl text-slate-200 hover:bg-obsidian-800 hover:text-champagne-300 font-medium transition-colors flex items-center justify-between">
             <span>Tổng quan</span><i data-lucide="chevron-right" class="w-4 h-4 text-champagne-400/60"></i>
           </a>
-          <a href="#tra-cuu-nhot" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-200 hover:bg-obsidian-800 hover:text-champagne-300 font-medium transition-colors flex items-center justify-between">
+          <a href="#tra-cuu-nhot"
+            class="mobile-nav-link px-4 py-3 rounded-xl text-slate-200 hover:bg-obsidian-800 hover:text-champagne-300 font-medium transition-colors flex items-center justify-between">
             <span>Tra cứu nhớt</span><i data-lucide="chevron-right" class="w-4 h-4 text-champagne-400/60"></i>
           </a>
-          <a href="#san-pham" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-200 hover:bg-obsidian-800 hover:text-champagne-300 font-medium transition-colors flex items-center justify-between">
+          <a href="#san-pham"
+            class="mobile-nav-link px-4 py-3 rounded-xl text-slate-200 hover:bg-obsidian-800 hover:text-champagne-300 font-medium transition-colors flex items-center justify-between">
             <span>Sản phẩm</span><i data-lucide="chevron-right" class="w-4 h-4 text-champagne-400/60"></i>
           </a>
-          <a href="#dai-ly-b2b" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-200 hover:bg-obsidian-800 hover:text-champagne-300 font-medium transition-colors flex items-center justify-between">
+          <a href="#dai-ly-b2b"
+            class="mobile-nav-link px-4 py-3 rounded-xl text-slate-200 hover:bg-obsidian-800 hover:text-champagne-300 font-medium transition-colors flex items-center justify-between">
             <span>Đại lý B2B</span><i data-lucide="chevron-right" class="w-4 h-4 text-champagne-400/60"></i>
           </a>
-          <a href="#lien-he" class="mobile-nav-link px-4 py-3 rounded-xl text-slate-200 hover:bg-obsidian-800 hover:text-champagne-300 font-medium transition-colors flex items-center justify-between">
+          <a href="#lien-he"
+            class="mobile-nav-link px-4 py-3 rounded-xl text-slate-200 hover:bg-obsidian-800 hover:text-champagne-300 font-medium transition-colors flex items-center justify-between">
             <span>Liên hệ</span><i data-lucide="chevron-right" class="w-4 h-4 text-champagne-400/60"></i>
           </a>
         </nav>
       </div>
       <div class="pt-5 border-t border-champagne-400/20 space-y-3">
-        <a href="tel:0905888666" class="w-full py-3 rounded-xl btn-gold text-sm font-bold flex items-center justify-center gap-2">
+        <a href="tel:0905888666"
+          class="w-full py-3 rounded-xl btn-gold text-sm font-bold flex items-center justify-center gap-2">
           <i data-lucide="phone-call" class="w-4 h-4"></i>
           Hotline: 0905 888 666
         </a>
@@ -290,20 +340,26 @@
   <!-- ===================================================================== -->
   <!-- 2. FULL-SCREEN LUXURY HERO SECTION                                    -->
   <!-- ===================================================================== -->
-  <section id="hero" class="relative min-h-screen flex flex-col justify-between pt-24 pb-8 overflow-hidden bg-arch-grid">
+  <section id="hero"
+    class="relative min-h-screen flex flex-col justify-between pt-24 pb-8 overflow-hidden bg-arch-grid">
     <!-- Ambient Golden Oil Particle Canvas -->
     <canvas id="hero-particles" class="absolute inset-0 w-full h-full pointer-events-none opacity-65"></canvas>
 
     <!-- Radial Champagne Glows -->
-    <div class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[680px] h-[680px] rounded-full bg-champagne-400/10 blur-[140px] animate-ambient"></div>
-    <div class="pointer-events-none absolute bottom-10 right-0 w-[440px] h-[440px] rounded-full bg-amberoil/10 blur-[120px]"></div>
+    <div
+      class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[680px] h-[680px] rounded-full bg-champagne-400/10 blur-[140px] animate-ambient">
+    </div>
+    <div
+      class="pointer-events-none absolute bottom-10 right-0 w-[440px] h-[440px] rounded-full bg-amberoil/10 blur-[120px]">
+    </div>
 
     <!-- Main Hero Content -->
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto py-8 lg:py-14">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <!-- Left Editorial Copy -->
         <div class="lg:col-span-7 space-y-7 text-center lg:text-left">
-          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-obsidian-800/80 border border-champagne-400/30 text-xs font-medium tracking-wider uppercase text-champagne-300">
+          <div
+            class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-obsidian-800/80 border border-champagne-400/30 text-xs font-medium tracking-wider uppercase text-champagne-300">
             <span class="w-2 h-2 rounded-full bg-champagne-400 animate-pulse"></span>
             Chuẩn Mực Bôi Trơn Thế Hệ Mới • API SP / ACEA C3
           </div>
@@ -313,26 +369,34 @@
           </h1>
 
           <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-light">
-            <strong class="text-champagne-200 font-medium">HUNG.NHOT VIETNAM</strong> kiến tạo giải pháp dầu nhớt tổng hợp toàn phần ứng dụng phân tử Ester tinh khiết — bảo vệ tuyệt đối động cơ từ xe sang, mô tô phân khối lớn đến đội xe thương mại hạng nặng.
+            <strong class="text-champagne-200 font-medium">HUNG.NHOT VIETNAM</strong> kiến tạo giải pháp dầu nhớt tổng
+            hợp toàn phần ứng dụng phân tử Ester tinh khiết — bảo vệ tuyệt đối động cơ từ xe sang, mô tô phân khối lớn
+            đến đội xe thương mại hạng nặng.
           </p>
 
           <!-- Dual CTAs -->
           <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-            <a href="#san-pham" class="w-full sm:w-auto px-8 py-4 rounded-xl btn-gold font-bold text-sm tracking-wide flex items-center justify-center gap-2.5 shadow-gold">
+            <a href="#san-pham"
+              class="w-full sm:w-auto px-8 py-4 rounded-xl btn-gold font-bold text-sm tracking-wide flex items-center justify-center gap-2.5 shadow-gold">
               <span>Khám phá sản phẩm</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
-            <a href="#tra-cuu-nhot" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-obsidian-800/75 hover:bg-obsidian-800 border border-champagne-400/35 hover:border-champagne-300 text-champagne-200 font-semibold text-sm tracking-wide transition-all flex items-center justify-center gap-2.5">
+            <a href="#tra-cuu-nhot"
+              class="w-full sm:w-auto px-8 py-4 rounded-xl bg-obsidian-800/75 hover:bg-obsidian-800 border border-champagne-400/35 hover:border-champagne-300 text-champagne-200 font-semibold text-sm tracking-wide transition-all flex items-center justify-center gap-2.5">
               <i data-lucide="gauge" class="w-4 h-4 text-champagne-400"></i>
               <span>Tra cứu nhớt theo xe</span>
             </a>
           </div>
 
           <!-- Micro Trust Badges -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 pt-3 text-xs text-slate-400">
-            <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-4 h-4 text-champagne-400"></i> Đầy đủ CO/CQ & VAT</span>
-            <span class="flex items-center gap-1.5"><i data-lucide="award" class="w-4 h-4 text-champagne-400"></i> Công nghệ Ester-Core Đức</span>
-            <span class="flex items-center gap-1.5"><i data-lucide="truck" class="w-4 h-4 text-champagne-400"></i> Miễn phí ship đơn từ 1.000.000đ</span>
+          <div
+            class="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 pt-3 text-xs text-slate-400">
+            <span class="flex items-center gap-1.5"><i data-lucide="shield-check"
+                class="w-4 h-4 text-champagne-400"></i> Đầy đủ CO/CQ & VAT</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="award" class="w-4 h-4 text-champagne-400"></i> Công
+              nghệ Ester-Core Đức</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="truck" class="w-4 h-4 text-champagne-400"></i> Miễn
+              phí ship đơn từ 1.000.000đ</span>
           </div>
         </div>
 
@@ -340,24 +404,27 @@
         <div class="lg:col-span-5 relative flex items-center justify-center">
           <div class="relative w-full max-w-md mx-auto">
             <!-- Architectural Halo Rings -->
-            <div class="absolute inset-0 m-auto w-72 h-72 sm:w-80 sm:h-80 rounded-full border border-champagne-400/20"></div>
-            <div class="absolute inset-0 m-auto w-60 h-60 sm:w-64 sm:h-64 rounded-full border border-dashed border-champagne-400/25"></div>
-            <div class="absolute inset-0 m-auto w-56 h-56 rounded-full bg-gradient-to-tr from-champagne-500/20 via-amberoil/15 to-transparent blur-2xl"></div>
+            <div class="absolute inset-0 m-auto w-72 h-72 sm:w-80 sm:h-80 rounded-full border border-champagne-400/20">
+            </div>
+            <div
+              class="absolute inset-0 m-auto w-60 h-60 sm:w-64 sm:h-64 rounded-full border border-dashed border-champagne-400/25">
+            </div>
+            <div
+              class="absolute inset-0 m-auto w-56 h-56 rounded-full bg-gradient-to-tr from-champagne-500/20 via-amberoil/15 to-transparent blur-2xl">
+            </div>
 
             <!-- Hero Owner Portrait -->
             <div class="relative z-10 flex justify-center pt-2">
-              <img
-                src="hero-owner.png"
-                alt="HUNG.NHOT - Dầu nhớt chính hãng"
+              <img src="hero-owner.png" alt="HUNG.NHOT - Dầu nhớt chính hãng"
                 class="w-72 sm:w-80 lg:w-full max-w-[380px] h-auto object-contain"
-                style="-webkit-mask-image: linear-gradient(to bottom, black 84%, transparent 100%); mask-image: linear-gradient(to bottom, black 84%, transparent 100%);"
-              />
+                style="-webkit-mask-image: linear-gradient(to bottom, black 84%, transparent 100%); mask-image: linear-gradient(to bottom, black 84%, transparent 100%);" />
             </div>
 
             <!-- Technical Spec Callouts (Positioned below portrait so nothing is covered) -->
             <div class="relative z-20 -mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div class="flex items-center gap-3 px-4 py-3 rounded-2xl glass-panel shadow-luxury">
-                <div class="w-9 h-9 shrink-0 rounded-xl bg-champagne-400/15 border border-champagne-400/35 flex items-center justify-center text-champagne-300">
+                <div
+                  class="w-9 h-9 shrink-0 rounded-xl bg-champagne-400/15 border border-champagne-400/35 flex items-center justify-center text-champagne-300">
                   <i data-lucide="flame" class="w-4 h-4"></i>
                 </div>
                 <div>
@@ -367,7 +434,8 @@
               </div>
 
               <div class="flex items-center gap-3 px-4 py-3 rounded-2xl glass-panel shadow-luxury">
-                <div class="w-9 h-9 shrink-0 rounded-xl bg-amberoil/15 border border-amberoil/35 flex items-center justify-center text-amberoil">
+                <div
+                  class="w-9 h-9 shrink-0 rounded-xl bg-amberoil/15 border border-amberoil/35 flex items-center justify-center text-amberoil">
                   <i data-lucide="sparkles" class="w-4 h-4"></i>
                 </div>
                 <div>
@@ -385,7 +453,8 @@
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-4">
       <div class="glass-panel rounded-2xl p-5 sm:p-6 grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
         <div class="flex items-start gap-3.5 lg:border-r lg:border-champagne-400/15 lg:pr-4">
-          <div class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/10 border border-champagne-400/25 flex items-center justify-center text-champagne-300">
+          <div
+            class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/10 border border-champagne-400/25 flex items-center justify-center text-champagne-300">
             <i data-lucide="verified" class="w-5 h-5"></i>
           </div>
           <div>
@@ -394,7 +463,8 @@
           </div>
         </div>
         <div class="flex items-start gap-3.5 lg:border-r lg:border-champagne-400/15 lg:pr-4">
-          <div class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/10 border border-champagne-400/25 flex items-center justify-center text-champagne-300">
+          <div
+            class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/10 border border-champagne-400/25 flex items-center justify-center text-champagne-300">
             <i data-lucide="building-2" class="w-5 h-5"></i>
           </div>
           <div>
@@ -403,7 +473,8 @@
           </div>
         </div>
         <div class="flex items-start gap-3.5 lg:border-r lg:border-champagne-400/15 lg:pr-4">
-          <div class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/10 border border-champagne-400/25 flex items-center justify-center text-champagne-300">
+          <div
+            class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/10 border border-champagne-400/25 flex items-center justify-center text-champagne-300">
             <i data-lucide="cpu" class="w-5 h-5"></i>
           </div>
           <div>
@@ -412,7 +483,8 @@
           </div>
         </div>
         <div class="flex items-start gap-3.5">
-          <div class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/10 border border-champagne-400/25 flex items-center justify-center text-champagne-300">
+          <div
+            class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/10 border border-champagne-400/25 flex items-center justify-center text-champagne-300">
             <i data-lucide="zap" class="w-5 h-5"></i>
           </div>
           <div>
@@ -434,7 +506,8 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
         <!-- Asymmetric Left Editorial Column -->
         <div class="lg:col-span-5 space-y-6 reveal">
-          <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400">
+          <div
+            class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400">
             <span class="w-8 h-px bg-champagne-400"></span>
             Tổng Quan & Công Nghệ
           </div>
@@ -442,12 +515,16 @@
             Tinh Hoa Công Nghệ <span class="text-gold-gradient italic">Bôi Trơn</span> Thế Hệ Mới
           </h2>
           <p class="text-slate-300 leading-relaxed text-sm sm:text-base font-light">
-            Giống như một công trình kiến trúc trường tồn đòi hỏi nền móng hoàn mỹ, mỗi khối động cơ đều cần lớp màng bảo vệ phân tử chuẩn xác đến từng micron. <strong class="text-slate-100 font-medium">HUNG.NHOT</strong> kết hợp dầu gốc tổng hợp nhóm IV/V cùng hệ phụ gia Ester phân cực, giúp dầu bám chặt lên bề mặt kim loại ngay cả khi tắt máy.
+            Giống như một công trình kiến trúc trường tồn đòi hỏi nền móng hoàn mỹ, mỗi khối động cơ đều cần lớp màng
+            bảo vệ phân tử chuẩn xác đến từng micron. <strong class="text-slate-100 font-medium">HUNG.NHOT</strong> kết
+            hợp dầu gốc tổng hợp nhóm IV/V cùng hệ phụ gia Ester phân cực, giúp dầu bám chặt lên bề mặt kim loại ngay cả
+            khi tắt máy.
           </p>
 
           <!-- Architectural Certification Strip -->
           <div class="glass-panel rounded-2xl p-5 space-y-4">
-            <p class="text-xs uppercase tracking-widest text-champagne-300 font-semibold">Chứng nhận & Tiêu chuẩn toàn cầu</p>
+            <p class="text-xs uppercase tracking-widest text-champagne-300 font-semibold">Chứng nhận & Tiêu chuẩn toàn
+              cầu</p>
             <div class="grid grid-cols-3 gap-3 text-center">
               <div class="p-3 rounded-xl bg-obsidian-900/80 border border-champagne-400/15">
                 <p class="font-serif font-bold text-champagne-200 text-sm">API SP</p>
@@ -464,9 +541,11 @@
             </div>
           </div>
 
-          <a href="#tra-cuu-nhot" class="inline-flex items-center gap-2 text-sm font-semibold text-champagne-300 hover:text-champagne-200 group">
+          <a href="#tra-cuu-nhot"
+            class="inline-flex items-center gap-2 text-sm font-semibold text-champagne-300 hover:text-champagne-200 group">
             <span>Tìm đúng phẩm cấp nhớt cho xe của bạn</span>
-            <i data-lucide="arrow-up-right" class="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+            <i data-lucide="arrow-up-right"
+              class="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
           </a>
         </div>
 
@@ -475,56 +554,66 @@
           <!-- Pillar 1 -->
           <article class="reveal glass-panel rounded-2xl p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1">
             <div class="flex items-center justify-between mb-5">
-              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-champagne-400/20 to-amberoil/10 border border-champagne-400/35 flex items-center justify-center text-champagne-300">
+              <div
+                class="w-12 h-12 rounded-2xl bg-gradient-to-br from-champagne-400/20 to-amberoil/10 border border-champagne-400/35 flex items-center justify-center text-champagne-300">
                 <i data-lucide="atom" class="w-6 h-6"></i>
               </div>
               <span class="font-serif text-3xl font-bold text-champagne-400/20">01</span>
             </div>
             <h3 class="font-serif text-xl font-bold text-slate-100 mb-2.5">Công Nghệ Ester Tổng Hợp Toàn Phần</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
-              Phân tử Ester mang điện tích âm tự động bám hút lên bề mặt chi tiết máy, giảm thiểu 72% mài mòn khi khởi động nguội và duy trì độ êm ái vượt trội.
+              Phân tử Ester mang điện tích âm tự động bám hút lên bề mặt chi tiết máy, giảm thiểu 72% mài mòn khi khởi
+              động nguội và duy trì độ êm ái vượt trội.
             </p>
           </article>
 
           <!-- Pillar 2 -->
-          <article class="reveal glass-panel rounded-2xl p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 sm:mt-6">
+          <article
+            class="reveal glass-panel rounded-2xl p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 sm:mt-6">
             <div class="flex items-center justify-between mb-5">
-              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-champagne-400/20 to-amberoil/10 border border-champagne-400/35 flex items-center justify-center text-champagne-300">
+              <div
+                class="w-12 h-12 rounded-2xl bg-gradient-to-br from-champagne-400/20 to-amberoil/10 border border-champagne-400/35 flex items-center justify-center text-champagne-300">
                 <i data-lucide="thermometer-sun" class="w-6 h-6"></i>
               </div>
               <span class="font-serif text-3xl font-bold text-champagne-400/20">02</span>
             </div>
             <h3 class="font-serif text-xl font-bold text-slate-100 mb-2.5">Bảo Vệ Động Cơ Nhiệt Độ Cực Đại</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
-              Độ bền trượt cắt HTHS cao kết hợp điểm chớp cháy trên 235°C giúp màng dầu không bị đứt gãy khi vận hành kẹt xe đô thị hay tăng tốc liên tục trên cao tốc.
+              Độ bền trượt cắt HTHS cao kết hợp điểm chớp cháy trên 235°C giúp màng dầu không bị đứt gãy khi vận hành
+              kẹt xe đô thị hay tăng tốc liên tục trên cao tốc.
             </p>
           </article>
 
           <!-- Pillar 3 -->
           <article class="reveal glass-panel rounded-2xl p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1">
             <div class="flex items-center justify-between mb-5">
-              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-champagne-400/20 to-amberoil/10 border border-champagne-400/35 flex items-center justify-center text-champagne-300">
+              <div
+                class="w-12 h-12 rounded-2xl bg-gradient-to-br from-champagne-400/20 to-amberoil/10 border border-champagne-400/35 flex items-center justify-center text-champagne-300">
                 <i data-lucide="fuel" class="w-6 h-6"></i>
               </div>
               <span class="font-serif text-3xl font-bold text-champagne-400/20">03</span>
             </div>
             <h3 class="font-serif text-xl font-bold text-slate-100 mb-2.5">Tiết Kiệm Nhiên Liệu Đến 8%</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
-              Hệ phụ gia biến tính ma sát vi mô (Friction Modifier) giúp giảm tổn hao công suất nội tại, tối ưu hóa mức tiêu thụ xăng/dầu và giảm phát thải CO2.
+              Hệ phụ gia biến tính ma sát vi mô (Friction Modifier) giúp giảm tổn hao công suất nội tại, tối ưu hóa mức
+              tiêu thụ xăng/dầu và giảm phát thải CO2.
             </p>
           </article>
 
           <!-- Pillar 4 -->
-          <article class="reveal glass-panel rounded-2xl p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 sm:mt-6">
+          <article
+            class="reveal glass-panel rounded-2xl p-6 sm:p-7 transition-all duration-300 hover:-translate-y-1 sm:mt-6">
             <div class="flex items-center justify-between mb-5">
-              <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-champagne-400/20 to-amberoil/10 border border-champagne-400/35 flex items-center justify-center text-champagne-300">
+              <div
+                class="w-12 h-12 rounded-2xl bg-gradient-to-br from-champagne-400/20 to-amberoil/10 border border-champagne-400/35 flex items-center justify-center text-champagne-300">
                 <i data-lucide="clock-4" class="w-6 h-6"></i>
               </div>
               <span class="font-serif text-3xl font-bold text-champagne-400/20">04</span>
             </div>
             <h3 class="font-serif text-xl font-bold text-slate-100 mb-2.5">Chu Kỳ Thay Nhớt Tới 10.000 km</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
-              Khả năng chống oxy hóa và phân tán cặn bùn vượt trội giữ lòng động cơ sạch bóng như mới, kéo dài gấp đôi chu kỳ bảo dưỡng so với dầu gốc khoáng.
+              Khả năng chống oxy hóa và phân tán cặn bùn vượt trội giữ lòng động cơ sạch bóng như mới, kéo dài gấp đôi
+              chu kỳ bảo dưỡng so với dầu gốc khoáng.
             </p>
           </article>
         </div>
@@ -536,11 +625,13 @@
   <!-- 4. INTERACTIVE VEHICLE OIL FINDER ("TRA CỨU DẦU NHỚT CHUẨN THEO XE")  -->
   <!-- ===================================================================== -->
   <section id="tra-cuu-nhot" class="py-20 lg:py-28 relative bg-obsidian-950/60 border-y border-champagne-400/15">
-    <div class="pointer-events-none absolute top-0 left-1/4 w-96 h-96 bg-champagne-400/5 blur-[120px] rounded-full"></div>
+    <div class="pointer-events-none absolute top-0 left-1/4 w-96 h-96 bg-champagne-400/5 blur-[120px] rounded-full">
+    </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center max-w-3xl mx-auto mb-12 reveal">
-        <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400 mb-3">
+        <div
+          class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400 mb-3">
           <span class="w-6 h-px bg-champagne-400"></span>
           Tư Vấn Kỹ Thuật Tự Động
           <span class="w-6 h-px bg-champagne-400"></span>
@@ -549,7 +640,8 @@
           Tra Cứu Dầu Nhớt <span class="text-gold-gradient italic">Chuẩn Theo Xe</span>
         </h2>
         <p class="text-slate-400 mt-4 text-sm sm:text-base">
-          Chọn thông tin phương tiện và điều kiện vận hành thực tế tại Việt Nam để nhận đề xuất cấp độ nhớt SAE & sản phẩm chuẩn xác từ kỹ sư HUNG.NHOT.
+          Chọn thông tin phương tiện và điều kiện vận hành thực tế tại Việt Nam để nhận đề xuất cấp độ nhớt SAE & sản
+          phẩm chuẩn xác từ kỹ sư HUNG.NHOT.
         </p>
       </div>
 
@@ -558,11 +650,14 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <!-- Step 1: Vehicle Type -->
           <div class="space-y-2.5">
-            <label for="finder-vehicle" class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-champagne-300">
-              <span class="w-5 h-5 rounded-full bg-champagne-400/20 text-champagne-300 flex items-center justify-center text-[11px]">1</span>
+            <label for="finder-vehicle"
+              class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-champagne-300">
+              <span
+                class="w-5 h-5 rounded-full bg-champagne-400/20 text-champagne-300 flex items-center justify-center text-[11px]">1</span>
               Loại phương tiện
             </label>
-            <select id="finder-vehicle" class="w-full px-4 py-3.5 rounded-xl bg-obsidian-900 border border-champagne-400/25 text-slate-100 text-sm focus:outline-none focus:border-champagne-300 transition-colors">
+            <select id="finder-vehicle"
+              class="w-full px-4 py-3.5 rounded-xl bg-obsidian-900 border border-champagne-400/25 text-slate-100 text-sm focus:outline-none focus:border-champagne-300 transition-colors">
               <option value="car">Ô tô du lịch (Sedan / SUV / MPV)</option>
               <option value="scooter">Xe tay ga (SH, Vario, NVX, Vespa...)</option>
               <option value="moto">Xe số & Mô tô Phân khối lớn (PKL)</option>
@@ -572,11 +667,14 @@
 
           <!-- Step 2: Engine / Fuel -->
           <div class="space-y-2.5">
-            <label for="finder-engine" class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-champagne-300">
-              <span class="w-5 h-5 rounded-full bg-champagne-400/20 text-champagne-300 flex items-center justify-center text-[11px]">2</span>
+            <label for="finder-engine"
+              class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-champagne-300">
+              <span
+                class="w-5 h-5 rounded-full bg-champagne-400/20 text-champagne-300 flex items-center justify-center text-[11px]">2</span>
               Nhiên liệu / Động cơ
             </label>
-            <select id="finder-engine" class="w-full px-4 py-3.5 rounded-xl bg-obsidian-900 border border-champagne-400/25 text-slate-100 text-sm focus:outline-none focus:border-champagne-300 transition-colors">
+            <select id="finder-engine"
+              class="w-full px-4 py-3.5 rounded-xl bg-obsidian-900 border border-champagne-400/25 text-slate-100 text-sm focus:outline-none focus:border-champagne-300 transition-colors">
               <option value="petrol">Động cơ Xăng tiêu chuẩn</option>
               <option value="hybrid_turbo">Động cơ Hybrid / Turbo phun trực tiếp</option>
               <option value="diesel">Động cơ Diesel (Máy dầu / Common Rail)</option>
@@ -585,11 +683,14 @@
 
           <!-- Step 3: Driving Condition -->
           <div class="space-y-2.5">
-            <label for="finder-condition" class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-champagne-300">
-              <span class="w-5 h-5 rounded-full bg-champagne-400/20 text-champagne-300 flex items-center justify-center text-[11px]">3</span>
+            <label for="finder-condition"
+              class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-champagne-300">
+              <span
+                class="w-5 h-5 rounded-full bg-champagne-400/20 text-champagne-300 flex items-center justify-center text-[11px]">3</span>
               Điều kiện vận hành chính
             </label>
-            <select id="finder-condition" class="w-full px-4 py-3.5 rounded-xl bg-obsidian-900 border border-champagne-400/25 text-slate-100 text-sm focus:outline-none focus:border-champagne-300 transition-colors">
+            <select id="finder-condition"
+              class="w-full px-4 py-3.5 rounded-xl bg-obsidian-900 border border-champagne-400/25 text-slate-100 text-sm focus:outline-none focus:border-champagne-300 transition-colors">
               <option value="city">Đô thị kẹt xe, dừng-chạy liên tục</option>
               <option value="highway">Đường trường cao tốc, đi tour xa</option>
               <option value="heavy">Tải nặng, đèo dốc, thời tiết khắc nghiệt</option>
@@ -597,12 +698,14 @@
           </div>
         </div>
 
-        <div class="mt-7 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-champagne-400/15">
+        <div
+          class="mt-7 flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-champagne-400/15">
           <p class="text-xs text-slate-400 flex items-center gap-2">
             <i data-lucide="info" class="w-4 h-4 text-champagne-400 shrink-0"></i>
             Khuyến nghị được chuẩn hóa theo tiêu chuẩn khí hậu nhiệt đới ẩm tại Việt Nam.
           </p>
-          <button id="finder-submit-btn" type="button" class="w-full sm:w-auto px-8 py-3.5 rounded-xl btn-gold font-bold text-sm tracking-wide flex items-center justify-center gap-2 shadow-gold-sm">
+          <button id="finder-submit-btn" type="button"
+            class="w-full sm:w-auto px-8 py-3.5 rounded-xl btn-gold font-bold text-sm tracking-wide flex items-center justify-center gap-2 shadow-gold-sm">
             <i data-lucide="search-check" class="w-4 h-4"></i>
             <span>Tìm loại nhớt phù hợp</span>
           </button>
@@ -624,7 +727,8 @@
       <!-- Header -->
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 reveal">
         <div>
-          <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400 mb-3">
+          <div
+            class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400 mb-3">
             <span class="w-8 h-px bg-champagne-400"></span>
             Danh Mục Chính Hãng
           </div>
@@ -633,7 +737,8 @@
           </h2>
         </div>
         <p class="text-sm text-slate-400 max-w-md leading-relaxed">
-          Lựa chọn dung tích linh hoạt từ chai 1L, can 4L đến xô 18L và phuy 200L. Giá niêm yết minh bạch, hỗ trợ đặt hàng trực tuyến nhanh chóng.
+          Lựa chọn dung tích linh hoạt từ chai 1L, can 4L đến xô 18L và phuy 200L. Giá niêm yết minh bạch, hỗ trợ đặt
+          hàng trực tuyến nhanh chóng.
         </p>
       </div>
 
@@ -641,19 +746,24 @@
       <div class="glass-panel rounded-2xl p-4 sm:p-5 mb-10 space-y-4 reveal">
         <!-- Category Pills -->
         <div id="category-tabs" class="flex flex-wrap gap-2">
-          <button type="button" data-category="all" class="filter-tab active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-champagne-400 text-obsidian-900">
+          <button type="button" data-category="all"
+            class="filter-tab active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-champagne-400 text-obsidian-900">
             Tất cả
           </button>
-          <button type="button" data-category="car" class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all bg-obsidian-900/70 text-slate-300 border border-champagne-400/20 hover:border-champagne-400/50 hover:text-champagne-200">
+          <button type="button" data-category="car"
+            class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all bg-obsidian-900/70 text-slate-300 border border-champagne-400/20 hover:border-champagne-400/50 hover:text-champagne-200">
             Dầu nhớt Ô tô
           </button>
-          <button type="button" data-category="bike" class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all bg-obsidian-900/70 text-slate-300 border border-champagne-400/20 hover:border-champagne-400/50 hover:text-champagne-200">
+          <button type="button" data-category="bike"
+            class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all bg-obsidian-900/70 text-slate-300 border border-champagne-400/20 hover:border-champagne-400/50 hover:text-champagne-200">
             Dầu nhớt Xe máy
           </button>
-          <button type="button" data-category="industrial" class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all bg-obsidian-900/70 text-slate-300 border border-champagne-400/20 hover:border-champagne-400/50 hover:text-champagne-200">
+          <button type="button" data-category="industrial"
+            class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all bg-obsidian-900/70 text-slate-300 border border-champagne-400/20 hover:border-champagne-400/50 hover:text-champagne-200">
             Dầu Xe tải & Công nghiệp
           </button>
-          <button type="button" data-category="additive" class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all bg-obsidian-900/70 text-slate-300 border border-champagne-400/20 hover:border-champagne-400/50 hover:text-champagne-200">
+          <button type="button" data-category="additive"
+            class="filter-tab px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all bg-obsidian-900/70 text-slate-300 border border-champagne-400/20 hover:border-champagne-400/50 hover:text-champagne-200">
             Phụ gia chăm sóc
           </button>
         </div>
@@ -662,10 +772,13 @@
         <div class="flex flex-col sm:flex-row gap-3 pt-3 border-t border-champagne-400/15">
           <div class="relative flex-1">
             <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
-            <input id="product-search" type="text" placeholder="Tìm theo tên sản phẩm, độ nhớt (5W-30, 10W-40, AW 68...)" class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-obsidian-900 border border-champagne-400/20 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-champagne-300 transition-colors" />
+            <input id="product-search" type="text"
+              placeholder="Tìm theo tên sản phẩm, độ nhớt (5W-30, 10W-40, AW 68...)"
+              class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-obsidian-900 border border-champagne-400/20 text-sm text-slate-100 placeholder:text-slate-500 focus:outline-none focus:border-champagne-300 transition-colors" />
           </div>
           <div class="sm:w-60">
-            <select id="product-sort" aria-label="Sắp xếp sản phẩm" class="w-full px-4 py-2.5 rounded-xl bg-obsidian-900 border border-champagne-400/20 text-sm text-slate-200 focus:outline-none focus:border-champagne-300 transition-colors">
+            <select id="product-sort" aria-label="Sắp xếp sản phẩm"
+              class="w-full px-4 py-2.5 rounded-xl bg-obsidian-900 border border-champagne-400/20 text-sm text-slate-200 focus:outline-none focus:border-champagne-300 transition-colors">
               <option value="default">Sắp xếp: Mặc định</option>
               <option value="price-asc">Giá: Thấp đến cao</option>
               <option value="price-desc">Giá: Cao đến thấp</option>
@@ -684,7 +797,8 @@
         <i data-lucide="package-search" class="w-12 h-12 text-champagne-400/60 mx-auto mb-3"></i>
         <p class="font-serif text-xl text-slate-200">Không tìm thấy sản phẩm phù hợp</p>
         <p class="text-sm text-slate-400 mt-1">Vui lòng thử từ khóa khác hoặc chọn lại danh mục "Tất cả".</p>
-        <button id="reset-filter-btn" type="button" class="mt-4 px-5 py-2.5 rounded-xl bg-champagne-400/15 border border-champagne-400/40 text-champagne-200 text-xs font-semibold hover:bg-champagne-400/25 transition-colors">
+        <button id="reset-filter-btn" type="button"
+          class="mt-4 px-5 py-2.5 rounded-xl bg-champagne-400/15 border border-champagne-400/40 text-champagne-200 text-xs font-semibold hover:bg-champagne-400/25 transition-colors">
           Đặt lại bộ lọc
         </button>
       </div>
@@ -694,13 +808,17 @@
   <!-- ===================================================================== -->
   <!-- 6. B2B & GARAGE PARTNERSHIP SECTION ("ĐẶC QUYỀN ĐẠI LÝ & GARA")       -->
   <!-- ===================================================================== -->
-  <section id="dai-ly-b2b" class="py-20 lg:py-28 relative bg-obsidian-950/70 border-y border-champagne-400/15 overflow-hidden">
-    <div class="pointer-events-none absolute -right-24 top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-champagne-400/10 blur-[140px]"></div>
+  <section id="dai-ly-b2b"
+    class="py-20 lg:py-28 relative bg-obsidian-950/70 border-y border-champagne-400/15 overflow-hidden">
+    <div
+      class="pointer-events-none absolute -right-24 top-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-champagne-400/10 blur-[140px]">
+    </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14 reveal">
         <div class="max-w-2xl">
-          <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400 mb-3">
+          <div
+            class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400 mb-3">
             <span class="w-8 h-px bg-champagne-400"></span>
             Hợp Tác Phân Phối Chiến Lược
           </div>
@@ -708,15 +826,18 @@
             Đặc Quyền <span class="text-gold-gradient italic">Đại Lý & Gara</span> Đối Tác
           </h2>
           <p class="text-slate-300 mt-4 text-sm sm:text-base font-light leading-relaxed">
-            Chính sách thương mại minh bạch, bảo vệ vùng phân phối và đồng hành dài hạn cùng các Gara ô tô, trung tâm chăm sóc xe và đại lý vật tư công nghiệp trên 63 tỉnh thành.
+            Chính sách thương mại minh bạch, bảo vệ vùng phân phối và đồng hành dài hạn cùng các Gara ô tô, trung tâm
+            chăm sóc xe và đại lý vật tư công nghiệp trên 63 tỉnh thành.
           </p>
         </div>
         <div class="flex flex-wrap gap-3">
-          <button type="button" onclick="selectInquiryAndScroll('Mở đại lý')" class="px-6 py-3.5 rounded-xl btn-gold text-sm font-bold flex items-center gap-2 shadow-gold-sm">
+          <button type="button" onclick="selectInquiryAndScroll('Mở đại lý')"
+            class="px-6 py-3.5 rounded-xl btn-gold text-sm font-bold flex items-center gap-2 shadow-gold-sm">
             <i data-lucide="handshake" class="w-4 h-4"></i>
             <span>Đăng ký mở Đại lý</span>
           </button>
-          <button type="button" onclick="selectInquiryAndScroll('Nhập cho Gara')" class="px-6 py-3.5 rounded-xl bg-obsidian-800 border border-champagne-400/35 hover:border-champagne-300 text-champagne-200 text-sm font-semibold transition-all">
+          <button type="button" onclick="selectInquiryAndScroll('Nhập cho Gara')"
+            class="px-6 py-3.5 rounded-xl bg-obsidian-800 border border-champagne-400/35 hover:border-champagne-300 text-champagne-200 text-sm font-semibold transition-all">
             Nhận bảng giá Gara
           </button>
         </div>
@@ -724,14 +845,17 @@
 
       <!-- 4 Wholesale Luxury Benefit Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="reveal glass-panel rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
+        <div
+          class="reveal glass-panel rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-champagne-400/15 border border-champagne-400/35 flex items-center justify-center text-champagne-300 mb-5 group-hover:scale-105 transition-transform">
+            <div
+              class="w-12 h-12 rounded-2xl bg-champagne-400/15 border border-champagne-400/35 flex items-center justify-center text-champagne-300 mb-5 group-hover:scale-105 transition-transform">
               <i data-lucide="percent" class="w-6 h-6"></i>
             </div>
             <h3 class="font-serif text-xl font-bold text-slate-100 mb-2">Chiết Khấu Bậc Thang</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
-              Mức chiết khấu trực tiếp lên tới <strong class="text-champagne-300">25% – 32%</strong> theo sản lượng tháng/quý, kèm thưởng doanh số và chính sách công nợ linh hoạt cho đối tác thân thiết.
+              Mức chiết khấu trực tiếp lên tới <strong class="text-champagne-300">25% – 32%</strong> theo sản lượng
+              tháng/quý, kèm thưởng doanh số và chính sách công nợ linh hoạt cho đối tác thân thiết.
             </p>
           </div>
           <div class="mt-5 pt-4 border-t border-champagne-400/15 text-xs font-semibold text-champagne-300">
@@ -739,14 +863,17 @@
           </div>
         </div>
 
-        <div class="reveal glass-panel rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
+        <div
+          class="reveal glass-panel rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-champagne-400/15 border border-champagne-400/35 flex items-center justify-center text-champagne-300 mb-5 group-hover:scale-105 transition-transform">
+            <div
+              class="w-12 h-12 rounded-2xl bg-champagne-400/15 border border-champagne-400/35 flex items-center justify-center text-champagne-300 mb-5 group-hover:scale-105 transition-transform">
               <i data-lucide="store" class="w-6 h-6"></i>
             </div>
             <h3 class="font-serif text-xl font-bold text-slate-100 mb-2">Hỗ Trợ Kệ & Biển Hiệu</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
-              Tài trợ miễn phí kệ trưng bày thép sơn tĩnh điện mạ vàng, bảng hiệu Alu cao cấp, đồng phục kỹ thuật viên, phễu rót và ấn phẩm POSM chuẩn nhận diện HUNG.NHOT.
+              Tài trợ miễn phí kệ trưng bày thép sơn tĩnh điện mạ vàng, bảng hiệu Alu cao cấp, đồng phục kỹ thuật viên,
+              phễu rót và ấn phẩm POSM chuẩn nhận diện HUNG.NHOT.
             </p>
           </div>
           <div class="mt-5 pt-4 border-t border-champagne-400/15 text-xs font-semibold text-champagne-300">
@@ -754,14 +881,17 @@
           </div>
         </div>
 
-        <div class="reveal glass-panel rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
+        <div
+          class="reveal glass-panel rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-champagne-400/15 border border-champagne-400/35 flex items-center justify-center text-champagne-300 mb-5 group-hover:scale-105 transition-transform">
+            <div
+              class="w-12 h-12 rounded-2xl bg-champagne-400/15 border border-champagne-400/35 flex items-center justify-center text-champagne-300 mb-5 group-hover:scale-105 transition-transform">
               <i data-lucide="file-check-2" class="w-6 h-6"></i>
             </div>
             <h3 class="font-serif text-xl font-bold text-slate-100 mb-2">VAT & Hồ Sơ CO/CQ Đủ</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
-              Xuất hóa đơn điện tử VAT 100%, cung cấp đầy đủ chứng nhận xuất xứ (CO), chứng nhận chất lượng (CQ) và phiếu kiểm định TDS/MSDS phục vụ đấu thầu doanh nghiệp.
+              Xuất hóa đơn điện tử VAT 100%, cung cấp đầy đủ chứng nhận xuất xứ (CO), chứng nhận chất lượng (CQ) và
+              phiếu kiểm định TDS/MSDS phục vụ đấu thầu doanh nghiệp.
             </p>
           </div>
           <div class="mt-5 pt-4 border-t border-champagne-400/15 text-xs font-semibold text-champagne-300">
@@ -769,14 +899,17 @@
           </div>
         </div>
 
-        <div class="reveal glass-panel rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
+        <div
+          class="reveal glass-panel rounded-2xl p-6 flex flex-col justify-between group hover:-translate-y-1 transition-all duration-300">
           <div>
-            <div class="w-12 h-12 rounded-2xl bg-champagne-400/15 border border-champagne-400/35 flex items-center justify-center text-champagne-300 mb-5 group-hover:scale-105 transition-transform">
+            <div
+              class="w-12 h-12 rounded-2xl bg-champagne-400/15 border border-champagne-400/35 flex items-center justify-center text-champagne-300 mb-5 group-hover:scale-105 transition-transform">
               <i data-lucide="graduation-cap" class="w-6 h-6"></i>
             </div>
             <h3 class="font-serif text-xl font-bold text-slate-100 mb-2">Đào Tạo Kỹ Thuật</h3>
             <p class="text-sm text-slate-400 leading-relaxed">
-              Chuyên gia bôi trơn trực tiếp đào tạo đội ngũ cố vấn dịch vụ cách đọc mã tiêu chuẩn OEM, tư vấn thay nhớt đúng dòng xe sang và tối ưu doanh thu dịch vụ bảo dưỡng.
+              Chuyên gia bôi trơn trực tiếp đào tạo đội ngũ cố vấn dịch vụ cách đọc mã tiêu chuẩn OEM, tư vấn thay nhớt
+              đúng dòng xe sang và tối ưu doanh thu dịch vụ bảo dưỡng.
             </p>
           </div>
           <div class="mt-5 pt-4 border-t border-champagne-400/15 text-xs font-semibold text-champagne-300">
@@ -793,7 +926,8 @@
   <section class="py-20 lg:py-28 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-14 reveal">
-        <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400 mb-3">
+        <div
+          class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400 mb-3">
           <span class="w-6 h-px bg-champagne-400"></span>
           Đánh Giá Thực Tế
           <span class="w-6 h-px bg-champagne-400"></span>
@@ -815,11 +949,14 @@
               <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
             </div>
             <p class="text-sm text-slate-300 leading-relaxed italic">
-              "Tôi chuyển sang dùng Apex Gold Full Synthetic 5W-30 cho chiếc Mercedes GLC 300 hơn 2 năm nay. Cảm nhận rõ rệt nhất là máy nổ rất êm, chạy đường dài Đà Nẵng – Quy Nhơn nhiệt độ dầu cực ổn định và tới mốc 9.500 km xả ra nhớt vẫn còn độ sánh đẹp."
+              "Tôi chuyển sang dùng Apex Gold Full Synthetic 5W-30 cho chiếc Mercedes GLC 300 hơn 2 năm nay. Cảm nhận rõ
+              rệt nhất là máy nổ rất êm, chạy đường dài Đà Nẵng – Quy Nhơn nhiệt độ dầu cực ổn định và tới mốc 9.500 km
+              xả ra nhớt vẫn còn độ sánh đẹp."
             </p>
           </div>
           <div class="flex items-center gap-3.5 mt-6 pt-5 border-t border-champagne-400/15">
-            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-champagne-400 to-amberoil flex items-center justify-center text-obsidian-900 font-serif font-bold">
+            <div
+              class="w-11 h-11 rounded-full bg-gradient-to-br from-champagne-400 to-amberoil flex items-center justify-center text-obsidian-900 font-serif font-bold">
               MQ
             </div>
             <div>
@@ -840,11 +977,14 @@
               <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
             </div>
             <p class="text-sm text-slate-300 leading-relaxed italic">
-              "Gara của tôi nhập sỉ dòng Apex 5W-30, 0W-20 Hybrid và phụ gia Engine Flush. Chính sách chiết khấu rõ ràng, giao hàng trong ngày và khách hàng quay lại bảo dưỡng định kỳ tăng hơn 40% nhờ chất lượng nhớt quá thuyết phục."
+              "Gara của tôi nhập sỉ dòng Apex 5W-30, 0W-20 Hybrid và phụ gia Engine Flush. Chính sách chiết khấu rõ
+              ràng, giao hàng trong ngày và khách hàng quay lại bảo dưỡng định kỳ tăng hơn 40% nhờ chất lượng nhớt quá
+              thuyết phục."
             </p>
           </div>
           <div class="flex items-center gap-3.5 mt-6 pt-5 border-t border-champagne-400/15">
-            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-champagne-400 to-amberoil flex items-center justify-center text-obsidian-900 font-serif font-bold">
+            <div
+              class="w-11 h-11 rounded-full bg-gradient-to-br from-champagne-400 to-amberoil flex items-center justify-center text-obsidian-900 font-serif font-bold">
               TH
             </div>
             <div>
@@ -865,11 +1005,14 @@
               <i data-lucide="star" class="w-4 h-4 fill-champagne-400"></i>
             </div>
             <p class="text-sm text-slate-300 leading-relaxed italic">
-              "Anh em trong hội PKL chạy tour Tây Bắc cực mê chai Apex Ester Racing 10W-40. Sang số nhẹ tênh, không bị trượt nồi khi kéo tua cao và máy mát hơn hẳn lúc kẹt xe nội thành. Đóng gói tem niêm phong chuẩn chỉnh, rất yên tâm."
+              "Anh em trong hội PKL chạy tour Tây Bắc cực mê chai Apex Ester Racing 10W-40. Sang số nhẹ tênh, không bị
+              trượt nồi khi kéo tua cao và máy mát hơn hẳn lúc kẹt xe nội thành. Đóng gói tem niêm phong chuẩn chỉnh,
+              rất yên tâm."
             </p>
           </div>
           <div class="flex items-center gap-3.5 mt-6 pt-5 border-t border-champagne-400/15">
-            <div class="w-11 h-11 rounded-full bg-gradient-to-br from-champagne-400 to-amberoil flex items-center justify-center text-obsidian-900 font-serif font-bold">
+            <div
+              class="w-11 h-11 rounded-full bg-gradient-to-br from-champagne-400 to-amberoil flex items-center justify-center text-obsidian-900 font-serif font-bold">
               ĐK
             </div>
             <div>
@@ -888,7 +1031,8 @@
   <section id="lien-he" class="py-20 lg:py-28 relative bg-obsidian-950/75 border-t border-champagne-400/15">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-12 reveal">
-        <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400 mb-3">
+        <div
+          class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-champagne-400 mb-3">
           <span class="w-8 h-px bg-champagne-400"></span>
           Thông Tin Người Bán
           <span class="w-8 h-px bg-champagne-400"></span>
@@ -897,7 +1041,8 @@
           Liên Hệ Trực Tiếp <span class="text-gold-gradient italic">HUNG.NHOT</span>
         </h2>
         <p class="text-slate-400 text-sm mt-3 leading-relaxed">
-          Quý khách xem thông tin sản phẩm, giá niêm yết và liên hệ trực tiếp với người bán qua Hotline, Zalo hoặc đến showroom bên dưới để được tư vấn và đặt hàng nhanh nhất.
+          Quý khách xem thông tin sản phẩm, giá niêm yết và liên hệ trực tiếp với người bán qua Hotline, Zalo hoặc đến
+          showroom bên dưới để được tư vấn và đặt hàng nhanh nhất.
         </p>
       </div>
 
@@ -907,39 +1052,49 @@
           <div class="glass-panel rounded-3xl p-6 sm:p-8 h-full flex flex-col justify-between space-y-6 shadow-luxury">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div class="flex items-start gap-3.5">
-                <div class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/15 border border-champagne-400/30 flex items-center justify-center text-champagne-300">
+                <div
+                  class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/15 border border-champagne-400/30 flex items-center justify-center text-champagne-300">
                   <i data-lucide="map-pin" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <p class="text-xs uppercase tracking-wider text-champagne-300 font-semibold">Showroom & Tổng Kho Miền Trung</p>
+                  <p class="text-xs uppercase tracking-wider text-champagne-300 font-semibold">Showroom & Tổng Kho Miền
+                    Trung</p>
                   <p class="text-sm text-slate-200 mt-1">268 Ngô Quyền, P. An Hải, TP. Đà Nẵng</p>
                   <p class="text-xs text-slate-400 mt-1">Kho phân phối: KCN Tân Bình (TP.HCM) & Long Biên (Hà Nội)</p>
                 </div>
               </div>
 
               <div class="flex items-start gap-3.5">
-                <div class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/15 border border-champagne-400/30 flex items-center justify-center text-champagne-300">
+                <div
+                  class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/15 border border-champagne-400/30 flex items-center justify-center text-champagne-300">
                   <i data-lucide="phone-call" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <p class="text-xs uppercase tracking-wider text-champagne-300 font-semibold">Hotline & Zalo Tư Vấn 24/7</p>
-                  <a href="tel:0905888666" class="text-lg font-bold text-slate-100 hover:text-champagne-300 transition-colors block mt-1">0905 888 666</a>
+                  <p class="text-xs uppercase tracking-wider text-champagne-300 font-semibold">Hotline & Zalo Tư Vấn
+                    24/7</p>
+                  <a href="tel:0905888666"
+                    class="text-lg font-bold text-slate-100 hover:text-champagne-300 transition-colors block mt-1">0905
+                    888 666</a>
                   <p class="text-xs text-slate-400 mt-0.5">Zalo OA: HUNG.NHOT VIETNAM Official</p>
                 </div>
               </div>
 
               <div class="flex items-start gap-3.5">
-                <div class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/15 border border-champagne-400/30 flex items-center justify-center text-champagne-300">
+                <div
+                  class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/15 border border-champagne-400/30 flex items-center justify-center text-champagne-300">
                   <i data-lucide="mail" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <p class="text-xs uppercase tracking-wider text-champagne-300 font-semibold">Email Kinh Doanh & B2B</p>
-                  <a href="mailto:kinhdoanh@apexlube.vn" class="text-sm text-slate-200 hover:text-champagne-300 transition-colors block mt-1">kinhdoanh@apexlube.vn</a>
+                  <p class="text-xs uppercase tracking-wider text-champagne-300 font-semibold">Email Kinh Doanh & B2B
+                  </p>
+                  <a href="mailto:kinhdoanh@apexlube.vn"
+                    class="text-sm text-slate-200 hover:text-champagne-300 transition-colors block mt-1">kinhdoanh@apexlube.vn</a>
                 </div>
               </div>
 
               <div class="flex items-start gap-3.5">
-                <div class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/15 border border-champagne-400/30 flex items-center justify-center text-champagne-300">
+                <div
+                  class="w-10 h-10 shrink-0 rounded-xl bg-champagne-400/15 border border-champagne-400/30 flex items-center justify-center text-champagne-300">
                   <i data-lucide="clock" class="w-5 h-5"></i>
                 </div>
                 <div>
@@ -957,20 +1112,24 @@
             <div>
               <h3 class="font-serif text-2xl font-bold text-slate-100">Kênh Liên Hệ Nhanh</h3>
               <p class="text-sm text-slate-400 mt-2 leading-relaxed">
-                Chọn kênh liên lạc thuận tiện nhất để trao đổi trực tiếp với người bán về sản phẩm, báo giá sỉ/lẻ và giao hàng.
+                Chọn kênh liên lạc thuận tiện nhất để trao đổi trực tiếp với người bán về sản phẩm, báo giá sỉ/lẻ và
+                giao hàng.
               </p>
             </div>
 
             <div class="space-y-3">
-              <a href="tel:0905888666" class="w-full py-3.5 px-5 rounded-xl btn-gold font-bold text-sm tracking-wide flex items-center justify-center gap-2 shadow-gold">
+              <a href="tel:0905888666"
+                class="w-full py-3.5 px-5 rounded-xl btn-gold font-bold text-sm tracking-wide flex items-center justify-center gap-2 shadow-gold">
                 <i data-lucide="phone-call" class="w-4 h-4"></i>
                 <span>Gọi Hotline: 0905 888 666</span>
               </a>
-              <a href="https://zalo.me/0905888666" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-5 rounded-xl bg-sky-500/15 border border-sky-400/40 hover:bg-sky-500/25 text-sky-200 font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
+              <a href="https://zalo.me/0905888666" target="_blank" rel="noopener noreferrer"
+                class="w-full py-3.5 px-5 rounded-xl bg-sky-500/15 border border-sky-400/40 hover:bg-sky-500/25 text-sky-200 font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
                 <i data-lucide="message-circle" class="w-4 h-4"></i>
                 <span>Nhắn Tin Zalo Người Bán</span>
               </a>
-              <a href="mailto:kinhdoanh@apexlube.vn" class="w-full py-3.5 px-5 rounded-xl bg-obsidian-900 border border-champagne-400/25 hover:border-champagne-300 text-slate-200 hover:text-champagne-200 font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
+              <a href="mailto:kinhdoanh@apexlube.vn"
+                class="w-full py-3.5 px-5 rounded-xl bg-obsidian-900 border border-champagne-400/25 hover:border-champagne-300 text-slate-200 hover:text-champagne-200 font-semibold text-sm flex items-center justify-center gap-2 transition-colors">
                 <i data-lucide="mail" class="w-4 h-4 text-champagne-400"></i>
                 <span>Gửi Email: kinhdoanh@apexlube.vn</span>
               </a>
@@ -990,7 +1149,8 @@
         <!-- Brand Column -->
         <div class="space-y-4">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-xl bg-obsidian-900 border border-champagne-400/35 flex items-center justify-center">
+            <div
+              class="w-10 h-10 rounded-xl bg-obsidian-900 border border-champagne-400/35 flex items-center justify-center">
               <i data-lucide="droplet" class="w-5 h-5 text-champagne-400 fill-champagne-400/30"></i>
             </div>
             <div>
@@ -999,7 +1159,8 @@
             </div>
           </div>
           <p class="text-xs text-slate-400 leading-relaxed">
-            Hệ thống phân phối dầu nhớt tổng hợp toàn phần, dầu thủy lực và phụ gia bảo vệ động cơ cao cấp. Đồng hành bền bỉ cùng hàng trăm nghìn chủ xe và đối tác Gara tại Việt Nam.
+            Hệ thống phân phối dầu nhớt tổng hợp toàn phần, dầu thủy lực và phụ gia bảo vệ động cơ cao cấp. Đồng hành
+            bền bỉ cùng hàng trăm nghìn chủ xe và đối tác Gara tại Việt Nam.
           </p>
         </div>
 
@@ -1007,10 +1168,13 @@
         <div>
           <h4 class="font-serif text-base font-bold text-champagne-200 mb-4">Điều Hướng Nhanh</h4>
           <ul class="space-y-2.5 text-sm text-slate-400">
-            <li><a href="#tong-quan" class="hover:text-champagne-300 transition-colors">Tổng quan & Công nghệ Ester</a></li>
-            <li><a href="#tra-cuu-nhot" class="hover:text-champagne-300 transition-colors">Tra cứu dầu nhớt theo xe</a></li>
+            <li><a href="#tong-quan" class="hover:text-champagne-300 transition-colors">Tổng quan & Công nghệ Ester</a>
+            </li>
+            <li><a href="#tra-cuu-nhot" class="hover:text-champagne-300 transition-colors">Tra cứu dầu nhớt theo xe</a>
+            </li>
             <li><a href="#san-pham" class="hover:text-champagne-300 transition-colors">Bộ sưu tập sản phẩm</a></li>
-            <li><a href="#dai-ly-b2b" class="hover:text-champagne-300 transition-colors">Chính sách Đại lý & Gara</a></li>
+            <li><a href="#dai-ly-b2b" class="hover:text-champagne-300 transition-colors">Chính sách Đại lý & Gara</a>
+            </li>
           </ul>
         </div>
 
@@ -1018,10 +1182,17 @@
         <div>
           <h4 class="font-serif text-base font-bold text-champagne-200 mb-4">Dòng Sản Phẩm Chủ Lực</h4>
           <ul class="space-y-2.5 text-sm text-slate-400">
-            <li><button type="button" onclick="quickFilterCategory('car')" class="hover:text-champagne-300 transition-colors text-left">Dầu nhớt Ô tô API SP / Hybrid</button></li>
-            <li><button type="button" onclick="quickFilterCategory('bike')" class="hover:text-champagne-300 transition-colors text-left">Dầu nhớt Xe tay ga & Mô tô PKL</button></li>
-            <li><button type="button" onclick="quickFilterCategory('industrial')" class="hover:text-champagne-300 transition-colors text-left">Dầu Diesel Xe tải & Thủy lực AW 68</button></li>
-            <li><button type="button" onclick="quickFilterCategory('additive')" class="hover:text-champagne-300 transition-colors text-left">Phụ gia súc rửa động cơ chuyên sâu</button></li>
+            <li><button type="button" onclick="quickFilterCategory('car')"
+                class="hover:text-champagne-300 transition-colors text-left">Dầu nhớt Ô tô API SP / Hybrid</button></li>
+            <li><button type="button" onclick="quickFilterCategory('bike')"
+                class="hover:text-champagne-300 transition-colors text-left">Dầu nhớt Xe tay ga & Mô tô PKL</button>
+            </li>
+            <li><button type="button" onclick="quickFilterCategory('industrial')"
+                class="hover:text-champagne-300 transition-colors text-left">Dầu Diesel Xe tải & Thủy lực AW 68</button>
+            </li>
+            <li><button type="button" onclick="quickFilterCategory('additive')"
+                class="hover:text-champagne-300 transition-colors text-left">Phụ gia súc rửa động cơ chuyên sâu</button>
+            </li>
           </ul>
         </div>
 
@@ -1029,10 +1200,14 @@
         <div>
           <h4 class="font-serif text-base font-bold text-champagne-200 mb-4">Cam Kết & Chính Sách</h4>
           <ul class="space-y-2.5 text-sm text-slate-400">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-champagne-400"></i> Cam kết đền 200% nếu phát hiện hàng giả</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-champagne-400"></i> Miễn phí giao hàng đơn từ 1.000.000đ</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-champagne-400"></i> Đổi trả miễn phí trong 7 ngày nguyên seal</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-champagne-400"></i> Xuất hóa đơn VAT đầy đủ theo yêu cầu</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-champagne-400"></i> Cam kết
+              đền 200% nếu phát hiện hàng giả</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-champagne-400"></i> Miễn phí
+              giao hàng đơn từ 1.000.000đ</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-champagne-400"></i> Đổi trả
+              miễn phí trong 7 ngày nguyên seal</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-champagne-400"></i> Xuất hóa
+              đơn VAT đầy đủ theo yêu cầu</li>
           </ul>
         </div>
       </div>
@@ -1049,17 +1224,20 @@
   <!-- ===================================================================== -->
   <div class="fixed bottom-5 right-5 z-40 flex flex-col items-center gap-3">
     <!-- Scroll to Top -->
-    <button id="scroll-top-btn" type="button" aria-label="Lên đầu trang" class="w-11 h-11 rounded-full bg-obsidian-800/90 border border-champagne-400/40 text-champagne-300 shadow-luxury flex items-center justify-center opacity-0 pointer-events-none translate-y-3 transition-all duration-300 hover:bg-champagne-400 hover:text-obsidian-900">
+    <button id="scroll-top-btn" type="button" aria-label="Lên đầu trang"
+      class="w-11 h-11 rounded-full bg-obsidian-800/90 border border-champagne-400/40 text-champagne-300 shadow-luxury flex items-center justify-center opacity-0 pointer-events-none translate-y-3 transition-all duration-300 hover:bg-champagne-400 hover:text-obsidian-900">
       <i data-lucide="arrow-up" class="w-5 h-5"></i>
     </button>
 
     <!-- Zalo Quick Chat -->
-    <a href="https://zalo.me/0905888666" target="_blank" rel="noopener noreferrer" aria-label="Chat Zalo HUNG.NHOT" class="w-12 h-12 rounded-full bg-[#0068FF] text-white shadow-lg flex items-center justify-center font-bold text-xs tracking-tight hover:scale-110 transition-transform ring-2 ring-white/20">
+    <a href="https://zalo.me/0905888666" target="_blank" rel="noopener noreferrer" aria-label="Chat Zalo HUNG.NHOT"
+      class="w-12 h-12 rounded-full bg-[#0068FF] text-white shadow-lg flex items-center justify-center font-bold text-xs tracking-tight hover:scale-110 transition-transform ring-2 ring-white/20">
       Zalo
     </a>
 
     <!-- Hotline Pulse -->
-    <a href="tel:0905888666" aria-label="Gọi Hotline 0905 888 666" class="relative w-12 h-12 rounded-full btn-gold shadow-gold flex items-center justify-center hover:scale-110 transition-transform">
+    <a href="tel:0905888666" aria-label="Gọi Hotline 0905 888 666"
+      class="relative w-12 h-12 rounded-full btn-gold shadow-gold flex items-center justify-center hover:scale-110 transition-transform">
       <span class="absolute inset-0 rounded-full bg-champagne-400 animate-ping opacity-30"></span>
       <i data-lucide="phone" class="w-5 h-5 relative z-10"></i>
     </a>
@@ -1068,14 +1246,18 @@
   <!-- ===================================================================== -->
   <!-- TECHNICAL DATASHEET MODAL ("XEM THÔNG SỐ")                            -->
   <!-- ===================================================================== -->
-  <div id="datasheet-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+  <div id="datasheet-modal"
+    class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
     <div class="glass-panel rounded-3xl w-full max-w-2xl max-h-[90vh] overflow-y-auto shadow-luxury relative">
-      <div class="sticky top-0 z-10 bg-obsidian-900/95 backdrop-blur-md px-6 py-4 border-b border-champagne-400/20 flex items-center justify-between">
+      <div
+        class="sticky top-0 z-10 bg-obsidian-900/95 backdrop-blur-md px-6 py-4 border-b border-champagne-400/20 flex items-center justify-between">
         <div>
-          <p class="text-[10px] uppercase tracking-[0.24em] text-champagne-400 font-semibold">Technical Data Sheet (TDS)</p>
+          <p class="text-[10px] uppercase tracking-[0.24em] text-champagne-400 font-semibold">Technical Data Sheet (TDS)
+          </p>
           <h3 id="tds-title" class="font-serif text-xl font-bold text-slate-100">Thông Số Kỹ Thuật</h3>
         </div>
-        <button id="close-tds-modal" type="button" aria-label="Đóng thông số" class="p-2 rounded-xl bg-obsidian-800 text-slate-300 hover:text-champagne-300 transition-colors">
+        <button id="close-tds-modal" type="button" aria-label="Đóng thông số"
+          class="p-2 rounded-xl bg-obsidian-800 text-slate-300 hover:text-champagne-300 transition-colors">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
@@ -1088,7 +1270,8 @@
   <!-- ===================================================================== -->
   <!-- LUXURY TOAST NOTIFICATION CONTAINER                                   -->
   <!-- ===================================================================== -->
-  <div id="toast-container" class="fixed top-24 right-4 z-[60] flex flex-col gap-2.5 pointer-events-none max-w-sm w-[calc(100vw-2rem)]"></div>
+  <div id="toast-container"
+    class="fixed top-24 right-4 z-[60] flex flex-col gap-2.5 pointer-events-none max-w-sm w-[calc(100vw-2rem)]"></div>
 
   <!-- ===================================================================== -->
   <!-- APPLICATION JAVASCRIPT (DATA, SVG GENERATOR, FINDER, CART, ANIMATION) -->
@@ -1477,11 +1660,10 @@
           const isActive = idx === vIdx;
           return `
             <button type="button" onclick="selectProductVariant('${p.id}', ${idx})"
-              class="px-2.5 py-1 rounded-lg text-[11px] font-semibold transition-all ${
-                isActive
-                  ? 'bg-champagne-400 text-obsidian-900 shadow-sm'
-                  : 'bg-obsidian-900/80 text-slate-300 border border-champagne-400/20 hover:border-champagne-400/50'
-              }">
+              class="px-2.5 py-1 rounded-lg text-[11px] font-semibold transition-all ${isActive
+              ? 'bg-champagne-400 text-obsidian-900 shadow-sm'
+              : 'bg-obsidian-900/80 text-slate-300 border border-champagne-400/20 hover:border-champagne-400/50'
+            }">
               ${v.size}
             </button>
           `;
@@ -1976,4 +2158,5 @@
     });
   </script>
 </body>
+
 </html>
