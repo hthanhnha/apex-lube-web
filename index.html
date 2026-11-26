@@ -255,16 +255,21 @@
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center gap-8">
+        <nav id="desktop-nav" class="hidden lg:flex items-center gap-8">
           <a href="#tong-quan"
-            class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Tổng quan</a>
+            class="nav-spy-link relative py-1.5 text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:rounded-full after:bg-gradient-to-r after:from-champagne-300 after:to-amberoil after:origin-left after:scale-x-0 after:transition-transform after:duration-300">Tổng
+            quan</a>
           <a href="#tra-cuu-nhot"
-            class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Tra cứu nhớt</a>
-          <a href="#san-pham" class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Sản
+            class="nav-spy-link relative py-1.5 text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:rounded-full after:bg-gradient-to-r after:from-champagne-300 after:to-amberoil after:origin-left after:scale-x-0 after:transition-transform after:duration-300">Tra
+            cứu nhớt</a>
+          <a href="#san-pham"
+            class="nav-spy-link relative py-1.5 text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:rounded-full after:bg-gradient-to-r after:from-champagne-300 after:to-amberoil after:origin-left after:scale-x-0 after:transition-transform after:duration-300">Sản
             phẩm</a>
           <a href="#dai-ly-b2b"
-            class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Đại lý B2B</a>
-          <a href="#lien-he" class="text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors">Liên
+            class="nav-spy-link relative py-1.5 text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:rounded-full after:bg-gradient-to-r after:from-champagne-300 after:to-amberoil after:origin-left after:scale-x-0 after:transition-transform after:duration-300">Đại
+            lý B2B</a>
+          <a href="#lien-he"
+            class="nav-spy-link relative py-1.5 text-sm font-medium text-slate-200 hover:text-champagne-300 transition-colors after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:rounded-full after:bg-gradient-to-r after:from-champagne-300 after:to-amberoil after:origin-left after:scale-x-0 after:transition-transform after:duration-300">Liên
             hệ</a>
         </nav>
 
@@ -1046,10 +1051,23 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-        <!-- Left Seller Info -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Left Seller Info + Photo -->
         <div class="lg:col-span-7 reveal">
-          <div class="glass-panel rounded-3xl p-6 sm:p-8 h-full flex flex-col justify-between space-y-6 shadow-luxury">
+          <div class="glass-panel rounded-3xl p-6 sm:p-8 flex flex-col space-y-6 shadow-luxury">
+            <!-- Seller Real Photo -->
+            <div class="relative overflow-hidden rounded-2xl border border-champagne-400/25 bg-obsidian-900">
+              <img src="seller-delivery.jpg" alt="HUNG.NHOT - Giao dầu nhớt chính hãng tận nơi"
+                class="w-full h-auto block" />
+              <div
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-obsidian-950/90 via-obsidian-950/45 to-transparent px-4 py-3 flex items-center justify-between">
+                <span class="text-xs font-semibold text-champagne-200">HUNG.NHOT VIETNAM • Giao hàng tận nơi</span>
+                <span
+                  class="text-[11px] px-2.5 py-0.5 rounded-full bg-champagne-400/20 border border-champagne-400/35 text-champagne-300">Chính
+                  hãng 100%</span>
+              </div>
+            </div>
+
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div class="flex items-start gap-3.5">
                 <div
@@ -1108,13 +1126,44 @@
 
         <!-- Right Quick Contact Actions -->
         <div class="lg:col-span-5 reveal">
-          <div class="glass-panel rounded-3xl p-6 sm:p-8 h-full flex flex-col justify-between space-y-6 shadow-luxury">
+          <div class="glass-panel rounded-3xl p-6 sm:p-8 flex flex-col space-y-6 shadow-luxury">
             <div>
               <h3 class="font-serif text-2xl font-bold text-slate-100">Kênh Liên Hệ Nhanh</h3>
               <p class="text-sm text-slate-400 mt-2 leading-relaxed">
                 Chọn kênh liên lạc thuận tiện nhất để trao đổi trực tiếp với người bán về sản phẩm, báo giá sỉ/lẻ và
                 giao hàng.
               </p>
+            </div>
+
+            <!-- Interactive 3-Brand Promo Poster Carousel -->
+            <div class="relative h-[380px] sm:h-[420px] overflow-hidden rounded-2xl border border-champagne-400/25 bg-obsidian-950/90 flex items-center justify-center select-none">
+              <!-- Ambient center glow -->
+              <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.14),transparent_65%)]"></div>
+
+              <!-- Poster 0: Liqui Moly -->
+              <button type="button" onclick="selectPromoPoster(0)" aria-label="Xem Liqui Moly 5W-30"
+                class="promo-slide absolute transition-all duration-500 ease-out rounded-xl overflow-hidden focus:outline-none">
+                <img src="liqui-promo.jpg" alt="Liqui Moly 5W-30 Long Life III" class="h-[330px] sm:h-[370px] w-auto object-contain block" />
+              </button>
+
+              <!-- Poster 1: Shell Helix Ultra -->
+              <button type="button" onclick="selectPromoPoster(1)" aria-label="Xem Shell Helix Ultra 0W-40"
+                class="promo-slide absolute transition-all duration-500 ease-out rounded-xl overflow-hidden focus:outline-none">
+                <img src="shell-promo.jpg" alt="Shell Helix Ultra 0W-40" class="h-[330px] sm:h-[370px] w-auto object-contain block" />
+              </button>
+
+              <!-- Poster 2: Motul 7100 -->
+              <button type="button" onclick="selectPromoPoster(2)" aria-label="Xem Motul 7100 10W-40"
+                class="promo-slide absolute transition-all duration-500 ease-out rounded-xl overflow-hidden focus:outline-none">
+                <img src="motul-promo.jpg" alt="Motul 7100 4T 10W-40" class="h-[330px] sm:h-[370px] w-auto object-contain block" />
+              </button>
+
+              <!-- Bottom Indicator Dots -->
+              <div class="absolute bottom-2.5 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2 px-3 py-1 rounded-full bg-obsidian-900/80 border border-champagne-400/25 backdrop-blur-sm">
+                <button type="button" onclick="selectPromoPoster(0)" aria-label="Chọn Liqui Moly" class="promo-dot w-2 h-2 rounded-full transition-all duration-300"></button>
+                <button type="button" onclick="selectPromoPoster(1)" aria-label="Chọn Shell" class="promo-dot w-2 h-2 rounded-full transition-all duration-300"></button>
+                <button type="button" onclick="selectPromoPoster(2)" aria-label="Chọn Motul" class="promo-dot w-2 h-2 rounded-full transition-all duration-300"></button>
+              </div>
             </div>
 
             <div class="space-y-3">
@@ -1943,10 +1992,61 @@
     }
 
     // =========================================================================
-    // 7. CONTACT SCROLL HELPER
+    // 7. CONTACT SCROLL HELPER & PROMO CAROUSEL
     // =========================================================================
     function selectInquiryAndScroll() {
       document.getElementById('lien-he').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    let activePromoIndex = 1; // Default: Shell in center, Liqui Moly left, Motul right
+    function selectPromoPoster(idx) {
+      activePromoIndex = idx;
+      const slides = document.querySelectorAll('.promo-slide');
+      const dots = document.querySelectorAll('.promo-dot');
+      if (slides.length !== 3) return;
+
+      const total = slides.length;
+      slides.forEach((slide, i) => {
+        // Compute relative position: -1 (left), 0 (center), 1 (right)
+        let diff = (i - activePromoIndex + total) % total;
+        if (diff === 2) diff = -1;
+
+        slide.classList.remove(
+          'z-20', 'z-10', 'scale-100', 'scale-[0.72]',
+          'translate-x-0', '-translate-x-[60%]', 'translate-x-[60%]',
+          'opacity-100', 'opacity-65', 'hover:opacity-95', 'hover:scale-[0.76]',
+          'brightness-75', 'hover:brightness-100', 'cursor-pointer', 'cursor-default',
+          'ring-1', 'ring-champagne-400/55', 'shadow-[0_12px_36px_rgba(212,175,55,0.22)]'
+        );
+
+        if (diff === 0) {
+          slide.classList.add(
+            'z-20', 'scale-100', 'translate-x-0', 'opacity-100',
+            'cursor-default', 'ring-1', 'ring-champagne-400/55',
+            'shadow-[0_12px_36px_rgba(212,175,55,0.22)]'
+          );
+        } else if (diff === -1) {
+          slide.classList.add(
+            'z-10', 'scale-[0.72]', '-translate-x-[60%]', 'opacity-65',
+            'hover:opacity-95', 'hover:scale-[0.76]', 'brightness-75',
+            'hover:brightness-100', 'cursor-pointer'
+          );
+        } else {
+          slide.classList.add(
+            'z-10', 'scale-[0.72]', 'translate-x-[60%]', 'opacity-65',
+            'hover:opacity-95', 'hover:scale-[0.76]', 'brightness-75',
+            'hover:brightness-100', 'cursor-pointer'
+          );
+        }
+      });
+
+      dots.forEach((dot, i) => {
+        const isActive = i === activePromoIndex;
+        dot.classList.toggle('bg-champagne-300', isActive);
+        dot.classList.toggle('w-5', isActive);
+        dot.classList.toggle('bg-slate-500', !isActive);
+        dot.classList.toggle('w-2', !isActive);
+      });
     }
 
     // =========================================================================
@@ -2033,9 +2133,43 @@
     // 12. SCROLL EFFECTS, INTERSECTION OBSERVER & EVENT LISTENERS
     // =========================================================================
     function initInteractions() {
-      // Sticky Header & Scroll-to-top button
+      // Sticky Header, Scroll-Spy & Scroll-to-top button
       const header = document.getElementById('main-header');
       const scrollTopBtn = document.getElementById('scroll-top-btn');
+      const navLinks = Array.from(document.querySelectorAll('#desktop-nav .nav-spy-link'));
+      const spySections = navLinks
+        .map((link) => {
+          const id = link.getAttribute('href').slice(1);
+          const el = document.getElementById(id);
+          return el ? { id, el, link } : null;
+        })
+        .filter(Boolean);
+
+      function updateActiveNavLink() {
+        const scrollPos = window.scrollY + 140;
+        let activeId = '';
+
+        for (const item of spySections) {
+          if (item.el.offsetTop <= scrollPos) {
+            activeId = item.id;
+          }
+        }
+
+        // Ensure last tab highlights when scrolled to the bottom of the page
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 40 && spySections.length > 0) {
+          activeId = spySections[spySections.length - 1].id;
+        }
+
+        navLinks.forEach((link) => {
+          const isActive = link.getAttribute('href') === `#${activeId}`;
+          link.classList.toggle('text-champagne-300', isActive);
+          link.classList.toggle('font-semibold', isActive);
+          link.classList.toggle('text-slate-200', !isActive);
+          link.classList.toggle('font-medium', !isActive);
+          link.classList.toggle('after:scale-x-100', isActive);
+          link.classList.toggle('after:scale-x-0', !isActive);
+        });
+      }
 
       window.addEventListener('scroll', () => {
         const scrolled = window.scrollY > 36;
@@ -2046,7 +2180,11 @@
         } else {
           scrollTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-3');
         }
+
+        updateActiveNavLink();
       });
+
+      updateActiveNavLink();
 
       scrollTopBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -2152,6 +2290,7 @@
     // Boot Application
     window.addEventListener('DOMContentLoaded', () => {
       renderProducts();
+      selectPromoPoster(1);
       initInteractions();
       initHeroParticles();
       lucide.createIcons();
